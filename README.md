@@ -12,7 +12,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 * Fagner Oliveira Passos
 * Matheus Reis Castelliano
-* Nome completo do aluno 3
+* Vinícius da Silva Moraes
 * Nome completo do aluno 4
 * Nome completo do aluno 5
 * Nome completo do aluno 6
