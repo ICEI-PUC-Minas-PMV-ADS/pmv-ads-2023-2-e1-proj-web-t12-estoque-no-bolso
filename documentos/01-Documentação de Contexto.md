@@ -10,9 +10,12 @@ Este link pode ajudar a equipe a entender mais sobre definição do problema: [O
 
 ## Objetivos
 
-[Aqui a equipe deve realizar uma descrição detalhada dos objetivos do trabalho, ressaltando quais as questões principais do problema a serem resolvidas pelo projeto, não é a hora de apresentar requisitos detalhados.]
- 
-Este link pode ajudar a equipe a entender mais sobre definição dos objetivos: [Objetivos, Problema de pesquisa e Justificativa.](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
+O objetivo geral desse projeto é desenvolver uma aplicação para gestão e controle de estoque que seja acessível e de fácil usabilidade, com suas funções disponibilizadas de forma intuitiva e simplificada. 
+Como objetivos específicos podemos listar: 
+
+- Ajudar microempreendedores a ter uma relação mais eficiente com seu estoque; 
+- Permitir aos usuários uma visualização completa do estoque; 
+- Promover a otimização de tempo e de custos. 
 
 ## Justificativa
 
