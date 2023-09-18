@@ -1,6 +1,12 @@
 # Introdução
 
-[Aqui a equipe deve criar um texto descritivo com a visão geral do problema abordado, apresentando o ambiente e as situações envolvidas no problema.]
+O aprendizado baseado em projetos é uma abordagem pedagógica que tem ganhado cada vez mais atenção nos últimos anos. De acordo com Miller e Krajcik (2019), o aprendizado baseado em projetos pode promover o aprendizado profundo ao envolver os alunos em problemas de design complexos e autênticos. Além disso, Terada (2021) argumenta que o aprendizado baseado em projetos pode ajudar os alunos a desenvolverem habilidades importantes para viver em uma sociedade baseada no conhecimento e altamente tecnológica. 
+
+De acordo com Slack, Chambers e Johnston (2009), o controle de estoque é um elemento vital na gestão eficaz de operações empresariais. A habilidade de monitorar, rastrear e gerenciar o estoque desempenha um papel central na garantia do funcionamento suave de uma organização, influenciando diretamente sua eficiência operacional e a satisfação do cliente.    
+
+Neste documento, apresentamos um projeto de aplicação front-end de controle de estoque. Essa iniciativa visa atender às necessidades de microempresas que possuem estoque, como lojistas, padarias, pequenos restaurantes etc., abordando a gestão eficiente de estoque por meio de uma abordagem centrada no público-alvo e nas histórias de usuário. Exploraremos a importância desse projeto no contexto empresarial.   
+
+Ao longo deste relatório, analisaremos o público-alvo, as histórias de usuário e os principais desafios técnicos e funcionais que enfrentaremos durante o desenvolvimento desta aplicação.
 
 ## Problema
 [Aqui a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.]
