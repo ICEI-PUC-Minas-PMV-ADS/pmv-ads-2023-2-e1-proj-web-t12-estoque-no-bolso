@@ -65,7 +65,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Repositório de código fonte         | GitHub                             | http://....                            |
 | Documentos do projeto               | GitHub                             | http://....                            |
 | Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
+| Gerenciamento do Projeto            | Trello     |https://trello.com/invite/adsestoquenobolso/ATTI372614535a91d3a98e28a41cc594226e71A33C5E                            |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
