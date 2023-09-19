@@ -1,10 +1,10 @@
-# Título do Projeto
+# Estoque no Bolso
 
-`CURSO`
+`Análise e Desenvolimento de Sistema - Puc Minas`
 
-`DISCIPLINA`
+`Desenvolivmento de aplicação web front-end`
 
-`SEMESTRE`
+`2° Semestre/2023`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
