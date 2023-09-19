@@ -26,11 +26,17 @@ Como objetivos específicos podemos listar:
 
 ## Justificativa
 
-[Aqui a equipe deve descrever a importância ou a motivação para trabalhar com o problema definido. Indique as razões pelas quais a equipe escolheu o problema e definiu os objetivos.
+ 
 
-Devem ser apresentados dados de fontes relevantes e confiáveis sobre o problema, inserindo-o como alvo de estudo. Sugere-se que a equipe utilize questionários, entrevistas e dados estatísticos, que devem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pela equipe.]
+Atualmente, apesar da crescente expansão tecnológica, algumas empresas ainda possuem sistemas de controle de estoque que vem demonstrando ser ineficazes em vista do potencial que poderiam atingir com a utilização de um sistema ágil, atualizável e tecnológico. Segundo o autor Bruno Paoleschi em sua obra “Almoxarifado e gestão de estoque”: 
 
-Este link pode ajudar a equipe a formular a justificativa: [Como montar a justificativa.](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+[...] com o aumento cada vez maior da concorrência, torna-se imprescindível para a manutenção o uso da lógica nas operações e nas ações empresariais em todos os níveis de atuação. Assim aqueles que, nesse ambiente, deixam de buscar um grau de serviço compatível com as necessidades do mercado, fatalmente estão fadados a perdas que, em alguns casos, podem significar a sucumbência. 
+
+Tendo em vista que a economia atualmente cresce exponencialmente com a tecnologia, é axiomático que existe uma demanda para que as empresas consigam de fato, acompanhar o mercado. Levando em conta que um bom gerenciamento de almoxarifado é um dos pré-requisitos para um bom funcionamento de uma empresa, o controle de estoque eletrônico possibilitaria a unificação de todos os dados de almoxarifado ocasionando na ciência exata de tudo o que perpassa pela empresa. Ademais também seria possível armazenar os dados, entendendo sobre os ganhos, necessidades e perdas que poderiam ser divididos por período. 
+
+Outrossim, o alto custo dos sistemas atuais que fornecem esse tipo de serviço impossibilita que muitas empresas, especialmente as de menor porte, agreguem este tipo de funcionalidade à sua forma de trabalho. A priori a aplicação deverá ser simples e funcional, de modo que sua usabilidade seja intuitiva independentemente do perfil do usuário e que a aplicação não precise de muita manutenção, gerando mais acessibilidade e um menor custo de repasse. 
+
+ 
 
 ## Público-Alvo
 
