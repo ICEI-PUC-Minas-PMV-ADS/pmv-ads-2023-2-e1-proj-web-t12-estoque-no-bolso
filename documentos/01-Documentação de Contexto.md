@@ -9,9 +9,10 @@ Neste documento, apresentamos um projeto de aplicação front-end de controle de
 Ao longo deste relatório, analisaremos o público-alvo, as histórias de usuário e os principais desafios técnicos e funcionais que enfrentaremos durante o desenvolvimento desta aplicação.
 
 ## Problema
-[Aqui a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.]
 
-Este link pode ajudar a equipe a entender mais sobre definição do problema: [Objetivos, Problema de pesquisa e Justificativa.](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
+O estoque é um dos principais ativos de uma instituição e representam um elemento essencial, portanto manter um gerenciamento de estoque eficiente é de suma importância para qualquer empresa, independentemente de seu tamanho. Mas, muitas vezes, para o microempreendedor o controle de estoque fica relegado a segundo plano, seja por desconhecimento da importância da gestão do estoque ou pela falta de ferramentas corretas para o gerenciamento.
+
+Por não implementar um sistema de gestão de estoque ou por utilizar ao mesmo tempo várias ferramentas de gestão de estoque, sem centralizar os processos, as empresas de pequeno porte não conseguem acompanhar a movimentação do estoque e dos insumos, não sabem qual o real nível de estoque e acabam cometendo muitos erros.
 
 
 ## Objetivos
