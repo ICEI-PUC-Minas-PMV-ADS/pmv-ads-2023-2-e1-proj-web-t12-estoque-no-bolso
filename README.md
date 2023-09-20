@@ -1,21 +1,22 @@
 # Estoque no Bolso
 
-`Análise e Desenvolimento de Sistema - Puc Minas`
+`Análise e Desenvolimento de Sistema - PUC Minas`
 
 `Desenvolivmento de aplicação web front-end`
 
 `2° Semestre/2023`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
+Nosso principal foco é a concepção de um aplicativo de fácil usabilidade e baixo custo, de forma a garantir que até mesmo os pequenos e microempreendedores, com limitada instrução, possam usufruir de uma ferramenta de software convencional.
 
 ## Integrantes
 
 * Fagner Oliveira Passos
-* Matheus Reis Castelliano
-* Vinícius da Silva Moraes
+* Franciany Kellyane de Souza
+* João Pedro Soares Lobo de Souza
 * Mariana Batista França Ferreira
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Matheus Reis Castelliano
+* Milton Cezario da Silva
+* Vinicius da Silva Moraes
 
 ## Orientador
 
