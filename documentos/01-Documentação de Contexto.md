@@ -40,12 +40,11 @@ Outrossim, o alto custo dos sistemas atuais que fornecem esse tipo de serviço i
 
 ## Público-Alvo
 
-[Aqui é necessário descrever os atores envolvidos no problema, destacando os diferentes perfis de usuários. O propósito é apresentar as características, necessidades, conhecimentos prévios e experiência com a tecnologia do público-alvo.
+O projeto Estoque no Bolso tem como objetivo atender às necessidades de micro e pequenos empreendedores e empresas. Muitas vezes, nos pequenos negócios, os proprietários desempenham múltiplos papéis e não têm tempo para monitorar seus estoques de forma estratégica. É aí que a aplicação Estoque no Bolso entra em ação.
 
-Sugere-se que a equipe utilize questionários e/ou entrevistas a fim de conhecer os atores que compõem o público alvo.]
+Esta aplicação foi pensada visando a simplicidade e a facilidade de uso, compreendendo que nem todos os empreendedores e usuários da aplicação têm experiência em gerenciamento de estoque e aplicações front-end. O Estoque no Bolso visa auxiliá-los a realizar um gerenciamento de estoque eficiente, independentemente de sua experiência anterior.
 
-Os links abaixo podem ajudar a equipe a conhecer um pouco mais sobre o público-alvo. 
+O controle eficaz de estoque é essencial para alavancar o setor de vendas e otimizar os custos operacionais. Em um cenário de e-commerce, por exemplo, uma gestão eficaz de estoque pode evitar atrasos nas entregas, garantindo que não haja falta de mercadorias. Em um contexto de mercado local, a aplicação ajuda a evitar perdas de produtos e o excesso dos mesmos, permitindo um controle mensal para reduzir gastos e garantir a qualidade dos produtos.
 
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
+Com um gerenciamento de estoque proporcionado pela aplicação, os usuários podem ter acesso aos produtos de forma mais rápida, ganhando agilidade no atendimento às demandas dos clientes.
 
