@@ -63,9 +63,9 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
+| Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso                           |
 | Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | Trello     |https://trello.com/invite/adsestoquenobolso/ATTI372614535a91d3a98e28a41cc594226e71A33C5E                            |
+| Gerenciamento do Projeto            | Trello          | https://trello.com/b/unR5yFCf/project-backlog              |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
