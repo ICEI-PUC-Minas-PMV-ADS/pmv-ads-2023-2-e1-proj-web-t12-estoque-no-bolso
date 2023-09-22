@@ -40,11 +40,10 @@ Outrossim, o alto custo dos sistemas atuais que fornecem esse tipo de serviço i
 
 ## Público-Alvo
 
-O projeto Estoque no Bolso tem como objetivo atender às necessidades de micro e pequenos empreendedores e empresas. Muitas vezes, nos pequenos negócios, os proprietários desempenham múltiplos papéis e não têm tempo para monitorar seus estoques de forma estratégica. É aí que a aplicação Estoque no Bolso entra em ação.
+A aplicação "Estoque no Bolso" foi desenvolvida com o propósito de atender às necessidades das micro e pequenas empresas que se dedicam ao comércio de uma variedade de produtos e serviços. Seu enfoque principal é facilitar o gerenciamento de estoque para um público que pode ter menos familiaridade com educação e tecnologia avançada. Isso se justifica pelo fato de que esse segmento empresarial é um dos que mais cresce no Brasil, conforme constatado em uma pesquisa conduzida pelo SEBRAE em abril de 2023.
 
-Esta aplicação foi pensada visando a simplicidade e a facilidade de uso, compreendendo que nem todos os empreendedores e usuários da aplicação têm experiência em gerenciamento de estoque e aplicações front-end. O Estoque no Bolso visa auxiliá-los a realizar um gerenciamento de estoque eficiente, independentemente de sua experiência anterior.
+Portanto, o público-alvo definido para a aplicação consiste em homens e mulheres responsáveis pela administração do estoque, seja como proprietários dos negócios ou como funcionários encarregados dessa tarefa.
 
-O controle eficaz de estoque é essencial para alavancar o setor de vendas e otimizar os custos operacionais. Em um cenário de e-commerce, por exemplo, uma gestão eficaz de estoque pode evitar atrasos nas entregas, garantindo que não haja falta de mercadorias. Em um contexto de mercado local, a aplicação ajuda a evitar perdas de produtos e o excesso dos mesmos, permitindo um controle mensal para reduzir gastos e garantir a qualidade dos produtos.
+Além disso, é importante ressaltar que a aplicação também tem o intuito de auxiliar os vendedores, que frequentemente dependem de informações precisas sobre a disponibilidade de produtos e suas quantidades para efetuar vendas ou estabelecer prazos para os clientes.
 
-Com um gerenciamento de estoque proporcionado pela aplicação, os usuários podem ter acesso aos produtos de forma mais rápida, ganhando agilidade no atendimento às demandas dos clientes.
 
