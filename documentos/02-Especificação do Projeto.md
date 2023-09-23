@@ -39,27 +39,37 @@ Baseando-se nos perfis de usuários, foram identificadas as seguintes histórias
 
 ## Requisitos do Projeto
 
-[Com base nas Histórias de Usuários, enumere os requisitos da solução. Lembre-se que cada requisito deve corresponder a uma, e somente uma, característica alvo da solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.]
-
 ### Requisitos Funcionais
 
-[Utilize o modelo de tabela abaixo para apresentar os requisitos funcionais]
-
-|ID    | Descrição                | Prioridade |
-|-------|---------------------------------|----|
-| RF-01 |  ...                    | ...   | 
-|  ...  |  ...                    | ...   |
+| ID    | DESCRIÇÃO DO REQUISITO                                                                                        | PRIORIDADE |
+|-------|---------------------------------------------------------------------------------------------------------------|------------|
+| RF-01 | A aplicação deve permitir ao usuário fazer o cadastro de itens                                                | ALTA       |
+| RF-02 | A aplicação deve permitir ao usuário fazer a consulta do custo dos itens                                      | MEDIA      |
+| RF-03 | A aplicação deve permitir ao usuário registrar uma venda e dar baixa no sistema.                              | ALTA       |
+| RF-04 | A aplicação deve enviar uma notificação sempre que o estoque estiver abaixo do permitido                      | MÉDIA      |
+| RF-05 | A aplicação deve permitir ao usuário atualizar a quantidade de itens no estoque                               | ALTA       |
+| RF-06 | A aplicação deve permitir ao usuário registrar a compra de um item                                            | BAIXA      |
+| RF-07 | A aplicação deve permitir ao usuário cadastrar o preço de venda de um item                                    | ALTA       |
+| RF-08 | A aplicação deve ser capaz de gerar um relatório de vendas realizadas                                         | BAIXA      |
+| RF-09 | A aplicação deve ser capaz de gerar um relatório da quantidade total dos produtos em estoque                  | ALTA       |
+| RF-10 | A aplicação deve permitir ao usuário cadastrar uma imagem do produto                                          | BAIXA      |
+| RF-11 | A aplicação deve permitir ao usuario editar, remover e arquivar algum item do estoque                         | ALTA       |
+| RF-12 | A aplicação deve permitir ao usuário cadastrar uma conta.                                                     | MÉDIA      |
+| RF-13 | A aplicação deve permitir ao usuário fazer o login da sua conta.                                              | MÉDIA      |
+| RF-14 | A aplicação deve possibilitar realizar um filtro/pesquisa para permitir ao usuário localizar itens no estoque | ALTA       |
 
 **Prioridade: Alta / Média / Baixa. 
 
-### Requisitos não Funcionais
 
-[Utilize o modelo de tabela abaixo para apresentar os requisitos não-funcionais]
+### Requisitos Não Funcionais
 
-|ID      | Descrição               |Prioridade |
-|--------|-------------------------|----|
-| RNF-01 |  ...                    | ...   | 
-| ...    |  ...                    | ...   | 
+| ID     | DESCRIÇÃO DO REQUISITO                                              | PRIORIDADE |
+|--------|---------------------------------------------------------------------|------------|
+| RNF-01 | A aplicação deve ser publicada em um ambiente com acesso à internet | ALTA       |
+| RNF-02 | A aplicação deve ser responsível com diferentes tamanhos de tela    | ALTA       |
+| RNF-03 | A aplicação deve ser compatível com diferentes navegadores          | ALTA       |
+| RNF-04 | A aplicação deve estar disponível 24 horas                          | MÉDIA      |
+| RNF-05 | A aplicação deve ser fácil e intuitiva de usar                      | ALTA       |
 
 **Prioridade: Alta / Média / Baixa. 
 
