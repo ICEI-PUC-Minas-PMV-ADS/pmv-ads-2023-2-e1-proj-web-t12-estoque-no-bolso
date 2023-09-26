@@ -12,18 +12,13 @@ Desse modo, a equipe se dispõe da sequinte forma:
 - Scrum Master: Fagner Passos.
 - Product Owner: Vinicius Moraes.
 - Equipe de Desenvolvimento: Fagner Passos, Franciany Souza, João Pedro Souza, Mariana França, Matheus Castelliano, Milton Cezario e Vinicius Moraes.
-- Equipe de Design: Matheus castelliano.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+- Equipe de Design: Matheus Castelliano.
 
 ### Processo
 
 Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello, estruturado no estilo Kanban, com as seguintes listas:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/e28e714d-7f39-49fd-84c1-b3b37302f16e)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/3c491c3f-d4f3-4892-a9ff-f128500472cf)
 
 - Links de Apoio: Lista que contém links de apoio para a equipe durante o desenvolvimento do projeto.
 - Perfis de usuário: Aqui estão listados os perfis de usuário da aplicação, para lembrar a equipe.
@@ -33,34 +28,22 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 - Aprovados pelo PO (Done): Nesta lista são colocadas as tarefas que foram aprovadas pelo PO como prontas para ser entregues ao cliente. 
 
 ### Etiquetas
+
 <p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:</p>
 
-<ul>
-  <li>Bug (Erro no código)</li>
-  <li>Desenvolvimento (Development)</li>
-  <li>Documentação (Documentation)</li>
-  <li>Gerência de Projetos (Project Management)</li>
-  <li>Infraestrutura (Infrastructure)</li>
-  <li>Testes (Tests)</li>
-</ul>
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/3f5adaee-1374-48b6-a9cf-f6ebeb8e350c)
 
-<figure> 
-  <img src="https://user-images.githubusercontent.com/100447878/164068979-9eed46e1-9b44-461e-ab88-c2388e6767a1.png"
-    <figcaption>Figura 3 - Tela do esquema de cores e categorias</figcaption>
-</figure> 
   
 ### Ferramentas
-
-[Descreva aqui as ferramentas empregadas no projeto e os ambiente de trabalho utilizados pela  equipe para desenvolvê-lo. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).]
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso                           |
-| Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | Trello          | https://trello.com/b/unR5yFCf/project-backlog              |
+| Repositório de código fonte         | GitHub                             |                           |
+| Documentos do projeto               | GitHub                             | [Documentos do projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso)                           |
+| Projeto de Interface                | Figma                              | [Figma](https://www.figma.com/proto/bLf0EhDVXRQd02w4x7Mk9N/Estoque-no-Bolso?page-id=0%3A1&type=design&node-id=18-800&viewport=759%2C10%2C0.16&t=FzBr4pn5r4gba7gk-1&scaling=contain&starting-point-node-id=18%3A800&mode=design)                            |
+| Gerenciamento do Projeto            | Trello          | [Trello](https://trello.com/b/unR5yFCf/project-backlog)              |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
