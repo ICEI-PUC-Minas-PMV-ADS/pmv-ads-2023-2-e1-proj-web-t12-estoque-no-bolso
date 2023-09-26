@@ -1,9 +1,6 @@
 
 # Metodologia
 
-Esta seção descreve a organização da equipe para a execução das tarefas do projeto e as ferramentas utilizadas para a manutenção dos códigos e demais artefatos.
-
-
 ## Gerenciamento de Projeto
 A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, pois como citam Amaral, Fleury e Isoni (2019, p. 68), seus benefícios são a
 
@@ -15,7 +12,7 @@ Desse modo, a equipe se dispõe da sequinte forma:
 - Scrum Master: Fagner Passos.
 - Product Owner: Vinicius Moraes.
 - Equipe de Desenvolvimento: Fagner Passos, Franciany Souza, João Pedro Souza, Mariana França, Matheus Castelliano, Milton Cezario e Vinicius Moraes.
-- Equipe de Design: Mariana França.
+- Equipe de Design: Matheus castelliano.
 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
@@ -24,18 +21,16 @@ Desse modo, a equipe se dispõe da sequinte forma:
 
 ### Processo
 
-Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello, estruturado com as seguintes listas:
-- Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
-- To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
-- Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
-- Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello, estruturado no estilo Kanban, com as seguintes listas:
 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/e28e714d-7f39-49fd-84c1-b3b37302f16e)
 
+- Links de Apoio: Lista que contém links de apoio para a equipe durante o desenvolvimento do projeto.
+- Perfis de usuário: Aqui estão listados os perfis de usuário da aplicação, para lembrar a equipe.
+- Backlog priorizado: Todas as atividades identificadas no decorrer do projeto devem ser incorporadas a esta lista. Funciona como Product Backlog. 
+- Sprint: Esta lista representa o Sprint Backlog. Este é o Sprint que a equipe está trabalhando atualmente. 
+- Hoje (Doing): Aqui a equipe seleciona as tarefas que realizarão naquele dia. São tarefas que são puxadas do Sprint 
+- Aprovados pelo PO (Done): Nesta lista são colocadas as tarefas que foram aprovadas pelo PO como prontas para ser entregues ao cliente. 
 
 ### Etiquetas
 <p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:</p>
