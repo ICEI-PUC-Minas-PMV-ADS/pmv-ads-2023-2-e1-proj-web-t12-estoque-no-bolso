@@ -34,11 +34,7 @@ Atualmente, apesar da crescente expansão tecnológica, algumas empresas ainda p
  
 O bom gerenciamento de almoxarifado é um dos pré-requisitos para um bom funcionamento de uma empresa, o controle de estoque eletrônico possibilitaria a unificação de todos os dados de almoxarifado ocasionando um controle mais exato de tudo o que perpassa pela empresa. Ademais também seria possível armazenar os dados, entendendo sobre os ganhos, necessidades e perdas que poderiam ser divididos por período.
 
-Porém, a complexidade de uso e o alto custo dos sistemas atuais que fornecem esse tipo de serviço impossibilitam que muitas empresas, especialmente as de menor porte, agreguem este tipo de funcionalidade à sua forma de trabalho.
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/ed208c9b-e88a-4482-86eb-5ab4e0ba9232)
-
-
- 
+Porém, a complexidade de uso e o alto custo dos sistemas atuais que fornecem esse tipo de serviço impossibilitam que muitas empresas, especialmente as de menor porte, agreguem este tipo de funcionalidade à sua forma de trabalho. 
 
 ## Público-Alvo
 
@@ -49,8 +45,6 @@ Para melhor entendimento do público-alvo foi realizada uma pesquisa qualitativa
 Outro ponto importante foi que algumas dessas microempresas não conseguiam encaixar o controle de estoque em suas rotinas cotidianas. Em muitos casos o dono era responsável pela maioria das atividades importantes e devido a tantas tarefas não conseguia monitorar o seu estoque de forma estratégica. 
 
 Foi percebido a necessidade de uma aplicação de controle de estoque simples e funcional, com uma usabilidade intuitiva independentemente do perfil do usuário. Além disso os microempreendedores tem a demanda de uma aplicação não precise de muita manutenção, gerando mais acessibilidade e um menor custo de repasse. A qualidade e a viabilidade da gestão de estoque depende dos recursos utilizados. Com um estoque de mercadorias organizado, o cliente poderá ter acesso aos produtos de forma mais rápida e o vendedor mais agilidade para atendê-lo em sua demanda.
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/453a4573-3d4f-4687-bb9b-c0e0456f8a66)
 
 
 
