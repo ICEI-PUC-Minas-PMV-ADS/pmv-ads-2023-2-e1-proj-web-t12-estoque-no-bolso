@@ -40,10 +40,15 @@ Outrossim, o alto custo dos sistemas atuais que fornecem esse tipo de serviço i
 
 ## Público-Alvo
 
-A aplicação "Estoque no Bolso" foi desenvolvida com o propósito de atender às necessidades das micro e pequenas empresas que se dedicam ao comércio de uma variedade de produtos e serviços. Seu enfoque principal é facilitar o gerenciamento de estoque para um público que pode ter menos familiaridade com educação e tecnologia avançada. Isso se justifica pelo fato de que esse segmento empresarial é um dos que mais cresce no Brasil, conforme constatado em uma pesquisa conduzida pelo SEBRAE em abril de 2023.
+Embora a necessidade de controle de estoque seja fundamental para qualquer negócio, o presente trabalho tem como enfoque os microempreendedores e as microempresas, buscando auxiliá-los a alcançar um efetivo gerenciamento de seu estoque.
 
-Portanto, o público-alvo definido para a aplicação consiste em homens e mulheres responsáveis pela administração do estoque, seja como proprietários dos negócios ou como funcionários encarregados dessa tarefa.
+Para melhor entendimento do público-alvo foi realizada uma pesquisa qualitativa, com microempreendedores, que possuíam estoque em sua empresa. Entre os pontos identificados pela pesquisa destaca-se o fato de que os pequenos empreendedores ou não possuem um controle de estoque digital ou possuem um controle de estoque digital, mas que não é efetivamente usado.
 
-Além disso, é importante ressaltar que a aplicação também tem o intuito de auxiliar os vendedores, que frequentemente dependem de informações precisas sobre a disponibilidade de produtos e suas quantidades para efetuar vendas ou estabelecer prazos para os clientes.
+Outro ponto importante foi que algumas dessas microempresas não conseguiam encaixar o controle de estoque em suas rotinas cotidianas. Em muitos casos o dono era responsável pela maioria das atividades importantes e devido a tantas tarefas não conseguia monitorar o seu estoque de forma estratégica. 
+
+Foi percebido a necessidade de uma aplicação de controle de estoque simples e funcional, com uma usabilidade intuitiva independentemente do perfil do usuário. Além disso os microempreendedores tem a demanda de uma aplicação não precise de muita manutenção, gerando mais acessibilidade e um menor custo de repasse. A qualidade e a viabilidade da gestão de estoque depende dos recursos utilizados. Com um estoque de mercadorias organizado, o cliente poderá ter acesso aos produtos de forma mais rápida e o vendedor mais agilidade para atendê-lo em sua demanda.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/453a4573-3d4f-4687-bb9b-c0e0456f8a66)
+
 
 
