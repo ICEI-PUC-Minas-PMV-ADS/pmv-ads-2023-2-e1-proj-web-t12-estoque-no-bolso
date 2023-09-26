@@ -28,13 +28,15 @@ Como objetivos específicos podemos listar:
 
  
 
-Atualmente, apesar da crescente expansão tecnológica, algumas empresas ainda possuem sistemas de controle de estoque que vem demonstrando ser ineficazes em vista do potencial que poderiam atingir com a utilização de um sistema ágil, atualizável e tecnológico. Segundo o autor Bruno Paoleschi em sua obra “Almoxarifado e gestão de estoque”: 
+Atualmente, apesar da crescente expansão tecnológica, algumas empresas ainda possuem sistemas de controle de estoque que ineficazes, que não alcançam o potencial que poderiam atingir se houvesse a utilização de um sistema ágil, atualizável e tecnológico. Segundo o autor Bruno Paoleschi em sua obra “Almoxarifado e gestão de estoque”:
+ 
+[...] com o aumento cada vez maior da concorrência, torna-se imprescindível para a manutenção o uso da lógica nas operações e nas ações empresariais em todos os níveis de atuação. Assim aqueles que, nesse ambiente, deixam de buscar um grau de serviço compatível com as necessidades do mercado, fatalmente estão fadados a perdas que, em alguns casos, podem significar a sucumbência.
+ 
+O bom gerenciamento de almoxarifado é um dos pré-requisitos para um bom funcionamento de uma empresa, o controle de estoque eletrônico possibilitaria a unificação de todos os dados de almoxarifado ocasionando um controle mais exato de tudo o que perpassa pela empresa. Ademais também seria possível armazenar os dados, entendendo sobre os ganhos, necessidades e perdas que poderiam ser divididos por período.
 
-[...] com o aumento cada vez maior da concorrência, torna-se imprescindível para a manutenção o uso da lógica nas operações e nas ações empresariais em todos os níveis de atuação. Assim aqueles que, nesse ambiente, deixam de buscar um grau de serviço compatível com as necessidades do mercado, fatalmente estão fadados a perdas que, em alguns casos, podem significar a sucumbência. 
+Porém, a complexidade de uso e o alto custo dos sistemas atuais que fornecem esse tipo de serviço impossibilitam que muitas empresas, especialmente as de menor porte, agreguem este tipo de funcionalidade à sua forma de trabalho.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/ed208c9b-e88a-4482-86eb-5ab4e0ba9232)
 
-Tendo em vista que a economia atualmente cresce exponencialmente com a tecnologia, é axiomático que existe uma demanda para que as empresas consigam de fato, acompanhar o mercado. Levando em conta que um bom gerenciamento de almoxarifado é um dos pré-requisitos para um bom funcionamento de uma empresa, o controle de estoque eletrônico possibilitaria a unificação de todos os dados de almoxarifado ocasionando na ciência exata de tudo o que perpassa pela empresa. Ademais também seria possível armazenar os dados, entendendo sobre os ganhos, necessidades e perdas que poderiam ser divididos por período. 
-
-Outrossim, o alto custo dos sistemas atuais que fornecem esse tipo de serviço impossibilita que muitas empresas, especialmente as de menor porte, agreguem este tipo de funcionalidade à sua forma de trabalho. A priori a aplicação deverá ser simples e funcional, de modo que sua usabilidade seja intuitiva independentemente do perfil do usuário e que a aplicação não precise de muita manutenção, gerando mais acessibilidade e um menor custo de repasse. 
 
  
 
