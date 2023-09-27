@@ -5,9 +5,9 @@
 
 Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de navegação do usuário na aplicação. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
 
-![User Flow -  Estoque no Bolso v2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/101217240/87b3b22a-42cf-4139-a7cb-2c43eda2e987)
+![User Flow -  Estoque no Bolso v3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/101217240/c01a9433-a239-4ea9-b185-1d8867e0db53)
 
-[User Flow -  Estoque no Bolso v2.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/files/12709707/User.Flow.-.Estoque.no.Bolso.v2.pdf)
+[User Flow -  Estoque no Bolso v3.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/files/12743730/User.Flow.-.Estoque.no.Bolso.v3.pdf)
 
 
 ## Protótipo
