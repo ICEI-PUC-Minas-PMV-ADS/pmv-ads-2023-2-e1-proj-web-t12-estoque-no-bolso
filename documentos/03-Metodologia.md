@@ -16,9 +16,11 @@ Desse modo, a equipe se dispõe da sequinte forma:
 
 ### Processo
 
-Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello, estruturado no estilo Kanban, com as seguintes listas:
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello (Figura 1), estruturado no estilo Kanban, com as seguintes listas:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/3c491c3f-d4f3-4892-a9ff-f128500472cf)
+
+Figura 1 - Quadro Kanban no Trello.
 
 - Links de Apoio: Lista que contém links de apoio para a equipe durante o desenvolvimento do projeto.
 - Perfis de usuário: Aqui estão listados os perfis de usuário da aplicação, para lembrar a equipe.
@@ -29,10 +31,11 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 ### Etiquetas
 
-<p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:</p>
+<p>As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias da imagem abaixo:</p>
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/3f5adaee-1374-48b6-a9cf-f6ebeb8e350c)
 
+Figura 2 - Legenda de etiquetas do quadro kanban
   
 ### Ferramentas
 
