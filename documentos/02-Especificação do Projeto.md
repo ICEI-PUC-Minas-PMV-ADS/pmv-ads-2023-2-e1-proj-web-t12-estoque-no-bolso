@@ -5,11 +5,11 @@
 
 | PERFIL     | DESCRIÇÃO                                   | NECESSIDADE                                                                                                                                                  |
 |------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| VENDEDOR   | Pessoa responsável por vendas.              | 1. Consultar o quantidade de itens em estoque 2. Consultar preço dos produtos 3. Consultar valor de custo de produtos 4. Registra venda                      |
+| VENDEDOR   | Pessoa responsável por vendas.              | 1. Consultar o quantidade de itens em estoque 2. Consultar preço dos produtos 3. Consultar valor de custo de produtos 4. Registrar vendas.                      |
 | GESTOR     | Gestor do empreendimento.                   | 1. Consultar vendas 2. Consultar historico de compras feitas 3. Consultar quantidade de itens em estoque 4. Ser alertado em caso de estoque abaixo do limite |
 | ESTOQUISTA | Pessoa responsável por controle de estoque. | 1. Consultar o estoque 2. Fazer balanço de estoque 3. atualizar saldo de estoque 4. Registrar entrada e saída de itens                                       |
 
-Vale ressaltar que, por se tratar de micro e pequenas empresas, há casos em que o proprietário realiza todas as funções. Portanto, o este se enquadra em todos os perfis. 
+Vale ressaltar que, por se tratar de micro e pequenas empresas, há casos em que o proprietário realiza todas as funções. Portanto, o mesmo se enquadra em todos os perfis. 
 
 
 ## Histórias de Usuários
