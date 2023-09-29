@@ -10,8 +10,8 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 
 Desse modo, a equipe se dispõe da sequinte forma:
 - Scrum Master: Fagner Passos.
-- Product Owner: Vinicius Moraes.
-- Equipe de Desenvolvimento: Fagner Passos, Franciany Souza, João Pedro Souza, Mariana França, Matheus Castelliano, Milton Cezario e Vinicius Moraes.
+- Product Owner: Vinícius Moraes.
+- Equipe de Desenvolvimento: Fagner Passos, Franciany Souza, João Pedro Souza, Mariana França, Matheus Castelliano, Milton Cezario e Vinícius Moraes.
 - Equipe de Design: Matheus Castelliano.
 
 ### Processo
