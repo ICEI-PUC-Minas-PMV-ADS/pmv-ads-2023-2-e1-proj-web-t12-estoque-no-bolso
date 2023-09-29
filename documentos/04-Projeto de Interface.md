@@ -92,7 +92,7 @@ Figura 8 - Tela de Vendas
 ---
 ## Tela de Relatórios
 
-Esta tela apresenta uma dashboard com dados dos produtos, vendas e estoque e permite geração de relatórios.
+Esta tela apresenta uma dashboard com dados dos produtos, vendas, estoque e permite geração de relatórios.
 
 ![Tela - Relatórios](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/bc625ac6-b1ae-4f8f-9e44-f967f1ba0261)
 
