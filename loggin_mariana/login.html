@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;title&gt;Login&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"</p>
+<p class="p1"><span class="Apple-tab-span">	</span> crossorigin="anonymous"&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;div id="login"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;h3 class="text-center text-white pt-5"&gt;Novo Usuário&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div id="login-row" class="row justify-content-center align-items-center"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div id="login-column" class="col-md-6"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div id="login-box" class="col-md-12"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;form id="login-form" class="form" method="post" onsubmit="loginUser (this)"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;h3 class="text-center text-info"&gt;Login&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;label for="username" class="text-info"&gt;Usuário&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input type="text" name="username" id="username" class="form-control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label for="password" class="text-info"&gt;Senha&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input type="text" name="password" id="password" class="form-control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="form-group text-right"&gt; <span class="Apple-converted-space">                               </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input type="submit" name="submit" class="btn btn-info btn-md" value="submit"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal"&gt;Novo usuario&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt; <span class="Apple-converted-space">   </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Modal --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="modal-dialog" role="document"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="modal-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modal-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h5 class="modal-title" id="loginModalLabel"&gt;Login App&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modal-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="login-box" class="col-md-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;form id="login-form" class="form" method="post" onsubmit="loginUser (this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-center text-info"&gt;Novo usuário&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="login" class="text-info"&gt;Usuário&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="txt_login" id="txt_login" class="form-control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="nome" class="text-info"&gt;Nome completo&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="txt_nome" id="txt_nome" class="form-control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="email" class="text-info"&gt;email&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" name="txt_email" id="txt_email" class="form-control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="senha" class="text-info"&gt;Senha&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="password" name="txt_senha" id="txt_senha" class="form-control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="senha2" class="text-info"&gt;Confirmação de Senha&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="password" name="txt_senha2" id="txt_senha2" class="form-control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modal-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Cancelar&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" id="btn_salvar" class="btn btn-info"&gt;Salvar&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="login.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Declara uma função para processar o formulário de login</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function processaFormLogin (event) { <span class="Apple-converted-space">               </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Cancela a submissão do formulário para tratar sem fazer refresh da tela</p>
+<p class="p1"><span class="Apple-converted-space">                </span>event.preventDefault ();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Obtem os dados de login e senha a partir do formulário de login</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var username = document.getElementById('username').value;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var password = document.getElementById('password').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Valida login e se estiver ok, redireciona para tela inicial da aplicação</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resultadoLogin = loginUser (username, password);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (resultadoLogin) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>window.location.href = 'index.html';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else { // Se login falhou, avisa ao usuário</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert ('Usuário ou senha incorretos');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function salvaLogin (event) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Cancela a submissão do formulário para tratar sem fazer refresh da tela</p>
+<p class="p1"><span class="Apple-converted-space">            </span>event.preventDefault ();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Obtem os dados do formulário</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let login<span class="Apple-converted-space">  </span>= document.getElementById('txt_login').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let nome <span class="Apple-converted-space">  </span>= document.getElementById('txt_nome').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let email<span class="Apple-converted-space">  </span>= document.getElementById('txt_email').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let senha<span class="Apple-converted-space">  </span>= document.getElementById('txt_senha').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let senha2 = document.getElementById('txt_senha2').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (senha != senha2) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert ('As senhas informadas não conferem.');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Adiciona o usuário no banco de dados</p>
+<p class="p1"><span class="Apple-converted-space">            </span>addUser (nome, login, senha, email);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert ('Usuário salvo com sucesso. Proceda com o login para ');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Oculta a div modal do login</p>
+<p class="p1"><span class="Apple-converted-space">            </span>//document.getElementById ('loginModal').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>$('#loginModal').modal('hide');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Associa a funçao processaFormLogin<span class="Apple-converted-space">  </span>formulário adicionado um manipulador do evento submit</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById ('login-form').addEventListener ('submit', processaFormLogin);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Associar salvamento ao botao</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin); <span class="Apple-converted-space">       </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"&gt;&lt;/script&gt; <span class="Apple-converted-space">   </span></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
