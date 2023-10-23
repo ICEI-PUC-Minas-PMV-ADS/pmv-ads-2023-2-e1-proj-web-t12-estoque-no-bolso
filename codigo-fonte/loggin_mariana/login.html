@@ -64,6 +64,11 @@
                         <input type="text" name="txt_email" id="txt_email" class="form-control">
                     </div>
                     <div class="form-group">
+                      <label for="acesso" class="text-info">Cargo - Digite: vendedor ou estoquista ou gerente</label><br>
+                      <input type="text" name="txt_acesso" id="txt_acesso" class="form-control">
+                        
+                    </div>
+                    <div class="form-group">
                         <label for="senha" class="text-info">Senha</label><br>
                         <input type="password" name="txt_senha" id="txt_senha" class="form-control">
                     </div>
@@ -71,13 +76,7 @@
                         <label for="senha2" class="text-info">Confirmação de Senha</label><br>
                         <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label INPUT type="radio" name="acesso" value="estoquista" checked>Função<br>
-                        <INPUT type="radio" name="acesso" value="estoquista" class="text-info"> Estoquista<br>
-                        <INPUT type="radio" name="acesso" value="vendedor"> Vendedor<br>
-                        <INPUT type="radio" name="acesso" value="gerente"> Gerente</P></label>
-                        
-                    </div>
+                    
                 </form>
             </div>
         </div>
@@ -119,7 +118,7 @@
             let login  = document.getElementById('txt_login').value;
             let nome   = document.getElementById('txt_nome').value;
             let email  = document.getElementById('txt_email').value;
-            let acesso = document.getElementsByTagName('acesso').value;
+            let acesso = document.getElementById('txt_acesso').value;
             let senha  = document.getElementById('txt_senha').value;
             let senha2 = document.getElementById('txt_senha2').value;
             if (senha != senha2) {
