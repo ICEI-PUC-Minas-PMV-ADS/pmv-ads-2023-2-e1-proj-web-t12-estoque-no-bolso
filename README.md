@@ -11,12 +11,10 @@ Nosso principal foco é a concepção de um aplicativo de fácil usabilidade e b
 ## Integrantes
 
 * Fagner Oliveira Passos
-* Franciany Kellyane de Souza
 * João Pedro Soares Lobo de Souza
 * Mariana Batista França Ferreira
 * Matheus Reis Castelliano
 * Milton Cezario da Silva
-* Vinicius da Silva Moraes
 
 ## Orientador
 
