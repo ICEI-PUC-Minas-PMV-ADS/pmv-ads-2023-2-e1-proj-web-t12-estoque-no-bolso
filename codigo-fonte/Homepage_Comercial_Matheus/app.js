@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let idCounter = 1; // Inicialize um contador de IDs
 
   // Verificar se estamos na página index.html
-  if (window.location.pathname.includes("../index.html")) {
+  if (window.location.pathname.includes("/index.html")) {
     // Função para salvar o formulário da página "index.html"
     document.querySelector('#contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
