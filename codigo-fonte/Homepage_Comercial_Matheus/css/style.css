@@ -1,0 +1,211 @@
+:root{
+    --cor-do-texto: #30323d;
+    --cor-do-hover: #e8c547;
+    --cor-do-fundo: #fafafa;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--cor-do-texto); 
+    background: var(--cor-do-fundo);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif; /* Fonte do Google Fonts */
+    color: #30323D;
+}
+
+header{
+    background: #7c81a0;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+}
+
+/* Estilos para o menu na direita */
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#logomenu {
+    block-size: 100px;
+    padding-right: 200px;
+}
+
+
+#logomenu:hover{ 
+    block-size: 110px;
+}
+
+nav{
+ margin-top: 70px;
+ position: sticky;
+    top: 0;
+}
+
+nav li{ /*nav li (lista) sao os itens da lista*/
+    display: inline;
+    line-height: 150%;
+    margin: 0 0 0 10px; /*margens são topo, direita, baixo e esquerda*/
+}
+
+nav a{ /*nav a (ancora) sao os links dentro da lista (nav li) */
+    text-transform: uppercase;
+    color: var(--cor-do-texto);
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: var(--cor-do-hover);
+    font-size: 20px; /*adicionei sozinho*/
+}
+
+nav li{ /*nav li (lista) sao os itens da lista*/
+    display: inline;
+    margin: 0 0 0 15px; /*margens são topo, direita, baixo e esquerda*/
+}
+
+/* Estilos para a logo na esquerda */
+.logo {
+    order: -1;
+    margin-right: auto;
+}
+
+
+
+/* Estilização do banner (você pode adicionar mais estilos conforme necessário) */
+#banner {
+    text-align: center;
+    padding: 40px 20px 15px;
+}
+
+#imgbanner {
+    /* width: 940px; */
+    max-width: 100%; /* Para garantir que a imagem do banner se ajuste à largura do contêiner */
+}
+
+
+#bem-vindo{
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#inicio {
+    display: inline-flex;
+    align-items: center;
+    padding: 30px;
+}
+
+#imgrelatorio{
+    width: 100%;
+}
+
+#listacorpo {
+    text-align: left;
+    line-height: 150%;
+    padding-left: 10px;
+    padding-top: 10px;
+    list-style: circle;
+}
+
+#listacorpo2 {
+    text-align: left;
+    line-height: 150%;
+    padding-left: 130px;
+    padding-top: 10px;
+    list-style: circle;
+}
+
+#planoseprecos{
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#preco{
+    display: inline-flex;
+    align-items: center;
+    padding: 30px;
+}
+
+#sobrenos {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#corposobrenos{
+    padding: 25px 40px;
+    text-align:center;
+}
+
+#preco {
+    display: inline-flex;
+    align-items: center;
+}
+
+.conteudo {
+    width: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.conteudo h2{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: start;
+    line-height: 1.5;
+}
+
+.corpo b {
+    font-weight: bold;
+}
+
+.corpo h2 {
+    font-weight: bold;
+    font-size: large;
+}
+
+.corpo{
+    padding: 25px;
+    background-color: #EDEDED; /* Cor de fundo do corpo */
+    margin: 20px;
+    text-align: center;
+}
+
+#contact-form{
+    padding: 30px;
+    line-height: 250%;
+}
+
+
+#footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: #4d5061; /* Cor de fundo do footer */
+}
+
+.copyright {
+    color: var(--cor-do-fundo);
+}
+
+@media screen and (max-width: 480px) {
+    .menu{
+        width: auto;
+    }
+}

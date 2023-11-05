@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Contatos</title>
+        <link rel="stylesheet" href="reset/reset.css">
+        <link rel="stylesheet" href="../css/style.css"> <!-- Certifique-se de vincular seu arquivo CSS apropriado aqui -->
+        <meta name="author" content= "Matheus Castelliano">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <h1>
+                    <a href="../../index.html"><img src="../img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
+                </h1>
+                <!--Preciso adicionar a logo aqui em cima-->
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Início</a></li>
+                        <li><a href="#preco">Preço</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#pagina-de-login.html">Login</a> <!-- Link para a página de login (a ser criada posteriormente) -->
+                        <li><a href="FormularioDeContato.html">Lista de Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="lsta-contatos">
+            <div class="conteudo">
+                <h2>Lista de Contatos</h2>
+                <!-- Botões de Ação -->
+                <!-- Search bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button id="pesquisar">Pesquisar</button>
+                </div>
+                <div class="acoes">
+                    <!-- <button id="editar">Editar</button> -->
+                    <button id="excluir">Excluir</button>
+                </div>
+                <table id="listaContatos">
+                    <thead>
+                    <tr>
+                        <th></th> <!-- Coluna para checkbox -->
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>WhatsApp</th>
+                        <th>Mensagem</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tabelaDeContatos">
+                    <!-- Os contatos serão exibidos aqui -->
+                    </tbody>
+                </table>   
+                <p id="no-messages-message" style="display: none;">Não há mensagens pendentes</p>
+         
+            </div>
+        </section>
+
+        <script src="../app.js"></script>
+    </body>
+</html>
