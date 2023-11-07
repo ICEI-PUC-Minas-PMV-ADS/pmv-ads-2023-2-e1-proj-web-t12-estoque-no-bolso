@@ -4,21 +4,39 @@ body {
             margin: 0;
             padding: 0;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 10px; /* saber a quantidade necessaria para ajustar */
-        }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px; /* saber a quantidade necessaria para ajustar */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li{ /*nav li (lista) sao os itens da lista*/
+    display: inline-flex;
+    line-height: 150%;
+    margin: 0 0 0 10px; /*margens são topo, direita, baixo e esquerda*/
+}
+
+nav a{
+    padding: 30px;
+    color: #FAFAFA;
+    text-decoration: none;
+    
+}
+
 .titulo{
     color: #FAFAFA;
-
-text-align: center;
-font-family: Inter;
-font-size: 12px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }        
 .estoque, .vendas, .relatorios {
     color: #FAFAFA;

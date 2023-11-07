@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header{
-    background: #7c81a0;
+    background: var(--cor-do-fundo);
     padding: 30px;
     position: sticky;
     top: 0;
@@ -39,8 +39,8 @@ header{
 }
 
 nav{
- margin-top: 70px;
- position: sticky;
+    margin-top: 70px;
+    position: sticky;
     top: 0;
 }
 
