@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Recuperar os dados dos contatos do localStorage
   const contatos = JSON.parse(localStorage.getItem('contatos')) || [];
-  // let idCounter = 1; // Inicialize um contador de IDs
-  let idCounter = idCounter;  
+  let idCounter = 1; // Inicialize um contador de IDs
+  // let idCounter = idCounter;  
 
 
   // Verificar se estamos na página index.html
