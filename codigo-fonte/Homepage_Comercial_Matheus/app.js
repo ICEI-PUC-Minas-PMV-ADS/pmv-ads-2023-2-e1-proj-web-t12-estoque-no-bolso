@@ -1,55 +1,58 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Recuperar os dados dos contatos do localStorage
   const contatos = JSON.parse(localStorage.getItem('contatos')) || [];
-  let idCounter = 1; // Inicialize um contador de IDs
+  // let idCounter = 1; // Inicialize um contador de IDs
+  let idCounter = idCounter;  
+
 
   // Verificar se estamos na página index.html
   if (window.location.pathname.includes("/index.html")) {
+      
     // Função para salvar o formulário da página "index.html"
-    document.querySelector('#contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
+      document.querySelector('#contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
 
-      // Coletar os dados do formulário
-      const nome = document.querySelector('#nome').value;
-      const email = document.querySelector('#email').value;
-      const telefone = document.querySelector('#telefone').value;
-      const mensagem = document.querySelector('#mensagem').value;
-      const whatsapp = document.querySelector('#whatsapp').value;
+        // Coletar os dados do formulário
+        const nome = document.querySelector('#nome').value;
+        const email = document.querySelector('#email').value;
+        const telefone = document.querySelector('#telefone').value;
+        const mensagem = document.querySelector('#mensagem').value;
+        const whatsapp = document.querySelector('#whatsapp').value;
 
-      // Verificar se o nome e o email foram preenchidos
-      if (nome && email) {
-        // Criar um objeto de contato com um ID único
-        const contato = {
-          id: idCounter, // Use o contador como ID
-          nome,
-          email,
-          telefone,
-          whatsapp,
-          mensagem
-        };
+        // Verificar se o nome e o email foram preenchidos
+        if (nome && email) {
+          // Criar um objeto de contato com um ID único
+          const contato = {
+            id: idCounter, // Use o contador como ID
+            nome,
+            email,
+            telefone,
+            whatsapp,
+            mensagem
+          };
 
-        // Incrementar o contador para o próximo ID único
-        idCounter++;
+          // Incrementar o contador para o próximo ID único
+          idCounter++;
 
-        // Adicionar o contato à lista
-        contatos.push(contato);
+          // Adicionar o contato à lista
+          contatos.push(contato);
 
-        // Salvar os contatos no localStorage
-        localStorage.setItem('contatos', JSON.stringify(contatos));
+          // Salvar os contatos no localStorage
+          localStorage.setItem('contatos', JSON.stringify(contatos));
 
-        // Limpar o formulário
-        document.querySelector('#nome').value = '';
-        document.querySelector('#email').value = '';
-        document.querySelector('#telefone').value = '';
-        document.querySelector('#whatsapp').value = '';
-        document.querySelector('#mensagem').value = '';
+          // Limpar o formulário
+          document.querySelector('#nome').value = '';
+          document.querySelector('#email').value = '';
+          document.querySelector('#telefone').value = '';
+          document.querySelector('#whatsapp').value = '';
+          document.querySelector('#mensagem').value = '';
 
-        // Exibir uma mensagem de confirmação
-        document.querySelector('#confirmation-message').textContent = 'Contato salvo com sucesso!';
-      } else {
-        // Exibir mensagem de erro se nome e email não forem preenchidos
-        document.querySelector('#confirmation-message').textContent = 'Por favor, preencha o nome e o email.';
-      }
+          // Exibir uma mensagem de confirmação
+          document.querySelector('#confirmation-message').textContent = 'Contato salvo com sucesso!';
+        } else {
+          // Exibir mensagem de erro se nome e email não forem preenchidos
+          document.querySelector('#confirmation-message').textContent = 'Por favor, preencha o nome e o email.';
+        }
     });
   }
 
@@ -165,5 +168,15 @@ document.addEventListener("DOMContentLoaded", function() {
       // Atualizar a tabela de contatos
       atualizarListaDeContatos();
     });
+  }
+
+
+  // verifica se estamos na página pag_produtos.html
+  if (window.location.pathname.includes("pag_produtos.html")) {
+    
+  }  
+
+  // verifca se estamos na página pag_vendas.html
+  if (window.location.pathname.includes("pag_vendas.html")) {
   }
 });

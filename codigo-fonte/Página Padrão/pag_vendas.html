@@ -33,8 +33,38 @@
             </div>
         </header>
         
-        <section class="corpo">
-                <H1>Esta é a Página de Vendas!</H1>
+
+        <section id="lista-produtos">
+            <div class="conteudo">
+                <h2>Adicione o produto desejado no carrinho</h2>
+                <!-- Botões de Ação -->
+                <!-- Search bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button id="pesquisar">Pesquisar</button>
+                </div>
+                <div class="acoes">
+                    <!-- <button id="editar">Editar</button> -->
+                    <button id="adicionar">Adicionar ao Carrinho</button>
+                </div>
+                <table id="produtosVendas">
+                    <thead>
+                    <tr>
+                        <th></th> <!-- Coluna para checkbox -->
+                        <th>ID</th>
+                        <th>Produto</th>
+                        <th>Estoque</th>
+                        <th>Custo</th>
+                        <th>Preço</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tabelaPrudotosVendas">
+                    <!-- Os produtos cadastrados serão exibidos aqui -->
+                    </tbody>
+                </table>   
+                <p id="no-products-message" style="display: none;">Não há produtos cadastrados</p>
+         
+            </div>
         </section>
 
         <script src="../app.js"></script>
