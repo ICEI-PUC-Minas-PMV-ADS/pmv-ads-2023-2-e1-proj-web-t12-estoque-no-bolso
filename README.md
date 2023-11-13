@@ -14,7 +14,7 @@ Nosso principal foco é a concepção de um aplicativo de fácil usabilidade e b
 * João Pedro Soares Lobo de Souza
 * Mariana Batista França Ferreira
 * Matheus Reis Castelliano
-* Milton Cezario da Silva
+
 
 ## Orientador
 
