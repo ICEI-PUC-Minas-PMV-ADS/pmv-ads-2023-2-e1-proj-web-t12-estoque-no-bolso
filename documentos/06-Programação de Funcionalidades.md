@@ -55,10 +55,10 @@ cadastro_usuarios.html
 
 #### Instruções de acesso
 
-O cadastro de usuário será feito através do menu login, que possui a opção de cadastrar novo usuário.
-Abra o menu de login. 
-Clique novo usuário. 
-Insira os dados. 
+O cadastro de usuário será feito através do menu login, que possui a opção de cadastrar novo usuário:
+- Abra o menu de login. 
+- Clique novo usuário. 
+- Insira os dados. 
 
 
 #### Responsável
@@ -66,14 +66,9 @@ Insira os dados.
 Mariana França
 
 
-
-
-
-
 ### Tela de usuários cadastrados
 
 ![Captura de tela 2023-11-15 070228](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/2aab2e7a-cd8c-4f88-a45c-73f880957129)
-
 
 
 #### Link de acesso
@@ -83,7 +78,6 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque
 #### Observações
 
 Os usuários cadastrados e as informações relativas a ele deverão ficar disponíveis.
-
 
 #### Responsável
 
@@ -117,7 +111,6 @@ Após entrar no link acima, role até o final da página para encontrar o formul
 Matheus Castelliano
 
 
-
 ### Tela Lista de Contatos (RF-15)
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/4e39679d-2c9f-4ab6-baf6-fe29fc69916a)
@@ -139,15 +132,37 @@ RF-15	A aplicação deve possibilitar realizar potênciais clientes entratrem em
 
 Depois de preencher o formulário de contato, acesse o link acima, para encontrar a tabela com os contatos e mensagens.
 
-
 #### Responsável
 
 Matheus Castelliano
 
+### Pagina Home Page Após Login
 
-> **Links Úteis**:
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+#### Requisitos Atendidos:
+
+RNF-05: A aplicação deve ser fácil e intuitiva de usar 
+
+#### Artefatos de Funcionalidades: 
+
+- Home_logado.html
+- Script.js
+- Style.css
+  
+#### link de acesso:
+
+[Home Logado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/HomePage_Logado_Fagner/home_logado.html)
+
+#### Instruções de acesso:
+
+Abra a Home do projeto (GitHub/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/Homepage_Comercial_Matheus/Login/index.html) Clique na aba login, efetue o login. 
+
+#### Responsável
+
+Fagner Passos
+
+##### Tela Home Logado:
+
+![image](https://user-images.githubusercontent.com/58199879/271438380-dfa1d087-1358-4b5d-9471-80ec3ae3cfb3.png)
+
+
 
