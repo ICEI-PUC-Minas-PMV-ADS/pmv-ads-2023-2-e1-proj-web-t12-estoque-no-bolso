@@ -33,11 +33,6 @@ Efetue o login, só é aceito login de usuários cadastrados
 Mariana França
 
 
-
-
-
-
-
 ### Tela de cadastro de usuários (RF12)
 
 ![Captura de tela 2023-11-15 064900](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/07e47cda-ca2b-4a79-9cbc-b8fa59ff3445)
@@ -85,7 +80,7 @@ Mariana França
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/loggin_mariana/registro_de_usuarios.html
 
-#### observações
+#### Observações
 
 Os usuários cadastrados e as informações relativas a ele deverão ficar disponíveis.
 
@@ -94,12 +89,60 @@ Os usuários cadastrados e as informações relativas a ele deverão ficar dispo
 
 Mariana França
 
+### Tela Home Page Comercial (RF-15)
+
+Esta é a tela inicial do projeto.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/56f50b96-e6b3-4130-a3b9-2126f8e0e34b)
+
+#### Requisitos atendidos: 
+
+RF-15	A aplicação deve possibilitar realizar potênciais clientes entratrem em contato	BAIXA
+
+#### Artefatos da funcionalidade
+
+- index.html
+- app.js
+
+#### Link de acesso
+
+[index.html](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/index.html)
+
+#### Instruções de acesso
+
+Após entrar no link acima, role até o final da página para encontrar o formulário de contato.
+
+#### Responsável
+
+Matheus Castelliano
 
 
 
+### Tela Lista de Contatos (RF-15)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/4e39679d-2c9f-4ab6-baf6-fe29fc69916a)
+
+#### Requisitos atendidos: 
+
+RF-15	A aplicação deve possibilitar realizar potênciais clientes entratrem em contato	BAIXA
+
+#### Artefatos da funcionalidade
+
+- FormularioDeContato.html
+- app.js
+
+#### Link de acesso
+
+[FormularioDeContato.html]([https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/index.html](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/Homepage_Comercial_Matheus/pages/FormularioDeContato.html))
+
+#### Instruções de acesso
+
+Depois de preencher o formulário de contato, acesse o link acima, para encontrar a tabela com os contatos e mensagens.
 
 
+#### Responsável
 
+Matheus Castelliano
 
 
 > **Links Úteis**:
