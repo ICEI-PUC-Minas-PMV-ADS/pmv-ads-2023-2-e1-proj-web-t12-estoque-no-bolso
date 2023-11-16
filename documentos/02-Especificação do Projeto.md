@@ -57,6 +57,8 @@ Baseando-se nos perfis de usuários, foram identificadas as seguintes histórias
 | RF-12 | A aplicação deve permitir ao usuário cadastrar uma conta.                                                     | MÉDIA      |
 | RF-13 | A aplicação deve permitir ao usuário fazer o login da sua conta.                                              | MÉDIA      |
 | RF-14 | A aplicação deve possibilitar realizar um filtro/pesquisa para permitir ao usuário localizar itens no estoque | ALTA       |
+| RF-15 | A aplicação deve possibilitar realizar potênciais clientes entratrem em contato | BAIXA       |
+
 
 **Prioridade: Alta / Média / Baixa. 
 
