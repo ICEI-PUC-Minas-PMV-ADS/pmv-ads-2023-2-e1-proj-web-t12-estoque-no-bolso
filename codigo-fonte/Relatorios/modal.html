@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório 1</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<script>
+    function showmodal(){
+        var element = document.getElementById("modal");
+        element.classList.add("show-modal");
+    }
+    function hidemodal(){
+        var element = document.getElementById ("modal");
+        element.classList.remove("show-modal")
+
+    }
+</script>
+<body>
+    <button onclick="showmodal()">Vendas por produto</button>
+    
+    <div class="modal" id="modal">
+       
+<div class="modal-content">
+    <span onclick="hidemodal()">&times;</span>
+    <h3>Relatório de Vendas</h1>
+        <div class="form-group">
+            <label for="tipo" class="text-info">Produto</label><br>
+            <p></p>
+            <input type="text" name="produto" id="produto" class="form-control">
+            <p></p>
+        </div>
+        <div class="form-group">
+            <label for="modelo" class="text-info">Modelo</label><br>
+            <p></p>
+            <input type="text" name="modelo" id="modelo" class="form-control">
+        </div>
+        <div class="form-group text-right">
+            <p></p>                                
+            <input type="submit" name="pesquisa" class="btn btn-info btn-md" value="submit">
+            
+        </div>
+       
+</div>
+  
+    </div>
+    </div>
+    
+</body>
+
+</html>
