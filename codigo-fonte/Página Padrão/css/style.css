@@ -208,6 +208,29 @@ nav li{ /*nav li (lista) sao os itens da lista*/
 .copyright {
     color: var(--cor-do-fundo);
 }
+.btn{
+    color: lightgray;
+    background-color: #30323D;
+    border-bottom: 5px solid lightgray;
+    font-size: 18px;
+    text-decoration: none;
+    display:inline-block;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-weight:bold;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.btn:hover{
+    background-color:#4d5061 ;
+    transform: translate(0px, -5px);
+    transition: transform 0.5s;
+}
+.btn1{
+    background-color: #30323D;
+}
+
 
 @media screen and (max-width: 480px) {
     .menu{
