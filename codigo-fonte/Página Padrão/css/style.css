@@ -213,6 +213,7 @@ nav li{ /*nav li (lista) sao os itens da lista*/
     background-color: #30323D;
     border-bottom: 5px solid lightgray;
     font-size: 18px;
+    width: 300px;
     text-decoration: none;
     display:inline-block;
     text-align: center;
@@ -228,7 +229,7 @@ nav li{ /*nav li (lista) sao os itens da lista*/
     transition: transform 0.5s;
 }
 .btn1{
-    background-color: #30323D;
+    background-color:#e8c547;
 }
 
 
