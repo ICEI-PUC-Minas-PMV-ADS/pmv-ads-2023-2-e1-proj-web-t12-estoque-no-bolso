@@ -3,14 +3,11 @@
 [Apresente os cenários de testes a serem utilizados na realização dos testes da aplicação. Escolha cenários de testes que demonstrem os requisitos sendo atendidos. ]
 
 Os testes funcionais a serem realizados na aplicação são descritos a seguir. [Utilize a estrutura abaixo para cada caso de teste]
+| Caso de teste | Requisitos Associados | Objetivo do teste | Passos | Critério de exito | Responsável |
+| --- | --- | --- | --- | --- | ---- |
+| CT 01: Verificar cadastro de usuários | O site deve permitir ao usuário cadastrar uma conta. | Conferir se o cadastro está sendo processado corretamente | 1. Acessar o navegador. 2.Informar o endereço do site. 3. Visualizar a página Home. 4. Clicar em "login", em seguida “novo usuário”. 5. Preencher o formulário e clicar em “submit” | Deve ocorrer uma validação das informações fornecidas pelo usuário, e ao clicar em "Submit", deve aparecer a mensagem "Usuário cadastrado com sucesso" e ser direcionado para página de login | João
+| --- | --- | --- | --- | --- | ---- |
 
-|Caso de Teste    | CT-X - Título Caso de Teste |
-|:---|:---|
-| Requisitos Associados | RF-X |
-| Objetivo do Teste | Descrição do objetivo do teste |
-| Passos | Indicar passos para a execução do teste |
-| Critérios de êxito | Indicar os critérios de êxito  |
-| Responsável pela elaborar do caso de Teste | Nome do integrante da equipe |
  
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
