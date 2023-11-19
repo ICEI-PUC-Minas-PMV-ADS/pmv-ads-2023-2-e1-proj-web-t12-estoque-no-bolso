@@ -8,6 +8,9 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--cor-do-texto); 
     background: var(--cor-do-fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -143,6 +146,10 @@ nav li{ /*nav li (lista) sao os itens da lista*/
     background-color:#e8c547;
 }
 
+#titulo  {
+    width: auto;
+    margin: 20px 150px 20px;
+}
 
 /* BARRA DE PESQUISA */
 .btn-excluir{
@@ -184,6 +191,22 @@ input[type=text] {
     padding:40px 0 0;
 }
 
+#corpo-vendas{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* LISTA DE VENDA */
+
+
+
+#lista-venda{
+    padding-right: 70px;
+}
+
+
+
 /* FOOTER */
 
 #footer {
@@ -194,6 +217,7 @@ input[type=text] {
     margin-left: -8px;
     margin-right: -8px;
     background-color: #4d5061; /* Cor de fundo do footer */
+    margin-top: auto !important;
 }
 
 .copyright {

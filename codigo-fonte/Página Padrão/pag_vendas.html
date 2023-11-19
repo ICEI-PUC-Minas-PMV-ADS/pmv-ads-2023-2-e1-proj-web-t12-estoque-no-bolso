@@ -1,112 +1,138 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estoque no Bolso</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
-        <meta name="author" content= "Matheus Castelliano">
-        <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
-        <meta http-equiv="refresh" content="5;http://google.com"> -->    
+    <!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estoque no Bolso</title>
+            <link rel="stylesheet" href="css/reset.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" href="css/style.css">
+            <meta name="author" content= "Matheus Castelliano">
+            <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
+            <meta http-equiv="refresh" content="5;http://google.com"> -->    
+            
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
         
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
-       
-    </head>
-    <body>
-        <header>
-            <div class="menu">
-                <h1>
-                    <a href="index.html"><img src="img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
-                </h1>
-                <!--Preciso adicionar a logo aqui em cima-->
-                <nav>
-                    <ul>
-                        <li><a href="pag_estoque.html"><img src="img/img_estoque.png" alt="imagem de estoque"></a></li>
-                        <li><a href="pag_vendas.html"><img src="img/ima_dinheiro2.png" alt="imagem de dinheiro"></a></li>
-                        <li><a href="pag_relatorios.html"><img src="img/img_grafico.png" alt="imagem de grafico"></a></li>
-                        <li><a href="../HomePage_Logado_Fagner/home_logado.html"><img src="img/img_login.png" alt=""></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
+        </head>
+        <body>
+            <header>
+                <div class="menu">
+                    <h1>
+                        <a href="index.html"><img src="img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
+                    </h1>
+                    <!--Preciso adicionar a logo aqui em cima-->
+                    <nav>
+                        <ul>
+                            <li><a href="pag_estoque.html"><img src="img/img_estoque.png" alt="imagem de estoque"></a></li>
+                            <li><a href="pag_vendas.html"><img src="img/img_dinheiro2.png" alt="imagem de dinheiro"></a></li>
+                            <li><a href="pag_relatorios.html"><img src="img/img_grafico.png" alt="imagem de grafico"></a></li>
+                            <li><a href="../HomePage_Logado_Fagner/home_logado.html"><img src="img/img_login.png" alt=""></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <h2 id="titulo">Adicione o produto desejado no carrinho</h2>    
 
-        <section id="lista-produtos">
-            <div class="conteudo">
-                <h2>Adicione o produto desejado no carrinho</h2>
+            <div id="corpo-vendas">
+                <section id="lista-produtos">
+                    <div class="conteudo">
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
+                        <select id="columnSelect">
+                            <option value="1">ID</option>
+                            <option value="2">Produtos</option>
+                            <option value="3">Estoque</option>
+                            <option value="4">Custo</option>
+                            <option value="5">Preço</option>
+                        </select>
+                        <button class="btn-excluir">Excluir</button>
+                        <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
+                        
+                        <div id="lista-abaixo" class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="produtosVendas" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th> 
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Produto</th>
+                                                <th scope="col">Estoque</th>
+                                                <th scope="col">Custo</th>
+                                                <th scope="col">Preço</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabelaPrudotosVendas">
+                                            <tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                 
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
-                <select id="columnSelect">
-                    <option value="1">ID</option>
-                    <option value="2">Produtos</option>
-                    <option value="3">Estoque</option>
-                    <option value="4">Custo</option>
-                    <option value="5">Preço</option>
-                </select>
-                <button class="btn-excluir">Excluir</button>
-                <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
+                    </div>
+                </section>
                 
-                <div id="lista-abaixo" class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <table id="produtosVendas" class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th> 
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Produto</th>
-                                        <th scope="col">Estoque</th>
-                                        <th scope="col">Custo</th>
-                                        <th scope="col">Preço</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabelaPrudotosVendas">
-                                    <tr>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <section id="lista-venda" class="section-vendas">
+                    <h4 id="titulo-sacola">Lista de Vendas</h4>
+                    <div id="lista-abaixo" class="container" id="sacola">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="produtosVendas" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th> 
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Produto</th>
+                                            <th scope="col">Quantidade</th>
+                                            <th scope="col">Preço</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabelaPrudotosVendas">
+                                        <tr>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-         
+                </section>
             </div>
-        </section>
 
-        <script src="../app.js"></script>
-        <script>
-            function myFunction() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("listaContatos");
-                tr = table.getElementsByTagName("tr");
-                var select = document.getElementById("columnSelect");
-                var index = select.value;
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[index];
-                    if (td) {
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                        } else {
-                            tr[i].style.display = "none";
+            <script src="../app.js"></script>
+            <script>
+                function myFunction() {
+                    var input, filter, table, tr, td, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("listaContatos");
+                    tr = table.getElementsByTagName("tr");
+                    var select = document.getElementById("columnSelect");
+                    var index = select.value;
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[index];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
                         }
                     }
                 }
-            }
-            function clearSearch() {
-                document.getElementById("myInput").value = "";
-                myFunction(); // Chame a função de filtro para reexibir todos os resultados
-            }
-        </script>
+                function clearSearch() {
+                    document.getElementById("myInput").value = "";
+                    myFunction(); // Chame a função de filtro para reexibir todos os resultados
+                }
+            </script>
 
-        <footer id="footer">
-            <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
-            <p class="copyright">&copy; Estoque no Bolso - 2023</p>
-        </footer>
-    </body>
-</html>
+            <footer id="footer">
+                <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
+                <p class="copyright">&copy; Estoque no Bolso - 2023</p>
+            </footer>
+        </body>
+    </html>
