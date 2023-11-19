@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Estoque no Bolso</title>
         <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <meta name="author" content= "Matheus Castelliano">
         <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
@@ -37,37 +38,71 @@
         <section id="lista-produtos">
             <div class="conteudo">
                 <h2>Adicione o produto desejado no carrinho</h2>
-                <!-- Botões de Ação -->
-                <!-- Search bar -->
-                <div class="search-bar">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button id="pesquisar">Pesquisar</button>
+                
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
+                <select id="columnSelect">
+                    <option value="1">ID</option>
+                    <option value="2">Produtos</option>
+                    <option value="3">Estoque</option>
+                    <option value="4">Custo</option>
+                    <option value="5">Preço</option>
+                </select>
+                <button class="btn-excluir">Excluir</button>
+                <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
+                
+                <div id="lista-abaixo" class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="produtosVendas" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th> 
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Produto</th>
+                                        <th scope="col">Estoque</th>
+                                        <th scope="col">Custo</th>
+                                        <th scope="col">Preço</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaPrudotosVendas">
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="acoes">
-                    <!-- <button id="editar">Editar</button> -->
-                    <button id="adicionar">Adicionar ao Carrinho</button>
-                </div>
-                <table id="produtosVendas">
-                    <thead>
-                    <tr>
-                        <th></th> <!-- Coluna para checkbox -->
-                        <th>ID</th>
-                        <th>Produto</th>
-                        <th>Estoque</th>
-                        <th>Custo</th>
-                        <th>Preço</th>
-                    </tr>
-                    </thead>
-                    <tbody id="tabelaPrudotosVendas">
-                    <!-- Os produtos cadastrados serão exibidos aqui -->
-                    </tbody>
-                </table>   
-                <p id="no-products-message" style="display: none;">Não há produtos cadastrados</p>
          
             </div>
         </section>
 
         <script src="../app.js"></script>
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("listaContatos");
+                tr = table.getElementsByTagName("tr");
+                var select = document.getElementById("columnSelect");
+                var index = select.value;
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[index];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            function clearSearch() {
+                document.getElementById("myInput").value = "";
+                myFunction(); // Chame a função de filtro para reexibir todos os resultados
+            }
+        </script>
 
         <footer id="footer">
             <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">

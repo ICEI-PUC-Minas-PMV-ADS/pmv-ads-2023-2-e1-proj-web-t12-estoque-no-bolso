@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lista de Contatos</title>
         <link rel="stylesheet" href="reset/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
         <link rel="stylesheet" href="../css/style.css"> <!-- Certifique-se de vincular seu arquivo CSS apropriado aqui -->
         <meta name="author" content= "Matheus Castelliano">
         
@@ -36,20 +38,48 @@
         <section id="lsta-contatos">
             <div class="conteudo">
                 <h2>Lista de Contatos</h2>
-                <!-- Botões de Ação -->
-                <!-- Search bar -->
-                <div class="search-bar">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button id="pesquisar">Pesquisar</button>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
+                <select id="columnSelect">
+                    <option value="1">ID</option>
+                    <option value="2">Nome</option>
+                    <option value="3">Email</option>
+                    <option value="4">Telefone</option>
+                    <option value="5">WhatsApp</option>
+                    <!-- <option value="6">Mensagem</option> -->
+                </select>
+                <button class="btn-excluir">Excluir</button>
+                <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
+                
+
+                <div id="lista-abaixo" class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="listaContatos" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th> <!-- Coluna para checkbox -->
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">E-mail</th>
+                                        <th scope="col">Telefone</th>
+                                        <th scope="col">WhatsApp</th>
+                                        <th scope="col">Mensagem</th>
+                                        <th scope="col">Excluir</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaDeContatos">
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="acoes">
-                    <!-- <button id="editar">Editar</button> -->
-                    <button id="excluir">Excluir</button>
-                </div>
-                <table id="listaContatos">
+
+                <!-- <table id="listaContatos">
                     <thead>
                     <tr>
-                        <th></th> <!-- Coluna para checkbox -->
+                        <th></th> Coluna para checkbox 
                         <th>ID</th>
                         <th>Nome</th>
                         <th>E-mail</th>
@@ -59,14 +89,46 @@
                     </tr>
                     </thead>
                     <tbody id="tabelaDeContatos">
-                    <!-- Os contatos serão exibidos aqui -->
+                    Os contatos serão exibidos aqui 
                     </tbody>
                 </table>   
-                <p id="no-messages-message" style="display: none;">Não há mensagens pendentes</p>
+                <p id="no-messages-message" style="display: none;">Não há mensagens pendentes</p> -->
          
             </div>
         </section>
 
         <script src="../app.js"></script>
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("listaContatos");
+                tr = table.getElementsByTagName("tr");
+                var select = document.getElementById("columnSelect");
+                var index = select.value;
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[index];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            function clearSearch() {
+                document.getElementById("myInput").value = "";
+                myFunction(); // Chame a função de filtro para reexibir todos os resultados
+            }
+        </script>
+        
+
+        <footer id="footer">
+            <img src= "../../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
+            <p class="copyright">&copy; Estoque no Bolso - 2023</p>
+        </footer>
     </body>
 </html>

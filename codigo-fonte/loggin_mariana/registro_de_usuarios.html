@@ -32,6 +32,11 @@
             // Associa a função de logout ao botão
             document.getElementById('btn_logout').addEventListener('click', logoutUser);
 
+            document.getElementById("btn_voltar").addEventListener("click", function() {
+                window.open("../Página Padrão/pag_relatorios.html", "_blank");
+            });
+
+
             // Informa o nome do usuário logado
             document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
 
@@ -48,6 +53,7 @@
 <body>
     <h1>Olá <span id="nomeUsuario">, seja bem-vindo!</span></h1>
     <button id="btn_logout">Efetuar Logout</button>
+    <button id="btn_voltar">Voltar</button>
 
     <div class="container">
         <div class="row">

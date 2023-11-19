@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const cellExcluir = row.insertCell(7);
         const excluirBtn = document.createElement("button");
         excluirBtn.textContent = "Excluir";
+        excluirBtn.className = "btn-excluir";
         excluirBtn.addEventListener("click", function () {
           // Encontrar o índice do contato pelo ID
           const id = contatos.findIndex(c => c.id === contato.id);
