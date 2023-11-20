@@ -13,36 +13,10 @@ body {
     min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif; /* Fonte do Google Fonts */
-    color: #30323D;
-}
-
-
-/* HEADER */
-
-
-header{
-    background: var(--cor-do-fundo);
-    padding: 30px;
-    position: sticky;
-    top: 0;
-}
-
 /* Estilos para o menu na direita */
 .menu {
     display: flex;
     justify-content: space-evenly;
-}
-
-#logomenu {
-    block-size: 100px;
-    padding-right: 200px;
-}
-
-
-#logomenu:hover{ 
-    block-size: 110px;
 }
 
 nav{
@@ -75,11 +49,6 @@ nav li{ /*nav li (lista) sao os itens da lista*/
     margin: 0 0 0 15px; /*margens são topo, direita, baixo e esquerda*/
 }
 
-/* Estilos para a logo na esquerda */
-.logo {
-    order: -1;
-    margin-right: auto;
-}
 
 
 

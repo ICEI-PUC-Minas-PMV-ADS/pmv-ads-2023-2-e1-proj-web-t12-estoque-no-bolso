@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <meta name="author" content= "Matheus Castelliano">
+        <script scr="script.js"></script>
         <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
         <meta http-equiv="refresh" content="5;http://google.com"> -->    
         
@@ -15,6 +16,46 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
        
     </head>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modal = document.getElementById('myModal');
+    const itemForm = document.getElementById('itemForm');
+  
+    openModalBtn.addEventListener('click', function () {
+      modal.style.display = 'block';
+    });
+  
+    closeModalBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+  
+    itemForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      const newItem = {
+        name: document.getElementById('itemName').value,
+        price: document.getElementById('itemPrice').value,
+        cost: document.getElementById('itemCost').value,
+        quantity: document.getElementById('itemQuantity').value,
+        id: document.getElementById('itemID').value,
+        size: document.getElementById('itemSize').value,
+        description: document.getElementById('itemDescription').value,
+        category: document.getElementById('itemCategory').value,
+        image: document.getElementById('itemImage').value, // Aqui você pode salvar o caminho ou a imagem em base64
+      };
+  
+      let itemList = JSON.parse(localStorage.getItem('itemList')) || [];
+      itemList.push(newItem);
+      localStorage.setItem('itemList', JSON.stringify(itemList));
+  
+      modal.style.display = 'none';
+    });
+  });
+  
+</script>
+    </script>
     <body>
         <header>
             <div class="menu">
@@ -32,12 +73,60 @@
                 </nav>
             </div>
         </header>
+        <nav class="pesquisa">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
+      </nav>
+      <div class="botao-adicionar">
+        <button id="openModalBtn">Adicionar</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" id="closeModalBtn">&times;</span>
+              <form id="itemForm">
+                <label for="itemName">Nome:</label>
+                <input type="text" id="itemName" name="itemName" required>
         
+                <label for="itemPrice">Preço de Venda:</label>
+                <input type="text" id="itemPrice" name="itemPrice" required>
+        
+                <label for="itemCost">Custo:</label>
+                <input type="text" id="itemCost" name="itemCost" required>
+        
+                <label for="itemQuantity">Quantidade:</label>
+                <input type="text" id="itemQuantity" name="itemQuantity" required>
+        
+                <label for="itemID">ID:</label>
+                <input type="text" id="itemID" name="itemID" required>
+        
+                <label for="itemSize">Tamanho:</label>
+                <input type="text" id="itemSize" name="itemSize" required>
+        
+                <label for="itemDescription">Descrição:</label>
+                <textarea id="itemDescription" name="itemDescription" required></textarea>
+        
+                <label for="itemCategory">Categoria:</label>
+                <input type="text" id="itemCategory" name="itemCategory" required>
+        
+                <label for="itemImage">Imagem:</label>
+                <input type="file" id="itemImage" name="itemImage" accept="image/*">
+        
+                <button type="submit">Adicionar Item</button>
+              </form>
+            </div>
+          </div>   
+      </div>
+      <nav class="botao">
+        <button id="btneditar">
+            Editar   
+        </button>
+      </nav>
+      <nav class="botao">
+        <button id="btnexcluir">
+            Excluir   
+        </button>
+      </nav>
         <section class="corpo">
                 <H1>Esta é a Página de Estoque!</H1>
         </section>
-
-        <script src="../app.js"></script>
 
         <footer id="footer">
             <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
@@ -45,3 +134,4 @@
         </footer>
     </body>
 </html>
+
