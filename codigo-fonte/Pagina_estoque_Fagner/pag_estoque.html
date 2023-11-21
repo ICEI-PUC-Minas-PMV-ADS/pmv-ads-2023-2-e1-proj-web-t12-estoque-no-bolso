@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <meta name="author" content= "Matheus Castelliano">
-        <script scr="script.js"></script>
+        
         <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
         <meta http-equiv="refresh" content="5;http://google.com"> -->    
         
@@ -16,46 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
        
     </head>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const openModalBtn = document.getElementById('openModalBtn');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const modal = document.getElementById('myModal');
-    const itemForm = document.getElementById('itemForm');
-  
-    openModalBtn.addEventListener('click', function () {
-      modal.style.display = 'block';
-    });
-  
-    closeModalBtn.addEventListener('click', function () {
-      modal.style.display = 'none';
-    });
-  
-    itemForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-  
-      const newItem = {
-        name: document.getElementById('itemName').value,
-        price: document.getElementById('itemPrice').value,
-        cost: document.getElementById('itemCost').value,
-        quantity: document.getElementById('itemQuantity').value,
-        id: document.getElementById('itemID').value,
-        size: document.getElementById('itemSize').value,
-        description: document.getElementById('itemDescription').value,
-        category: document.getElementById('itemCategory').value,
-        image: document.getElementById('itemImage').value, // Aqui você pode salvar o caminho ou a imagem em base64
-      };
-  
-      let itemList = JSON.parse(localStorage.getItem('itemList')) || [];
-      itemList.push(newItem);
-      localStorage.setItem('itemList', JSON.stringify(itemList));
-  
-      modal.style.display = 'none';
-    });
-  });
-  
-</script>
-    </script>
+
     <body>
         <header>
             <div class="menu">
@@ -73,11 +34,51 @@
                 </nav>
             </div>
         </header>
-        <nav class="pesquisa">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
-      </nav>
+
+        <h2 id="titulo">Aqui você pode gerenciar produtos!</h2>   
+
+        <div id="corpo-vendas">
+          <section id="lista-produtos">
+              <div class="conteudo">
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
+                  <select id="columnSelect">
+                      <option value="1">ID</option>
+                      <option value="2">Produtos</option>
+                      <option value="3">Estoque</option>
+                      <option value="4">Custo</option>
+                      <option value="5">Preço</option>
+                  </select>
+                  <button class="btn-excluir">Excluir</button>
+                  <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
+                  
+                  <div id="lista-abaixo" class="container">
+                      <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                              <table id="produtosVendas" class="table table-striped">
+                                  <thead>
+                                      <tr>
+                                          <th scope="col"></th> 
+                                          <th scope="col">ID</th>
+                                          <th scope="col">Produto</th>
+                                          <th scope="col">Estoque</th>
+                                          <th scope="col">Custo</th>
+                                          <th scope="col">Preço</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody id="tabelaPrudotosVendas">
+                                      <tr>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+          
+              </div>
+          </section>
+
       <div class="botao-adicionar">
-        <button id="openModalBtn">Adicionar</button>
+        <button id="openModalBtn" onclick="">Adicionar</button>
         <div id="myModal" class="modal">
             <div class="modal-content">
               <span class="close" id="closeModalBtn">&times;</span>
@@ -127,6 +128,46 @@
         <section class="corpo">
                 <H1>Esta é a Página de Estoque!</H1>
         </section>
+        <script src="script.js"></script>
+        <!-- <script>
+          document.addEventListener('DOMContentLoaded', function () {
+          const openModalBtn = document.getElementById('openModalBtn');
+          const closeModalBtn = document.getElementById('closeModalBtn');
+          const modal = document.getElementById('myModal');
+          const itemForm = document.getElementById('itemForm');
+        
+          openModalBtn.addEventListener('click', function () {
+            modal.style.display = 'block';
+          });
+        
+          closeModalBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+          });
+        
+          itemForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+        
+            const newItem = {
+              name: document.getElementById('itemName').value,
+              price: document.getElementById('itemPrice').value,
+              cost: document.getElementById('itemCost').value,
+              quantity: document.getElementById('itemQuantity').value,
+              id: document.getElementById('itemID').value,
+              size: document.getElementById('itemSize').value,
+              description: document.getElementById('itemDescription').value,
+              category: document.getElementById('itemCategory').value,
+              image: document.getElementById('itemImage').value, // Aqui você pode salvar o caminho ou a imagem em base64
+            };
+        
+            let itemList = JSON.parse(localStorage.getItem('itemList')) || [];
+            itemList.push(newItem);
+            localStorage.setItem('itemList', JSON.stringify(itemList));
+        
+            modal.style.display = 'none';
+          });
+        });
+        
+      </script> -->
 
         <footer id="footer">
             <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">

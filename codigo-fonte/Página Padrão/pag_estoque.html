@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Estoque no Bolso</title>
         <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="modais-estoque/modais.css">
         <meta name="author" content= "Matheus Castelliano">
         <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
         <meta http-equiv="refresh" content="5;http://google.com"> -->    
@@ -13,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
-       
+    
     </head>
     <body>
         <header>
@@ -33,11 +35,96 @@
             </div>
         </header>
         
-        <section class="corpo">
-                <H1>Esta é a Página de Estoque!</H1>
-        </section>
+        <h2 id="titulo">Aqui você pode gerenciar produtos!</h2>    
 
-        <script src="../app.js"></script>
+        <div id="corpo-vendas">
+            <section id="lista-produtos">
+                <div class="conteudo">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
+                    <select id="columnSelect">
+                        <option value="1">ID</option>
+                        <option value="2">Produtos</option>
+                        <option value="3">Estoque</option>
+                        <option value="4">Custo</option>
+                        <option value="5">Preço</option>
+                    </select>
+                    <button class="btn-excluir">Excluir</button>
+                    <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
+                    <button class="btn-excluir" id="openModalBtn">Adicionar</button>
+                    <!-- <button class="botao-adicionar" id="openModalBtn">Adicionar</button> -->
+                    <div id="lista-abaixo" class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <table id="produtosVendas" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th> 
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Produto</th>
+                                            <th scope="col">Estoque</th>
+                                            <th scope="col">Custo</th>
+                                            <th scope="col">Preço</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabelaPrudotosVendas">
+                                        <tr>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
+        </div>
+
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" id="closeModalBtn">&times;</span>
+              <form id="itemForm">
+                <label for="itemName">Nome:</label>
+                <input type="text" id="itemName" name="itemName" required>
+        
+                <label for="itemPrice">Preço de Venda:</label>
+                <input type="text" id="itemPrice" name="itemPrice" required>
+        
+                <label for="itemCost">Custo:</label>
+                <input type="text" id="itemCost" name="itemCost" required>
+        
+                <label for="itemQuantity">Quantidade:</label>
+                <input type="text" id="itemQuantity" name="itemQuantity" required>
+        
+                <label for="itemID">ID:</label>
+                <input type="text" id="itemID" name="itemID" required>
+        
+                <label for="itemSize">Tamanho:</label>
+                <input type="text" id="itemSize" name="itemSize" required>
+        
+                <label for="itemDescription">Descrição:</label>
+                <textarea id="itemDescription" name="itemDescription" required></textarea>
+        
+                <label for="itemCategory">Categoria:</label>
+                <input type="text" id="itemCategory" name="itemCategory" required>
+        
+                <label for="itemImage">Imagem:</label>
+                <input type="file" id="itemImage" name="itemImage" accept="image/*">
+        
+                <button type="submit">Adicionar Item</button>
+              </form>
+            </div> 
+      </div>
+
+
+
+        <script src="modais-estoque/pag_estoque.js"></script>
+
+        <script>
+            
+        </script>
+
+
 
         <footer id="footer">
             <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">

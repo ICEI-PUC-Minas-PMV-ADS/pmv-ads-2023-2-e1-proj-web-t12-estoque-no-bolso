@@ -1,23 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Recuperar os dados dos contatos do localStorage
-  const contatos = JSON.parse(localStorage.getItem('contatos')) || [];
+  const contatos = JSON.parse(localStorage.getItem("contatos")) || [];
   let idCounter = 1; // Inicialize um contador de IDs
-  // let idCounter = idCounter;  
-
+  // let idCounter = idCounter;
 
   // Verificar se estamos na página index.html
   if (window.location.pathname.includes("/index.html")) {
-      
     // Função para salvar o formulário da página "index.html"
-      document.querySelector('#contact-form').addEventListener('submit', function (e) {
+    document
+      .querySelector("#contact-form")
+      .addEventListener("submit", function (e) {
         e.preventDefault();
 
         // Coletar os dados do formulário
-        const nome = document.querySelector('#nome').value;
-        const email = document.querySelector('#email').value;
-        const telefone = document.querySelector('#telefone').value;
-        const mensagem = document.querySelector('#mensagem').value;
-        const whatsapp = document.querySelector('#whatsapp').value;
+        const nome = document.querySelector("#nome").value;
+        const email = document.querySelector("#email").value;
+        const telefone = document.querySelector("#telefone").value;
+        const mensagem = document.querySelector("#mensagem").value;
+        const whatsapp = document.querySelector("#whatsapp").value;
 
         // Verificar se o nome e o email foram preenchidos
         if (nome && email) {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             email,
             telefone,
             whatsapp,
-            mensagem
+            mensagem,
           };
 
           // Incrementar o contador para o próximo ID único
@@ -38,22 +38,24 @@ document.addEventListener("DOMContentLoaded", function() {
           contatos.push(contato);
 
           // Salvar os contatos no localStorage
-          localStorage.setItem('contatos', JSON.stringify(contatos));
+          localStorage.setItem("contatos", JSON.stringify(contatos));
 
           // Limpar o formulário
-          document.querySelector('#nome').value = '';
-          document.querySelector('#email').value = '';
-          document.querySelector('#telefone').value = '';
-          document.querySelector('#whatsapp').value = '';
-          document.querySelector('#mensagem').value = '';
+          document.querySelector("#nome").value = "";
+          document.querySelector("#email").value = "";
+          document.querySelector("#telefone").value = "";
+          document.querySelector("#whatsapp").value = "";
+          document.querySelector("#mensagem").value = "";
 
           // Exibir uma mensagem de confirmação
-          document.querySelector('#confirmation-message').textContent = 'Contato salvo com sucesso!';
+          document.querySelector("#confirmation-message").textContent =
+            "Contato salvo com sucesso!";
         } else {
           // Exibir mensagem de erro se nome e email não forem preenchidos
-          document.querySelector('#confirmation-message').textContent = 'Por favor, preencha o nome e o email.';
+          document.querySelector("#confirmation-message").textContent =
+            "Por favor, preencha o nome e o email.";
         }
-    });
+      });
   }
 
   // Verificar se estamos na página FormularioDeContato.html
@@ -102,13 +104,13 @@ document.addEventListener("DOMContentLoaded", function() {
         excluirBtn.className = "btn-excluir";
         excluirBtn.addEventListener("click", function () {
           // Encontrar o índice do contato pelo ID
-          const id = contatos.findIndex(c => c.id === contato.id);
+          const id = contatos.findIndex((c) => c.id === contato.id);
 
           // Remover o contato da lista com base no índice
           contatos.splice(id, 1);
 
           // Atualizar o localStorage
-          localStorage.setItem('contatos', JSON.stringify(contatos));
+          localStorage.setItem("contatos", JSON.stringify(contatos));
 
           // Remover a linha da tabela
           row.remove();
@@ -123,20 +125,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Excluir Contatos Selecionados
     const excluir = document.querySelector("#excluir");
     excluir.addEventListener("click", function () {
-      const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+      const checkboxes = document.querySelectorAll(
+        "input[type='checkbox']:checked"
+      );
 
       checkboxes.forEach(function (checkbox) {
         const row = checkbox.parentElement.parentElement;
         const id = parseInt(row.cells[1].textContent);
 
         // Encontrar o índice do contato pelo ID
-        const index = contatos.findIndex(c => c.id === id);
+        const index = contatos.findIndex((c) => c.id === id);
 
         // Remover o contato da lista com base no índice
         contatos.splice(index, 1);
 
         // Atualizar o localStorage
-        localStorage.setItem('contatos', JSON.stringify(contatos));
+        localStorage.setItem("contatos", JSON.stringify(contatos));
 
         // Remover a linha da tabela
         row.remove();
@@ -144,38 +148,42 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Cancelar a edição
-    document.querySelector('#cancelar-edit').addEventListener('click', function () {
-      document.querySelector('#edit-form-container').style.display = 'none';
-    });
+    document
+      .querySelector("#cancelar-edit")
+      .addEventListener("click", function () {
+        document.querySelector("#edit-form-container").style.display = "none";
+      });
 
     // Salvar edição
-    document.querySelector('#salvar-edit').addEventListener('click', function () {
-      const id = parseInt(document.querySelector('#form-edit').getAttribute('data-contact-id'));
-      const contato = contatos.find(c => c.id === id);
+    document
+      .querySelector("#salvar-edit")
+      .addEventListener("click", function () {
+        const id = parseInt(
+          document.querySelector("#form-edit").getAttribute("data-contact-id")
+        );
+        const contato = contatos.find((c) => c.id === id);
 
-      // Atualizar os dados do contato com as informações do formulário de edição
-      contato.nome = document.querySelector('#nome-edit').value;
-      contato.email = document.querySelector('#email-edit').value;
-      contato.telefone = document.querySelector('#telefone-edit').value;
-      contato.mensagem = document.querySelector('#whatsapp-edit').value;
-      contato.mensagem = document.querySelector('#mensagem-edit').value;
+        // Atualizar os dados do contato com as informações do formulário de edição
+        contato.nome = document.querySelector("#nome-edit").value;
+        contato.email = document.querySelector("#email-edit").value;
+        contato.telefone = document.querySelector("#telefone-edit").value;
+        contato.mensagem = document.querySelector("#whatsapp-edit").value;
+        contato.mensagem = document.querySelector("#mensagem-edit").value;
 
-      // Atualizar o localStorage
-      localStorage.setItem('contatos', JSON.stringify(contatos));
+        // Atualizar o localStorage
+        localStorage.setItem("contatos", JSON.stringify(contatos));
 
-      // Fechar o formulário de edição
-      document.querySelector('#edit-form-container').style.display = 'none';
+        // Fechar o formulário de edição
+        document.querySelector("#edit-form-container").style.display = "none";
 
-      // Atualizar a tabela de contatos
-      atualizarListaDeContatos();
-    });
+        // Atualizar a tabela de contatos
+        atualizarListaDeContatos();
+      });
   }
-
 
   // verifica se estamos na página pag_produtos.html
   if (window.location.pathname.includes("pag_produtos.html")) {
-    
-  }  
+  }
 
   // verifca se estamos na página pag_vendas.html
   if (window.location.pathname.includes("pag_vendas.html")) {

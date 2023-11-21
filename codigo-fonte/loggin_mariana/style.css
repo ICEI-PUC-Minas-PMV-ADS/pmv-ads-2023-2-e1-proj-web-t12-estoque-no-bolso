@@ -197,6 +197,7 @@ nav li{ /*nav li (lista) sao os itens da lista*/
 
 #footer {
     text-align: center;
+    font-size: 16px;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: -8px;

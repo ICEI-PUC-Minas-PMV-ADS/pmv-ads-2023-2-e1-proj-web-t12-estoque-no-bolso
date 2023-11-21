@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-  
-  // FUNCOES DO MODAL
-  
     const openModalBtn = document.getElementById('openModalBtn');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modal = document.getElementById('myModal');
@@ -16,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.display = 'none';
     });
   
-    
-
-    // FUNCOES DO FORMULARIO
     itemForm.addEventListener('submit', function (e) {
       e.preventDefault();
   
@@ -40,4 +33,4 @@ document.addEventListener('DOMContentLoaded', function () {
   
       modal.style.display = 'none';
     });
-});
+  });
