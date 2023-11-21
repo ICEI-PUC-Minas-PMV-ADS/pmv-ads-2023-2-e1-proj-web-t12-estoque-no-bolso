@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Estoque no Bolso</title>
-        <link rel="stylesheet" href="css/reset.css">
+        <!-- <link rel="stylesheet" href="css/reset.css"> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="modais-estoque/modais.css">
+        <!-- <link rel="stylesheet" href="modais-estoque/modais.css  "> -->
         <meta name="author" content= "Matheus Castelliano">
         <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
         <meta http-equiv="refresh" content="5;http://google.com"> -->    
@@ -48,10 +50,10 @@
                         <option value="4">Custo</option>
                         <option value="5">Preço</option>
                     </select>
-                    <button class="btn-excluir">Excluir</button>
-                    <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
-                    <button class="btn-excluir" id="openModalBtn">Adicionar</button>
-                    <!-- <button class="botao-adicionar" id="openModalBtn">Adicionar</button> -->
+                    <button class="btn-menu">Excluir</button>
+                    <button class="btn-menu" onclick="clearSearch()">Limpar</button>
+                    <button class="btn-menu" data-toggle="modal" data-target="#modalProdutos">Adicionar</button>
+
                     <div id="lista-abaixo" class="container">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
@@ -79,51 +81,60 @@
             </section>
         </div>
 
+        <!-- Modal -->
+            <div class="modal fade" id="modalProdutos" tabindex="-1" role="dialog" aria-labelledby="CadastroProdutos" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="CadastroProdutos">Cadastro de Produtos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="login-box" class="col-md-12">
+                            <form id="form-produtos" class="form" method="post" onsubmit="loginUser (this)">
+                                <h3 class="text-center text-info">Cadastro de Produtos</h3>
+                                <div class="form-group">
+                                    <label for="cod" class="text-info">COD</label><br>
+                                    <input type="number" name="txt_cod" id="txt_cod" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="produto" class="text-info">Produto</label><br>
+                                    <input type="text" name="txt_produto" id="txt_produto" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="variação" class="text-info">Variação</label><br>
+                                    <input type="text" name="txt_variação" id="txt_variação" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="custo" class="text-info">Custo</label><br>
+                                    <input type="number" name="txt_custo" id="txt_custo" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="quantidade" class="text-info">Quantidade</label><br>
+                                    <input type="number" name="txt_quantidade" id="txt_quantidade" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="venda" class="text-info">Preço de Venda</label><br>
+                                    <input type="text" name="text_venda" id="text_venda" class="form-control">
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" id="btn_salvar" class="btn btn-info">Salvar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+  
 
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-              <span class="close" id="closeModalBtn">&times;</span>
-              <form id="itemForm">
-                <label for="itemName">Nome:</label>
-                <input type="text" id="itemName" name="itemName" required>
-        
-                <label for="itemPrice">Preço de Venda:</label>
-                <input type="text" id="itemPrice" name="itemPrice" required>
-        
-                <label for="itemCost">Custo:</label>
-                <input type="text" id="itemCost" name="itemCost" required>
-        
-                <label for="itemQuantity">Quantidade:</label>
-                <input type="text" id="itemQuantity" name="itemQuantity" required>
-        
-                <label for="itemID">ID:</label>
-                <input type="text" id="itemID" name="itemID" required>
-        
-                <label for="itemSize">Tamanho:</label>
-                <input type="text" id="itemSize" name="itemSize" required>
-        
-                <label for="itemDescription">Descrição:</label>
-                <textarea id="itemDescription" name="itemDescription" required></textarea>
-        
-                <label for="itemCategory">Categoria:</label>
-                <input type="text" id="itemCategory" name="itemCategory" required>
-        
-                <label for="itemImage">Imagem:</label>
-                <input type="file" id="itemImage" name="itemImage" accept="image/*">
-        
-                <button type="submit">Adicionar Item</button>
-              </form>
-            </div> 
-      </div>
-
-
-
-        <script src="modais-estoque/pag_estoque.js"></script>
-
-        <script>
-            
-        </script>
-
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
         <footer id="footer">
