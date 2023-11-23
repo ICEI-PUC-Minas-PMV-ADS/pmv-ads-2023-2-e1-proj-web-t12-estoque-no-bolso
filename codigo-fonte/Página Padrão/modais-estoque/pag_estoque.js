@@ -1,93 +1,96 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Recuperar os dados dos PRODUTOS do localStorage
-  const produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+    const produtos = []; // Array para armazenar os produtos
 
-  // Associar salvamento ao botão
-  document.querySelector('#btn_salvar').addEventListener('click', function (e) {
-      salvaProduto(e);
-      console.log('btn_salvar');
-  });
+    const modalProdutos = new bootstrap.Modal(document.getElementById('modalProdutos'), {
+        backdrop: 'static'
+    });
 
-  // Função para salvar o produto no Local Storage
-  function salvaProduto(e) {
-    e.preventDefault();
+    const formProdutos = document.getElementById('form-produtos');
+    const btnSalvar = document.getElementById('btn_salvar');
+    const tabelaProdutos = document.getElementById('tabelaPrudotosVendas');
 
-    // Coletar os dados do formulário
-    let cod = document.querySelector('#txt_cod').value;
-    let produto = document.querySelector('#txt_produto').value;
-    let categoria = document.querySelector('#txt_categoria').value;
-    let variacao = document.querySelector('#txt_variacao').value;
-    let custo = document.querySelector('#txt_custo').value;
-    let quantidade = document.querySelector('#txt_quantidade').value;
-    let preco = document.querySelector('#text_venda').value;
-    let descricao = document.querySelector('#text_descricao').value;
+    // Função para limpar o formulário
+    function clearForm() {
+        formProdutos.reset();
+    }
 
+    // Função para renderizar a tabela de produtos
+    function renderTable() {
+        tabelaProdutos.innerHTML = '';
 
-      // Verificar se o nome e o email foram preenchidos
-      if (produto && categoria && quantidade) {
-          // Criar um objeto de produto com um ID único
-          const produtoObj = {
-              cod,
-              produto,
-              categoria,
-              variacao,
-              custo,
-              quantidade,
-              preco,
-              descricao,
-          };
+        for (let i = 0; i < produtos.length; i++) {
+            const produto = produtos[i];
 
-          // Adicionar o produto à lista
-          produtos.push(produtoObj);
+            const row = document.createElement('tr');
+            row.innerHTML = `<td><input type="checkbox" class="form-check-input"></td>
+                            <td>${produto.id}</td>
+                            <td>${produto.nome}</td>
+                            <td>${produto.estoque}</td>
+                            <td>${produto.custo}</td>
+                            <td>${produto.preco}</td>`;
 
-          // Salvar os produtos no localStorage
-          localStorage.setItem('produtos', JSON.stringify(produtos));
+            tabelaProdutos.appendChild(row);
+        }
+    }
 
-          // Limpar o formulário
-          clearForm();
+    // Evento do botão "Adicionar"
+    const btnAdicionar = document.getElementById('btn_adicionar');
+    if (btnAdicionar) {
+        btnAdicionar.addEventListener('click', function () {
+            clearForm();
+            modalProdutos.show();
+        });
+    }
 
-          // Atualizar a lista de produtos no corpo do site
-          updateProductList();
-      }
-  }
+    // Evento do botão "Salvar"
+    btnSalvar.addEventListener('click', function () {
+        // Adicione aqui a lógica para salvar o produto no array
+        // Exemplo:
+        const novoProduto = {
+            id: document.getElementById('txt_cod').value,
+            nome: document.getElementById('txt_produto').value,
+            // Adicione os outros campos conforme necessário
+        };
 
-  // Função para limpar os campos do formulário
-  function clearForm() {
-      document.querySelector("#txt_cod").value = "";
-      document.querySelector("#txt_produto").value = "";
-      document.querySelector("#txt_categoria").value = "";
-      document.querySelector("#txt_variacao").value = "";
-      document.querySelector("#txt_custo").value = "";
-      document.querySelector("#txt_quantidade").value = "";
-      document.querySelector("#text_venda").value = "";
-      document.querySelector("#text_descricao").value = "";
-  }
+        produtos.push(novoProduto);
 
-  // Função para atualizar a lista de produtos no corpo do site
-  function updateProductList() {
-      // Obter o elemento onde a lista será exibida
-      var productList = document.getElementById("productList");
+        // Renderiza a tabela novamente
+        renderTable();
 
-      // Criar uma lista não ordenada para mostrar os produtos
-      var ul = document.createElement("ul");
+        // Limpa o formulário e fecha o modal
+        clearForm();
+        modalProdutos.hide();
+    });
 
-      // Adicionar cada produto à lista
-      for (var i = 0; i < produtos.length; i++) {
-          var produto = produtos[i];
+    // Evento do botão "Excluir"
+    document.getElementById('btn_excluir').addEventListener('click', function () {
+        // Adicione aqui a lógica para excluir os produtos selecionados
+        // Exemplo:
+        const checkboxes = document.querySelectorAll('#tabelaPrudotosVendas input[type="checkbox"]:checked');
 
-          // Criar um item de lista para cada produto
-          var li = document.createElement("li");
-          li.innerHTML = `ID: ${produto.cod}, Produto: ${produto.produto}, Categoria: ${produto.categoria}, Quantidade: ${produto.quantidade}, Preço: ${produto.preco}, Descrição: ${produto.descricao}`;
+        for (let i = checkboxes.length - 1; i >= 0; i--) {
+            const index = checkboxes[i].parentNode.parentNode.rowIndex - 1;
+            produtos.splice(index, 1);
+        }
 
-          // Adicionar o item à lista não ordenada
-          ul.appendChild(li);
-      }
+        // Renderiza a tabela novamente
+        renderTable();
+    });
 
-      // Limpar o conteúdo anterior e adicionar a nova lista ao elemento
-      productList.innerHTML = "";
-      productList.appendChild(ul);
-  }
+    // Evento da tabela para abrir modal de edição
+    tabelaProdutos.addEventListener('click', function (event) {
+        const target = event.target;
+        if (target.tagName === 'TD' && target.parentNode.rowIndex > 0) {
+            const index = target.parentNode.rowIndex - 1;
+            const produtoSelecionado = produtos[index];
 
-  // Chame a função para inicializar a lista ao carregar a página
-  updateProductList();
+            // Preencha o formulário com os dados do produto
+            document.getElementById('txt_cod').value = produtoSelecionado.id;
+            document.getElementById('txt_produto').value = produtoSelecionado.nome;
+            // Preencha os outros campos conforme necessário
+
+            // Abre o modal de edição
+            modalProdutos.show();
+        }
+    });
 });

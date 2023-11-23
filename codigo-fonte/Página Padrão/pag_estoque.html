@@ -1,159 +1,252 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estoque no Bolso</title>
-        <!-- <link rel="stylesheet" href="css/reset.css"> -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	 crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
-        <!-- <link rel="stylesheet" href="modais-estoque/modais.css  "> -->
-        <meta name="author" content= "Matheus Castelliano">
-        <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
-        <meta http-equiv="refresh" content="5;http://google.com"> -->    
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
-    
-    </head>
-    <body>
-        <header>
-            <div class="menu">
-                <h1>
-                    <a href="index.html"><img src="img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
-                </h1>
-                <!--Preciso adicionar a logo aqui em cima-->
-                <nav>
-                    <ul>
-                        <li><a href="pag_estoque.html"><img src="img/img_estoque2.png" alt="imagem de estoque"></a></li>
-                        <li><a href="pag_vendas.html"><img src="img/img_dinheiro.png" alt="imagem de dinheiro"></a></li>
-                        <li><a href="pag_relatorios.html"><img src="img/img_grafico.png" alt="imagem de grafico"></a></li>
-                        <li><a href="../HomePage_Logado_Fagner/home_logado.html"><img src="img/img_login.png" alt=""></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <h2 id="titulo">Aqui você pode gerenciar produtos!</h2>    
-
-        <div id="corpo-vendas">
-            <section id="lista-produtos">
-                <div class="conteudo">
-                
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
-                    <select id="columnSelect">
-                        <option value="1">ID</option>
-                        <option value="2">Produtos</option>
-                        <option value="3">Estoque</option>
-                        <option value="4">Custo</option>
-                        <option value="5">Preço</option>
-                    </select>
-                    <button class="btn-menu">Excluir</button>
-                    <button class="btn-menu" onclick="clearSearch()">Limpar</button>
-                    <button class="btn-menu" data-toggle="modal" data-target="#modalProdutos">Adicionar</button>
-
-                    <div id="lista-abaixo" class="container">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <table id="produtosVendas" class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col"></th> 
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Produto</th>
-                                            <th scope="col">Estoque</th>
-                                            <th scope="col">Custo</th>
-                                            <th scope="col">Preço</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tabelaPrudotosVendas">
-                                        <tr>
-                                        </tr>
-                                    </tbody>
-                                    
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="productList"></div>    
-                </div>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque no Bolso</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1>
+                <a href="index.html"><img src="img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
+            </h1>
+            <!--Preciso adicionar a logo aqui em cima-->
+            <nav>
+                <ul>
+                    <li><a href="pag_estoque.html"><img src="img/img_estoque2.png" alt="imagem de estoque"></a></li>
+                    <li><a href="pag_vendas.html"><img src="img/img_dinheiro.png" alt="imagem de dinheiro"></a></li>
+                    <li><a href="pag_relatorios.html"><img src="img/img_grafico.png" alt="imagem de grafico"></a></li>
+                    <li><a href="../HomePage_Logado_Fagner/home_logado.html"><img src="img/img_login.png" alt=""></a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Modal -->
-            <div class="modal fade" id="modalProdutos" tabindex="-1" role="dialog" aria-labelledby="CadastroProdutos" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="CadastroProdutos">Cadastro de Produtos</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="login-box" class="col-md-12">
-                            <form id="form-produtos" class="form" method="post" onsubmit="loginUser (this)">
-                                <h3 class="text-center text-info">Cadastro de Produtos</h3>
-                                <div class="form-group">
-                                    <label for="cod" class="text-info">COD</label><br>
-                                    <input type="number" name="txt_cod" id="txt_cod" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="produto" class="text-info">Produto</label><br>
-                                    <input type="text" name="txt_produto" id="txt_produto" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="categoria" class="text-info">Categoria</label><br>
-                                    <input type="text" name="categoria" id="txt_categoria" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="variação" class="text-info">Variação</label><br>
-                                    <input type="text" name="txt_variacao" id="txt_variacao" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="custo" class="text-info">Custo</label><br>
-                                    <input type="number" name="txt_custo" id="txt_custo" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="quantidade" class="text-info">Quantidade</label><br>
-                                    <input type="number" name="txt_quantidade" id="txt_quantidade" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="venda" class="text-info">Preço de Venda</label><br>
-                                    <input type="text" name="text_venda" id="text_venda" class="form-control">
-                                </div>
-                                <!-- <div class="form-group">
-                                    <label for="imagem" class="text-info">Imagem</label><br>
-                                    <input type="file" name="text_imagem" id="text_imagem" class="form-control">
-                                </div> -->
-                                <div class="form-group">
-                                    <label for="descricao" class="text-info">Descrição</label><br>
-                                    <input type="text" name="text_descricao" id="text_descricao" class="form-control">
-                                </div>
-                                
-                            </form>
+    <h2 id="titulo">Aqui você pode gerenciar produtos!</h2>
+
+    <div id="corpo-vendas">
+        <section id="lista-produtos">
+            <div class="conteudo">
+               
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
+                <select id="columnSelect">
+                    <option value="1">Cód.</option>
+                    <option value="2">Produto</option>
+                    <option value="3">Categoria</option>
+                    <option value="4">Custo</option>
+                    <option value="5">Valor</option>
+                </select>
+                <button class="btn-menu" onclick="clearSearch()">Limpar</button>
+                <button class="btn-menu" data-toggle="modal" data-target="#modalProdutos">Adicionar</button>
+
+                <div id="lista-abaixo" class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <table id="produtosVendas" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Cód.</th>
+                                        <th scope="col">Produto</th>
+                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Tamanho</th>
+                                        <th scope="col">Custo</th>
+                                        <th scope="col">Quantidade</th>
+                                        <th scope="col">Valor</th>
+                                        <th scope="col">Descrição</th>
+                                        <th scope="col">Ações</th> <!-- Nova coluna para ações -->
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaPrudotosVendas">
+                                    <!-- ... (linhas da tabela) ... -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalProdutos" tabindex="-1" role="dialog" aria-labelledby="CadastroProdutos" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="CadastroProdutos">Cadastro de Produtos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div id="login-box" class="col-md-12">
+                        <form id="form-produtos" class="form" method="post" onsubmit="loginUser (this)">
+                            <h3 class="text-center text-info">Cadastro de Produtos</h3>
+                            <div class="form-group">
+                                <label for="cod" class="text-info">Cod.</label><br>
+                                <input type="number" name="txt_cod" id="txt_cod" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="produto" class="text-info">Produto</label><br>
+                                <input type="text" name="txt_produto" id="txt_produto" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="categoria" class="text-info">Categoria</label><br>
+                                <input type="text" name="categoria" id="txt_categoria" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="tamanho" class="text-info">Variação</label><br>
+                                <input type="text" name="txt_tamanho" id="txt_tamanho" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="custo" class="text-info">Custo</label><br>
+                                <input type="number" name="txt_custo" id="txt_custo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="quantidade" class="text-info">Quantidade</label><br>
+                                <input type="number" name="txt_quantidade" id="txt_quantidade" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="venda" class="text-info">Valor</label><br>
+                                <input type="text" name="text_venda" id="text_venda" class="form-control">
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="imagem" class="text-info">Imagem</label><br>
+                                <input type="file" name="text_imagem" id="text_imagem" class="form-control">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="descricao" class="text-info">Descrição</label><br>
+                                <input type="text" name="text_descricao" id="text_descricao" class="form-control">
+                            </div>
+                            
+                        </form>
+                    </div>
+                   </div>
+                   <div class="modal-footer">
                     <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     <button type="button" id="btn_salvar" class="btn btn-info">Salvar</button>
                     </div>
                 </div>
                 </div>
             </div>
-  
-        <script src="modais-estoque/pag_estoque.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-        <footer id="footer">
-            <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
-            <p class="copyright">&copy; Estoque no Bolso - 2023</p>
-        </footer>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const produtos = []; // Array para armazenar os produtos
+            let editingIndex = -1; // Índice do produto em edição
+
+            const modalProdutos = new bootstrap.Modal(document.getElementById('modalProdutos'), {
+                backdrop: 'static'
+            });
+
+            const formProdutos = document.getElementById('form-produtos');
+            const btnSalvar = document.getElementById('btn_salvar');
+            const tabelaProdutos = document.getElementById('tabelaPrudotosVendas');
+
+            // Função para limpar o formulário
+            function clearForm() {
+                formProdutos.reset();
+                editingIndex = -1;
+            }
+
+            // Função para renderizar a tabela de produtos
+            function renderTable() {
+                tabelaProdutos.innerHTML = '';
+
+                for (let i = 0; i < produtos.length; i++) {
+                    const produto = produtos[i];
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td><input type="checkbox" class="form-check-input"></td>
+                                    <td>${produto.id}</td>
+                                    <td>${produto.nome}</td>
+                                    <td>${produto.categoria}</td>
+                                    <td>${produto.tamanho}</td>
+                                    <td>${produto.custo}</td>
+                                    <td>${produto.quantidade}</td>
+                                    <td>${produto.valor}</td>
+                                    <td>${produto.descricao}</td>
+                                    <td>
+                                        <button class="btn-editar" data-index="${i}">Editar</button>
+                                        <button class="btn-excluir" data-index="${i}">Excluir</button>
+                                    </td>`;
+
+                    tabelaProdutos.appendChild(row);
+                }
+            }
+
+            // Evento do botão "Salvar"
+            btnSalvar.addEventListener('click', function () {
+                const id = document.getElementById('txt_cod').value;
+                const nome = document.getElementById('txt_produto').value;
+                const categoria = document.getElementById('txt_categoria').value;
+                const tamanho = document.getElementById('txt_tamanho').value;
+                const custo = document.getElementById('txt_custo').value;
+                const quantidade = document.getElementById('txt_quantidade').value;
+                const valor = document.getElementById('text_venda').value;
+                const descricao = document.getElementById('text_descricao').value;
+
+                if (editingIndex === -1) {
+                    // Adiciona um novo produto se não estiver em modo de edição
+                    produtos.push({ id, nome, categoria, tamanho, custo, quantidade, valor, descricao });
+                } else {
+                    // Edita o produto se estiver em modo de edição
+                    produtos[editingIndex] = { id, nome, categoria, tamanho, custo, quantidade, valor, descricao };
+                    editingIndex = -1;
+                }
+
+                // Renderiza a tabela novamente
+                renderTable();
+
+                // Limpa o formulário e fecha o modal
+                clearForm();
+                modalProdutos.hide();
+            });
+
+            // Evento da tabela para abrir modal de edição ou excluir
+            tabelaProdutos.addEventListener('click', function (event) {
+                const target = event.target;
+
+                if (target.classList.contains('btn-editar')) {
+                    // Modo de edição
+                    const index = target.dataset.index;
+                    editingIndex = index;
+
+                    document.getElementById('txt_cod').value = produtos[index].id;
+                    document.getElementById('txt_produto').value = produtos[index].nome;
+                    document.getElementById('txt_categoria').value = produtos[index].categoria;
+                    document.getElementById('txt_tamanho').value = produtos[index].tamanho;
+                    document.getElementById('txt_custo').value = produtos[index].custo;
+                    document.getElementById('txt_quantidade').value = produtos[index].quantidade;
+                    document.getElementById('text_venda').value = produtos[index].valor;
+                    document.getElementById('text_descricao').value = produtos[index].descricao;
+
+                    modalProdutos.show();
+                } else if (target.classList.contains('btn-excluir')) {
+                    // Excluir o produto
+                    const index = target.dataset.index;
+                    produtos.splice(index, 1);
+
+                    // Renderiza a tabela novamente
+                    renderTable();
+                }
+            });
+        });
+    </script>
+
+    <footer id="footer">
+        <img src="../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
+        <p class="copyright">&copy; Estoque no Bolso - 2023</p>
+    </footer>
+</body>
 </html>
