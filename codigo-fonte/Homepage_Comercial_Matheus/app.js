@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Verificar se estamos na página index.html
   if (window.location.pathname.includes("/index.html")) {
     // Função para salvar o formulário da página "index.html"
-    document
-      .querySelector("#contact-form")
-      .addEventListener("submit", function (e) {
+    document.querySelector("#contact-form").addEventListener("submit", function (e) {
         e.preventDefault();
 
         // Coletar os dados do formulário
@@ -181,11 +179,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // verifica se estamos na página pag_produtos.html
-  if (window.location.pathname.includes("pag_produtos.html")) {
-  }
-
-  // verifca se estamos na página pag_vendas.html
-  if (window.location.pathname.includes("pag_vendas.html")) {
-  }
 });

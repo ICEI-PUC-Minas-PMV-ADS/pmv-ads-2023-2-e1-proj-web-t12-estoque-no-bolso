@@ -29,26 +29,10 @@
         <!--Preciso adicionar a logo aqui em cima-->
         <nav>
           <ul>
-            <li>
-              <a href="pag_estoque.html"
-                ><img src="img/img_estoque2.png" alt="imagem de estoque"
-              /></a>
-            </li>
-            <li>
-              <a href="pag_vendas.html"
-                ><img src="img/img_dinheiro.png" alt="imagem de dinheiro"
-              /></a>
-            </li>
-            <li>
-              <a href="pag_relatorios.html"
-                ><img src="img/img_grafico.png" alt="imagem de grafico"
-              /></a>
-            </li>
-            <li>
-              <a href="../HomePage_Logado_Fagner/home_logado.html"
-                ><img src="img/img_login.png" alt=""
-              /></a>
-            </li>
+            <li><a href="pag_estoque.html"><img src="img/img_estoque2.png" alt="imagem de estoque"/></a></li>
+            <li><a href="pag_vendas.html"><img src="img/img_dinheiro.png" alt="imagem de dinheiro"/></a></li>
+            <li><a href="pag_relatorios.html"><img src="img/img_grafico.png" alt="imagem de grafico"/></a></li>
+            <li><a href="../HomePage_Logado_Fagner/home_logado.html"><img src="img/img_login.png" alt=""/></a></li>
           </ul>
         </nav>
       </div>
@@ -59,13 +43,8 @@
     <div id="corpo-vendas">
       <section id="lista-produtos">
         <div class="conteudo">
-          <input
-            type="text"
-            id="myInput"
-            onkeyup="myFunction()"
-            placeholder="Buscar..."
-            title="Digite um nome"
-          />
+          <!-- BARRA DE PESQUISA -->
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome"/>
           <select id="columnSelect">
             <option value="1">Cód.</option>
             <option value="2">Produto</option>
@@ -74,21 +53,16 @@
             <option value="5">Valor</option>
           </select>
           <button class="btn-menu" onclick="clearSearch()">Limpar</button>
-          <button
-            class="btn-menu"
-            data-toggle="modal"
-            data-target="#modalProdutos"
-          >
-            Adicionar
-          </button>
+          <button class="btn-menu" data-toggle="modal" data-target="#modalProdutos">Adicionar</button>
 
+          <!-- LISTA DE PRODUTOS -->
           <div id="lista-abaixo" class="container">
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <table id="produtosVendas" class="table table-striped">
                   <thead>
                     <tr>
-                      <th scope="col"></th>
+                      <!-- <th scope="col"></th> -->
                       <th scope="col">Cód.</th>
                       <th scope="col">Produto</th>
                       <th scope="col">Categoria</th>
@@ -102,7 +76,7 @@
                     </tr>
                   </thead>
                   <tbody id="tabelaPrudotosVendas">
-                    <!-- ... (linhas da tabela) ... -->
+                    <!--LISTA/TABALEA PRODUTOS-->
                   </tbody>
                 </table>
               </div>
@@ -243,6 +217,7 @@
       </div>
     </div>
 
+    <!-- SCRIPTS MODAL -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -259,11 +234,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="modais-estoque/pag_estoque.js"></script>
+
     <footer id="footer">
-      <img
-        src="../HomePage_Logado_Fagner/Img/Logo - ENB.png"
-        style="scale: 70%"
-      />
+      <img src="../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%"/>
       <p class="copyright">&copy; Estoque no Bolso - 2023</p>
     </footer>
   </body>

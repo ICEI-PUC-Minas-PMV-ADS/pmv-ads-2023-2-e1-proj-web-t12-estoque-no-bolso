@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Função para carregar os dados do localStorage
   function loadFromLocalStorage() {
-    const storedData = localStorage.getItem("produtos");
+    const storedData = localStorage.getItem("produtosSalvos");
     if (storedData) {
       produtos = JSON.parse(storedData);
       renderTable();
     }
   }
-  const formProdutos = document.getElementById("form-produtos");
+//   const formProdutos = document.getElementById("form-produtos");
   const btnSalvar = document.getElementById("btn_salvar");
   const tabelaProdutos = document.getElementById("tabelaPrudotosVendas");
 
@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const produto = produtos[i];
 
       const row = document.createElement("tr");
-      row.innerHTML = `<td><input type="checkbox" class="form-check-input"></td>
-                            <td>${produto.id}</td>
+      row.innerHTML =       `<td><input type="checkbox" class="form-check-input"></td>
+                            <td>${produto.cod}</td>
                             <td>${produto.nome}</td>
                             <td>${produto.categoria}</td>
                             <td>${produto.tamanho}</td>
                             <td>${produto.custo}</td>
                             <td>${produto.quantidade}</td>
-                            <td>${produto.valor}</td>
+                            <td>${produto.valorVenda}</td>
                             <td>${produto.descricao}</td>
                             <td>
                                 <button class="btn-editar" data-index="${i}">Editar</button>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Função para salvar os dados no localStorage
   function saveToLocalStorage() {
-    localStorage.setItem("produtos", JSON.stringify(produtos));
+    localStorage.setItem("produtosSalvos", JSON.stringify(produtos));
   }
 
   // Função para limpar o formulário
@@ -64,37 +64,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Evento do botão "Salvar"
   btnSalvar.addEventListener("click", function () {
-    const id = document.getElementById("txt_cod").value;
+    const cod = document.getElementById("txt_cod").value;
     const nome = document.getElementById("txt_produto").value;
     const categoria = document.getElementById("txt_categoria").value;
     const tamanho = document.getElementById("txt_tamanho").value;
     const custo = document.getElementById("txt_custo").value;
     const quantidade = document.getElementById("txt_quantidade").value;
-    const valor = document.getElementById("text_venda").value;
+    const valorVenda = document.getElementById("text_venda").value;
     const descricao = document.getElementById("text_descricao").value;
 
     if (editingIndex === -1) {
       // Adiciona um novo produto se não estiver em modo de edição
       produtos.push({
-        id,
+        cod,
         nome,
         categoria,
         tamanho,
         custo,
         quantidade,
-        valor,
+        valorVenda,
         descricao,
       });
     } else {
       // Edita o produto se estiver em modo de edição
       produtos[editingIndex] = {
-        id,
+        cod,
         nome,
         categoria,
         tamanho,
         custo,
         quantidade,
-        valor,
+        valorVenda,
         descricao,
       };
       editingIndex = -1;
@@ -117,17 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const index = target.dataset.index;
       editingIndex = index;
 
-      document.getElementById("txt_cod").value = produtos[index].id;
+      document.getElementById("txt_cod").value = produtos[index].cod;
       document.getElementById("txt_produto").value = produtos[index].nome;
-      document.getElementById("txt_categoria").value =
-        produtos[index].categoria;
+      document.getElementById("txt_categoria").value = produtos[index].categoria;
       document.getElementById("txt_tamanho").value = produtos[index].tamanho;
       document.getElementById("txt_custo").value = produtos[index].custo;
-      document.getElementById("txt_quantidade").value =
-        produtos[index].quantidade;
-      document.getElementById("text_venda").value = produtos[index].valor;
-      document.getElementById("text_descricao").value =
-        produtos[index].descricao;
+      document.getElementById("txt_quantidade").value = produtos[index].quantidade;
+      document.getElementById("text_venda").value = produtos[index].valorVenda;
+      document.getElementById("text_descricao").value = produtos[index].descricao;
 
       $("#modalProdutos").modal("show");
     } else if (target.classList.contains("btn-excluir")) {
