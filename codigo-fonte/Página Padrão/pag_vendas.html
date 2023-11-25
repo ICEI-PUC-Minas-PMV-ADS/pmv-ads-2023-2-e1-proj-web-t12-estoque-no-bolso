@@ -50,6 +50,7 @@
                         </select>
                         <button class="btn-excluir">Excluir</button>
                         <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
+                        <button class="btn-excluir" onclick="limparCarrinho()">Limpar Carrinho</button>
                         
                         <!-- LISTA DE PROUDTOS -->
                         <div id="lista-abaixo" class="container">
@@ -95,6 +96,11 @@
                                     <tbody id="tabelaPrudotosVendas">
                                         <tr>
                                         </tr>
+                                        <tr class="linha-total">
+                                            <td colspan="2"></td>   
+                                            <td>Total:</td>
+                                            <td id="totalCompra">0.00</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -129,6 +135,20 @@
                 function clearSearch() {
                     document.getElementById("myInput").value = "";
                     myFunction(); // Chame a função de filtro para reexibir todos os resultados
+                }
+                function limparCarrinho() {
+                    // Encontrar a tabela de carrinho
+                    const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+                
+                    // Remover todas as linhas da tabela
+                    while (tabelaCarrinho.rows.length > 0) {
+                        tabelaCarrinho.deleteRow(0);
+                    }
+                
+                    // Outras ações que você pode querer realizar, como atualizar o localStorage
+                    // atualizarCarrinhoLocalStorage();
+                
+                    console.log("Carrinho limpo com sucesso!");
                 }
             </script>
 

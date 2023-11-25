@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             botao.className = "btn-adicionar";
             botao.textContent = "Adicionar";
             botao.onclick = function () {
-                adicionarNoCarrinho(this);
+                adicionarNoCarrinho(this, produto);
             };
             cellBotao.appendChild(botao);
         });
@@ -37,22 +37,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     atualizarListaProdutos();
 
-    function adicionarNoCarrinho(botao) {
+    function adicionarNoCarrinho(botao, produto) {
         // Encontrar a linha da tabela onde o botão foi clicado
         const linha = botao.closest('tr');
     
         // Obter os dados da linha
         const cod = linha.cells[0].textContent;
-        const produto = linha.cells[1].textContent;
+        const nomeProduto = linha.cells[1].textContent;
     
-        // Modificar para garantir que a quantidade seja um número válido
-        const quantidade = parseInt(linha.cells[2].textContent.trim()) || 0;
+        // Solicitar ao usuário a quantidade desejada
+        const quantidadeDigitada = prompt(`Digite a quantidade desejada para ${nomeProduto}:`);
     
-        // Modificar para garantir que o preço seja um número válido
-        const preco = parseFloat(linha.cells[4].textContent.trim().replace('R$', '').replace(',', '.')) || 0;
+        // Validar se a quantidade é um número válido
+        const quantidade = parseInt(quantidadeDigitada.trim()) || 0;
     
-        console.log("Valores obtidos para adicionar ao carrinho:", { cod, produto, quantidade, preco });
-    
+        // Calcular o novo preço com base na quantidade
+        const precoUnitario = parseFloat(produto.valorVenda.trim().replace('R$', '').replace(',', '.')) || 0;
+        const novoPreco = quantidade * precoUnitario;
+
         // Adicionar o produto ao carrinho
         const carrinho = document.querySelector("#tabelaPrudotosVendas");
         const novaLinha = carrinho.insertRow();
@@ -62,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const cellPrecoCarrinho = novaLinha.insertCell(3);
     
         cellCodigoCarrinho.textContent = cod;
-        cellProdutoCarrinho.textContent = produto;
+        cellProdutoCarrinho.textContent = nomeProduto;
         cellQuantidadeCarrinho.textContent = quantidade;
-        cellPrecoCarrinho.textContent = preco;
+        cellPrecoCarrinho.textContent = novoPreco.toFixed(2);
     
         // Adicionar o botão de remoção
         const cellRemover = novaLinha.insertCell(-1); // -1 insere no final
@@ -75,22 +77,62 @@ document.addEventListener("DOMContentLoaded", function () {
             removerDoCarrinho(this);
         };
         cellRemover.appendChild(botaoRemover);
-    
-        console.log("Produto adicionado ao carrinho:", { cod, produto, quantidade, preco });
+
+        // Mover a linha "TOTAL" para o final da tabela
+        const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+        const linhaTotal = tabelaCarrinho.querySelector('.linha-total');
+        tabelaCarrinho.appendChild(linhaTotal);
+
+        // Atualizar o total da compra
+        atualizarTotalCompra();
+
+        console.log("Produto adicionado ao carrinho:", { cod, nomeProduto, quantidade, novoPreco });
         // atualizarCarrinhoLocalStorage();
     }
     
-
+    function atualizarTotalCompra() {
+        // Encontrar a tabela de carrinho
+        const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+    
+        // Verificar se há pelo menos uma linha (excluindo a linha "TOTAL")
+        if (tabelaCarrinho.rows.length > 1) {
+            // Calcular o total somando os valores da coluna "preço"
+            let totalCompra = 0;
+            for (let i = 0; i < tabelaCarrinho.rows.length - 1; i++) {
+                const precoCell = tabelaCarrinho.rows[i].cells[3];
+                if (precoCell) {
+                    totalCompra += parseFloat(precoCell.textContent);
+                }
+            }
+    
+            // Encontrar a linha "TOTAL"
+            const linhaTotal = tabelaCarrinho.querySelector('.linha-total');
+    
+            // Atualizar a célula de total com o valor calculado
+            const cellTotal = linhaTotal.querySelector('#totalCompra');
+            if (cellTotal) {
+                cellTotal.textContent = totalCompra.toFixed(2);
+                console.log("Total da compra atualizado:", totalCompra);
+            } else {
+                console.error("Erro ao encontrar a célula de total.");
+            }
+        } else {
+            // Se não houver itens no carrinho, definir o total como 0.00
+            const cellTotal = tabelaCarrinho.querySelector('#totalCompra');
+            if (cellTotal) {
+                cellTotal.textContent = '0.00';
+                console.log("Carrinho vazio. Total resetado para 0.00");
+            } else {
+                console.error("Erro ao encontrar a célula de total.");
+            }
+        }
+    }
+    
+    
     function removerDoCarrinho(botaoRemover) {
         const linhaRemover = botaoRemover.closest('tr');
         linhaRemover.remove();
         // atualizarCarrinhoLocalStorage();
-    }
-
-
-    const botaoLimparCarrinho = document.querySelector("#botaoLimparCarrinho");
-    botaoLimparCarrinho.addEventListener("click", function () {
-        limparCarrinho();
-    });
-
+        atualizarTotalCompra(); // Atualizar o total após remover um item
+    }  
 });
