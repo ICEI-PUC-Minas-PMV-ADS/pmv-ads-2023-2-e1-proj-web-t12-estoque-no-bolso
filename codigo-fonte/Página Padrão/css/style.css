@@ -52,6 +52,10 @@ nav li {
   margin: 0 0 0 15px; /*margens são topo, direita, baixo e esquerda*/
 }
 
+#logomenu{
+  padding-top: 30px;
+}
+
 /* BODY */
 
 .conteudo {
