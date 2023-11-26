@@ -4,8 +4,19 @@ Relatório com as evidências dos testes de software realizados na aplicação p
 
 Os resultados dos testes funcionais realizados na aplicação são descritos a seguir. [Utilize a estrutura abaixo para cada caso de teste executado]
 
+# Caso de Teste
+# CT-01 - Links página home
+
+
+Na página Home, ao clicar nos botões eles direcionam corretamente ao ponto indicado, seja um ponto específico na própria Home ou outra página da aplicação, como no caso do botão de login ou contato.
+
+Responsável pela execução do caso de Teste | Mariana
+
+[Untitled_ Nov 26, 2023 8_26 PM.webm](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/4ff10910-6f4c-4cab-b3b9-f66a14c14eb9)
+
+
 # Caso de Teste   
-# CT-01 - Cadastro de Usuários
+# CT-02 - Cadastro de Usuários
 
 Usuário preenche os campos "Email" e "Senha" inválidos ou de usuário não cadastrado.
 Navegador retorna que os dados estão inválidos.
@@ -22,7 +33,7 @@ Responsável pela execução do caso de Teste | Fagner
 
 
 # Caso de Teste
-# CT-02 - Login de usuários
+# CT-03 - Login de usuários
 
 
 Dados para inclusão de novo usuários são preenchidos, inclusive com senha e confirmação de senha.
