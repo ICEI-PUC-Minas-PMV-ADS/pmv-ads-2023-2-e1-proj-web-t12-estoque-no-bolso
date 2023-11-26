@@ -51,6 +51,7 @@
                         <button class="btn-menu">Excluir</button>
                         <button class="btn-menu" onclick="clearSearch()">Limpar</button>
                         <button class="btn-menu" id="btnLimparCarrinho" >Limpar Carrinho</button>
+                        <button class="btn-menu" id="btnModalVenda" data-toggle="modal" data-target="#modalRegistrarVenda">Registrar</button>
                         
                         <!-- LISTA DE PROUDTOS -->
                         <div id="lista-abaixo" class="container">
@@ -69,7 +70,7 @@
                                         </thead>
                                         <tbody id="tabelaProdutosSalvos">
                                             <tr>
-                                            <!--LISTA/TABELA DE VENDAS-->
+                                            <!--LISTA/TABELA DE PRODUTOS SALVOS-->
                                             </tr>
                                         </tbody>
                                     </table>
@@ -79,7 +80,7 @@
                     </div>
                 </section>
                 
-                
+                <!-- TABELA CARRINHO -->
                 <section id="lista-venda" class="section-vendas">
                     <h4 id="titulo-sacola">Lista de Vendas</h4>
                     <div id="lista-abaixo" class="container" id="sacola">
@@ -95,6 +96,7 @@
                                             <th scope="col">Ações</th>
                                         </tr>
                                     </thead>
+                                    <!-- PRODUTOS NO CARRINHO -->
                                     <tbody id="tabelaPrudotosVendas">
                                         <tr>
                                         </tr>
@@ -111,8 +113,45 @@
                 </section>
             </div>
 
+
+            <!-- Modal de Registro de Venda -->
+            <div class="modal fade" id="modalRegistrarVenda" tabindex="-1" role="dialog" aria-labelledby="RegistroVenda" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="RegistroVenda">Registrar Venda</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Formulário de Registro de Venda -->
+                            <form id="formRegistroVenda">
+                                <div class="mb-3">
+                                    <label for="nomeCliente" class="form-label">Nome do Cliente</label>
+                                    <input type="text" class="form-control" id="nomeCliente" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefoneCliente" class="form-label">Número de Telefone</label>
+                                    <input type="tel" class="form-control" id="telefoneCliente" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="btnConfirmarVenda">Confirmar Venda</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
             <script src="../Página Padrão/vendas_matheus/pag_vendas.js"></script>
             
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+              
+
             <!-- SCRIP PARA BARRA DE PESQUISA -->
             <script>
                 function myFunction() {
