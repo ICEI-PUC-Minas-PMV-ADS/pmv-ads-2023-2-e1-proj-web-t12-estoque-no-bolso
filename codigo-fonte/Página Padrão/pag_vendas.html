@@ -48,9 +48,9 @@
                             <option value="4">Custo</option>
                             <option value="5">Preço</option>
                         </select>
-                        <button class="btn-excluir">Excluir</button>
-                        <button class="btn-excluir" onclick="clearSearch()">Limpar</button>
-                        <button class="btn-excluir" onclick="limparCarrinho()">Limpar Carrinho</button>
+                        <button class="btn-menu">Excluir</button>
+                        <button class="btn-menu" onclick="clearSearch()">Limpar</button>
+                        <button class="btn-menu" id="btnLimparCarrinho" >Limpar Carrinho</button>
                         
                         <!-- LISTA DE PROUDTOS -->
                         <div id="lista-abaixo" class="container">
@@ -112,6 +112,7 @@
             </div>
 
             <script src="../Página Padrão/vendas_matheus/pag_vendas.js"></script>
+            
             <!-- SCRIP PARA BARRA DE PESQUISA -->
             <script>
                 function myFunction() {
@@ -138,21 +139,8 @@
                     document.getElementById("myInput").value = "";
                     myFunction(); // Chame a função de filtro para reexibir todos os resultados
                 }
-                function limparCarrinho() {
-                    // Encontrar a tabela de carrinho
-                    const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
-                
-                    // Remover todas as linhas da tabela
-                    while (tabelaCarrinho.rows.length > 0) {
-                        tabelaCarrinho.deleteRow(0);
-                    }
-                
-                    // Outras ações que você pode querer realizar, como atualizar o localStorage
-                    // atualizarCarrinhoLocalStorage();
-                
-                    console.log("Carrinho limpo com sucesso!");
-                }
-            </script>
+            
+            </script>  
 
             <footer id="footer">
                 <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
