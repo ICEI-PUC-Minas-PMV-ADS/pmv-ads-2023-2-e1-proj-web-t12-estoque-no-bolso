@@ -10,7 +10,7 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 Usuário preenche os campos "Email" e "Senha" inválidos ou de usuário não cadastrado.
 Navegador retorna que os dados estão inválidos.
 
-Responsável pela execução do caso de Teste | Mariana
+Responsável pela execução do caso de Teste | Fagner
 
 
 
@@ -28,7 +28,7 @@ Responsável pela execução do caso de Teste | Mariana
 Dados para inclusão de novo usuários são preenchidos, inclusive com senha e confirmação de senha.
 Se o usuário já estiver cadastrado e as informações de usuário e senha estiverem corretas, o login será bem-sucedido.
 
-Responsável pela execução do caso de Teste | Mariana 
+Responsável pela execução do caso de Teste | Fagner 
 
 
 
