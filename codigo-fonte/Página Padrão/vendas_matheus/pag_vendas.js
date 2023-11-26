@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Adiciona o botão "Adicionar no Carrinho"
             const cellBotao = row.insertCell(5);
             const botao = document.createElement("button");
-            botao.className = "btn-adicionar";
+            botao.className = "btn-excluir";
             botao.textContent = "Adicionar";
             botao.onclick = function () {
                 adicionarNoCarrinho(this, produto);
@@ -35,15 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    atualizarListaProdutos();
-
     function adicionarNoCarrinho(botao, produto) {
         // Encontrar a linha da tabela onde o botão foi clicado
         const linha = botao.closest('tr');
     
         // Obter os dados da linha
-        const cod = linha.cells[0].textContent;
-        const nomeProduto = linha.cells[1].textContent;
+        const cod = linha.cells[0]?.textContent;
+        const nomeProduto = linha.cells[1]?.textContent;
     
         // Solicitar ao usuário a quantidade desejada
         const quantidadeDigitada = prompt(`Digite a quantidade desejada para ${nomeProduto}:`);
@@ -54,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Calcular o novo preço com base na quantidade
         const precoUnitario = parseFloat(produto.valorVenda.trim().replace('R$', '').replace(',', '.')) || 0;
         const novoPreco = quantidade * precoUnitario;
-
+    
         // Adicionar o produto ao carrinho
         const carrinho = document.querySelector("#tabelaPrudotosVendas");
         const novaLinha = carrinho.insertRow();
@@ -63,32 +61,35 @@ document.addEventListener("DOMContentLoaded", function () {
         const cellQuantidadeCarrinho = novaLinha.insertCell(2);
         const cellPrecoCarrinho = novaLinha.insertCell(3);
     
-        cellCodigoCarrinho.textContent = cod;
-        cellProdutoCarrinho.textContent = nomeProduto;
+        cellCodigoCarrinho.textContent = cod || '';
+        cellProdutoCarrinho.textContent = nomeProduto || '';
         cellQuantidadeCarrinho.textContent = quantidade;
         cellPrecoCarrinho.textContent = novoPreco.toFixed(2);
     
         // Adicionar o botão de remoção
         const cellRemover = novaLinha.insertCell(-1); // -1 insere no final
         const botaoRemover = document.createElement("button");
-        botaoRemover.className = "btn-remover";
+        botaoRemover.className = "btn-excluir";
         botaoRemover.textContent = "Remover";
         botaoRemover.onclick = function () {
             removerDoCarrinho(this);
         };
         cellRemover.appendChild(botaoRemover);
-
+    
         // Mover a linha "TOTAL" para o final da tabela
         const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
         const linhaTotal = tabelaCarrinho.querySelector('.linha-total');
         tabelaCarrinho.appendChild(linhaTotal);
-
+    
         // Atualizar o total da compra
         atualizarTotalCompra();
-
+    
+        // Salvar no localStorage
+        atualizarCarrinhoLocalStorage();
+    
         console.log("Produto adicionado ao carrinho:", { cod, nomeProduto, quantidade, novoPreco });
-        // atualizarCarrinhoLocalStorage();
     }
+    
     
     function atualizarTotalCompra() {
         // Encontrar a tabela de carrinho
@@ -128,11 +129,91 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
-    
     function removerDoCarrinho(botaoRemover) {
         const linhaRemover = botaoRemover.closest('tr');
         linhaRemover.remove();
-        // atualizarCarrinhoLocalStorage();
-        atualizarTotalCompra(); // Atualizar o total após remover um item
-    }  
+        // Atualizar o total após remover um item
+        atualizarTotalCompra();
+        
+        // Salvar no localStorage
+        atualizarCarrinhoLocalStorage();
+    }
+
+    function atualizarCarrinhoLocalStorage() {
+        // Encontrar a tabela de carrinho
+        const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+    
+        // Criar um array para armazenar os produtos do carrinho
+        const produtosCarrinho = [];
+    
+        // Iterar sobre as linhas da tabela (excluindo a linha "TOTAL")
+        for (let i = 0; i < tabelaCarrinho.rows.length - 1; i++) {
+            const linha = tabelaCarrinho.rows[i];
+    
+            // Obter os dados da linha
+            const cod = linha.cells[0]?.textContent || '';
+            const nomeProduto = linha.cells[1]?.textContent || '';
+            const quantidade = parseInt(linha.cells[2]?.textContent) || 0;
+            const preco = parseFloat(linha.cells[3]?.textContent) || 0;
+    
+            // Adicionar o produto ao array
+            produtosCarrinho.push({ cod, nomeProduto, quantidade, preco });
+        }
+    
+        // Salvar o array no localStorage
+        localStorage.setItem("produtosCarrinho", JSON.stringify(produtosCarrinho));
+    
+        console.log("Dados do carrinho salvos no localStorage:", produtosCarrinho);
+    }
+    
+    function carregarCarrinhoDoLocalStorage() {
+        const produtosCarrinho = JSON.parse(localStorage.getItem("produtosCarrinho")) || [];
+    
+        // Verificar se há produtos no carrinho
+        if (produtosCarrinho.length > 0) {
+            // Encontrar a tabela de carrinho
+            const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+    
+            // Limpar a tabela antes de adicionar os produtos do carrinho
+            while (tabelaCarrinho.rows.length > 1) {
+                tabelaCarrinho.deleteRow(0);
+            }
+    
+            // Iterar sobre os produtos no carrinho
+            produtosCarrinho.forEach(function (produto) {
+                // Adicionar o produto à tabela de carrinho
+                const novaLinha = tabelaCarrinho.insertRow();
+                const cellCodigoCarrinho = novaLinha.insertCell(0);
+                const cellProdutoCarrinho = novaLinha.insertCell(1);
+                const cellQuantidadeCarrinho = novaLinha.insertCell(2);
+                const cellPrecoCarrinho = novaLinha.insertCell(3);
+    
+                cellCodigoCarrinho.textContent = produto.cod || '';
+                cellProdutoCarrinho.textContent = produto.nomeProduto || '';
+                cellQuantidadeCarrinho.textContent = produto.quantidade;
+                cellPrecoCarrinho.textContent = produto.preco.toFixed(2);
+    
+                // Adicionar o botão de remoção
+                const cellRemover = novaLinha.insertCell(-1); // -1 insere no final
+                const botaoRemover = document.createElement("button");
+                botaoRemover.className = "btn-excluir";
+                botaoRemover.textContent = "Remover";
+                botaoRemover.onclick = function () {
+                    removerDoCarrinho(this);
+                };
+                cellRemover.appendChild(botaoRemover);
+            });
+    
+            // Mover a linha "TOTAL" para o final da tabela
+            const linhaTotal = tabelaCarrinho.querySelector('.linha-total');
+            tabelaCarrinho.appendChild(linhaTotal);
+    
+            // Atualizar o total da compra
+            atualizarTotalCompra();
+        }
+    }
+    
+    atualizarListaProdutos();
+    carregarCarrinhoDoLocalStorage();
+
 });
