@@ -4,7 +4,7 @@ Relatório com as evidências dos testes de software realizados na aplicação p
 
 Os resultados dos testes funcionais realizados na aplicação são descritos a seguir. [Utilize a estrutura abaixo para cada caso de teste executado]
 
-# Caso de Teste
+# Casos de Teste
 # CT-01 - Links página home
 
 
@@ -15,7 +15,7 @@ Responsável pela execução do caso de Teste | Mariana
 [Untitled_ Nov 26, 2023 8_26 PM.webm](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/4ff10910-6f4c-4cab-b3b9-f66a14c14eb9)
 
 
-# Caso de Teste   
+   
 # CT-02 - Cadastro de Usuários
 
 Usuário preenche os campos "Email" e "Senha" inválidos ou de usuário não cadastrado.
@@ -32,7 +32,7 @@ Responsável pela execução do caso de Teste | Fagner
 
 
 
-# Caso de Teste
+
 # CT-03 - Login de usuários
 
 
@@ -95,5 +95,13 @@ Após clicar no botão salvar, o item é atualizado.
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/b1ec5cba-9849-4993-9ace-09033e9f0af8)
 
+# CT-08 - Verificar funcionamento da página de vendas
+
+
+A aplicação permite que o usuário escolha um dos produtos e defina a quantidade a ser vendida. Após clicar em adicionar a venda, é gerada uma lista de produtos vendidos e qual o valor da venda.
+
+Responsável pela execução do caso de Teste | Mariana
+
+[Untitled_ Nov 26, 2023 8_46 PM.webm](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/cb34e26e-3c7f-416f-8c43-d1b330a7f32d)
 
 
