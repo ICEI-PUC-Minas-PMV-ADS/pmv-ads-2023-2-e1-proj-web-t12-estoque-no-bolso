@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos_relatorio.css">
+
+    <script src="../modais-estoque/pag_estoque.js" defer></script>
+    <script>
+        // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+ 
+
+        function exibeProdutos() {
+            for (let i = 0; i < produtos.length; i++) {
+             const produto = produtos[i];
+
+             const row = document.createElement("tr");
+             row.innerHTML = `
+                            <td>${produto.cod}</td>
+                            <td>${produto.nome}</td>
+                            <td>${produto.categoria}</td>
+                            <td>${produto.tamanho}</td>
+                            <td>${produto.custo}</td>
+                            <td>${produto.quantidade}</td>
+                            <td>${produto.valorVenda}</td>
+                            <td>${produto.descricao}</td>`;
+
+      tabelaProdutos.appendChild(row);
+    }
+
+        }
+
+        function initPage() {
+
+
+
+            document.getElementById("btn_voltar").addEventListener("click", function() {
+                window.open("./Página Padrão/pag_relatorios.html", "_blank");
+            });
+    
+
+            // Lista os produtos
+            exibeProdutos ();
+        }
+
+    </script>
+    <title>Estoque</title>
+
+    <head>
+        <body>
+            <header><h1 class="header-title">Relatório de Estoque</h1></header>
+            <main>
+                <button id="btn_voltar">Voltar</button>
+                <table id="tableProduto" class="records">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cód.</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Tamanho</th>
+                            <th scope="col">Custo</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr></tr>
+                    </tbody>
+                </table>
+                <div class="modal" id="modal">
+
+                </div>
+            </main>
+        </body>
+    </head>
+ 
