@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 //   const formProdutos = document.getElementById("form-produtos");
   const btnSalvar = document.getElementById("btn_salvar");
-  const tabelaProdutos = document.getElementById("tabelaPrudotosVendas");
+  const tabelaProdutos = document.getElementById("tabelaPrudotosSalvos");
 
   loadFromLocalStorage();
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const produto = produtos[i];
 
       const row = document.createElement("tr");
-      row.innerHTML =       `<td><input type="checkbox" class="form-check-input"></td>
+      row.innerHTML =       `
                             <td>${produto.cod}</td>
                             <td>${produto.nome}</td>
                             <td>${produto.categoria}</td>

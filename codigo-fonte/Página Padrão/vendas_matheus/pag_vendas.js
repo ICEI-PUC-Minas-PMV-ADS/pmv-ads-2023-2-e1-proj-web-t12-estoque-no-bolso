@@ -1,5 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     const produtos = JSON.parse(localStorage.getItem("produtosSalvos")) || [];
+    const btnLimpar = document.getElementById("btnLimparCarrinho");
+
+
+    btnLimpar.addEventListener("click", function () { 
+                    // Encontrar a tabela de carrinho
+                    const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+                
+                    // Remover todas as linhas da tabela
+                    while (tabelaCarrinho.rows.length > 0) {
+                        tabelaCarrinho.deleteRow(0);
+                    }
+                
+                    // Outras ações que você pode querer realizar, como atualizar o localStorage
+                    atualizarCarrinhoLocalStorage();
+                
+                    console.log("Carrinho limpo com sucesso!");
+                });
 
     function atualizarListaProdutos() {
         const tabelaDeProdutos = document.querySelector("#tabelaProdutosSalvos");
