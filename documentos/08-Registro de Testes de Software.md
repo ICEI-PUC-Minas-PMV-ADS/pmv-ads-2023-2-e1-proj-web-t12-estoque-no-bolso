@@ -64,5 +64,36 @@ Responsável pela execução do caso de Teste | Fagner
 
 ![Captura de tela 2023-11-26 172446](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/0899204d-424e-4269-89bf-0cd24b39bc31)
 
+# CT-06 - Funcionalidades página de estoque - cadastro de itens
+
+Nesta página é exibido uma lista com os itens cadastrados e suas informações. 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/5fea6383-a4a4-4bf0-a0c9-e30eae4f493e)
+
+
+Ao clicar no botão "adicionar", o modal para cadastro dos itens é exibido. 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/fe91c36d-2d85-4b42-9eb7-a64030e085bf)
+
+
+| Dados salvos no Local storage | 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/82873a80-8d3b-4ee1-8f9a-1bd98695581e)
+
+
+# CT-07 - Funcionalidades página de estoque - edição de itens
+
+Nesta página é exibido uma lista com os itens cadastrados e suas informações.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/5fea6383-a4a4-4bf0-a0c9-e30eae4f493e)
+
+Ao clicar no botão "editar", o modal editar os item é exibido.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/e360f1e9-6506-4dd6-92da-2fa657446024)
+
+Após clicar no botão salvar, o item é atualizado.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/b1ec5cba-9849-4993-9ace-09033e9f0af8)
+
 
 
