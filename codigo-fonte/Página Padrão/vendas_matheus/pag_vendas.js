@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         // Verificar se há pelo menos uma linha (excluindo a linha "TOTAL")
         if (tabelaCarrinho.rows.length > 1) {
-            // Calcular o total somando os valores da coluna "preço"
+            // Calcula o total somando os valores da coluna "preço"
             let totalCompra = 0;
             for (let i = 0; i < tabelaCarrinho.rows.length - 1; i++) {
                 const precoCell = tabelaCarrinho.rows[i].cells[3];
@@ -150,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Erro ao encontrar a célula de total.");
             }
         }
+        
     }
     
     // BOTAO PARA REMOVER O ITEM DO CARRINHO
@@ -266,7 +267,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // SALVA OS DADOS DO CLIENTE NUMA VARIAVEL
         const dadosDoCliente = {nomeCliente, telefoneCliente};
 
-        const vendaAtual = {dadosDoCliente, intensNoCarrinho: carrinhoAtual};
+        // PEGA VALOR TOTAL DO CARRINHO
+        
+        const totalCompraHTML = document.getElementById("totalCompra").textContent;
+        const totalCompra = parseFloat(totalCompraHTML);
+        console.log("Total da compra:", totalCompra);
+
+        const vendaAtual = {dadosDoCliente, intensNoCarrinho: carrinhoAtual, totalCompra: totalCompra};
 
         registrosExistente.push(vendaAtual);
 
