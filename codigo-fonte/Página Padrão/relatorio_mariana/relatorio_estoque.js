@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Adicionar o botão de remoção
                 const cellRemover = novaLinha.insertCell(-1); // -1 insere no final
                 const botaoRemover = document.createElement("button");
-                botaoRemover.className = "btn-excluir";
+                botaoRemover.className = "btn-excluir btn_trans";
                 botaoRemover.textContent = "Remover";
                 botaoRemover.onclick = function () {
                     removerDoCarrinho(this);
