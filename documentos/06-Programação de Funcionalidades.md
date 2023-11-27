@@ -164,5 +164,86 @@ Fagner Passos
 
 ![image](https://user-images.githubusercontent.com/58199879/271438380-dfa1d087-1358-4b5d-9471-80ec3ae3cfb3.png)
 
+### Tela Controle de Vendas (RF-01)
+![image](https://private-user-images.githubusercontent.com/58199879/271438647-194f0cba-2b14-4573-a743-a0a3cf10c37b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEwNDA2ODIsIm5iZiI6MTcwMTA0MDM4MiwicGF0aCI6Ii81ODE5OTg3OS8yNzE0Mzg2NDctMTk0ZjBjYmEtMmIxNC00NTczLWE3NDMtYTBhM2NmMTBjMzdiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI2VDIzMTMwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY5YWI0ZTY0ZTA0YTg3ZTgzM2Q4MDQ4ZDgyZGZlYzI3MjQwMWI2M2MxMjBkYmFiN2UwYjk2NTlkN2I0NGY0NWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.S7LLbnCUBPdgyqfKbIdsH-rroZVwOCMCgl0FCgku3L4)
 
+#### Requisistos Atendidos.
+- RF-01:A aplicação deve permitir ao usuário fazer o cadastro de itens;
+- RF-02:A aplicação deve permitir ao usuário fazer a consulta do custo dos itens;
+- RF-05:A aplicação deve permitir ao usuário atualizar a quantidade de itens no estoque;
+- RF-06:A aplicação deve permitir ao usuário registrar a compra de um item;
+- RF-07:A aplicação deve permitir ao usuário cadastrar o preço de venda de um item;
+- RF-11:A aplicação deve permitir ao usuario editar, remover e arquivar algum item do estoque;
 
+#### Artefatos de Funcionalidades
+- pag_estoque.html
+- pag-estoque.js
+- style.css
+
+#### Link de Acesso
+
+[Pagina de Estoque](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/P%C3%A1gina%20Padr%C3%A3o/pag_estoque.html)
+
+#### Instruções de Acesso
+
+Abra a Home do projeto (GitHub/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/Homepage_Comercial_Matheus/Login/index.html) Clique na aba login, efetue o login. Após entrar na pagina home logado, clique no icone de estoque.
+
+#### Responsável
+
+Fagner
+
+### Tela de Vendas (RF-03)
+![image](https://private-user-images.githubusercontent.com/58199879/271439174-c3b16a42-a913-4be3-ba64-d4707d99bf1c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEwNDE0NjYsIm5iZiI6MTcwMTA0MTE2NiwicGF0aCI6Ii81ODE5OTg3OS8yNzE0MzkxNzQtYzNiMTZhNDItYTkxMy00YmUzLWJhNjQtZDQ3MDdkOTliZjFjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI2VDIzMjYwNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZmNzYwNTI5ZTI2NGVhZDBjMjRhMWZiMDVjMDVhZDE1MzBlNzgzMzQ4M2NjZTAxMGY2MDM0OTllNmQ5YjYzNjEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.xTNUtWDg-UlwNm_b32jTv_zYkjEwIa_21pRuLDGgXxk)
+
+#### Requisitos Atendidos
+
+- RF-03:A aplicação deve permitir ao usuário registrar uma venda e dar baixa no sistema;
+  
+#### Artefatos de Funcionalidades
+
+- pag_vendas.html
+- style.css
+- pag_vendas.js
+
+#### Link de Acesso
+
+[Pagina de Vendas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/P%C3%A1gina%20Padr%C3%A3o/pag_vendas.html)
+
+#### Instruções de Acesso
+
+Abra a Home do projeto (GitHub/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/Homepage_Comercial_Matheus/Login/index.html) Clique na aba login, efetue o login. Após entrar na pagina home logado, clique no icone de vendas.
+
+#### Responsável
+
+Matheus
+
+### Tela de Relatório (RF-08)
+
+![image](https://private-user-images.githubusercontent.com/58199879/271439498-bc625ac6-b1ae-4f8f-9e44-f967f1ba0261.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEwNDIwMDEsIm5iZiI6MTcwMTA0MTcwMSwicGF0aCI6Ii81ODE5OTg3OS8yNzE0Mzk0OTgtYmM2MjVhYzYtYjFhZS00ZjhmLTllNDQtZjk2N2YxYmEwMjYxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI2VDIzMzUwMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWI3MTRiNzExODE4NGIyMWFlMWVjOGM1NDhkMjMxMjc3MzA1Y2E3OWIxNDFmNWMzOWE4MzM5NGJiN2UzZmMxZWQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.828YBAEVXw5Y372RX5LkGPGag3GtHRfzxo35uBMVqxg)
+
+#### Requisitos Atendidos
+
+- RF-09:A aplicação deve ser capaz de gerar um relatório da quantidade total dos produtos em estoque;
+- RF-10:A aplicação deve permitir ao usuário cadastrar uma imagem do produto.
+  
+#### Artefatos de Funcionalidades
+
+- pag_relatorios.html
+- modal_vt.html
+- modalep.html
+- modal_vt
+- estilo.css
+
+#### Link de Acesso
+
+[Pagina de Relatório](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/P%C3%A1gina%20Padr%C3%A3o/pag_relatorios.html)
+
+#### Instrução de Acesso 
+
+Abra a Home do projeto (GitHub/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/Homepage_Comercial_Matheus/Login/index.html) Clique na aba login, efetue o login. Após entrar na pagina home logado, clique no icone de relatório.
+
+#### Responsável
+
+Mariana
+
+  
