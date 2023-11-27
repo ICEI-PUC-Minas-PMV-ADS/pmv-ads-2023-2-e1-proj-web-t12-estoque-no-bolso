@@ -2,22 +2,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const produtos = JSON.parse(localStorage.getItem("produtosSalvos")) || [];
     const btnLimpar = document.getElementById("btnLimparCarrinho");
 
+    // LIMPAR CARRINHO
+    btnLimpar.addEventListener("click", limparCarrinho);
+    
+    function limparCarrinho() { 
+        // Encontrar a tabela de carrinho
+        const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+    
+        // Remover todas as linhas da tabela
+        while (tabelaCarrinho.rows.length > 0) {
+            tabelaCarrinho.deleteRow(0);
+        }
+    
+        // Outras ações que você pode querer realizar, como atualizar o localStorage
+        atualizarCarrinhoLocalStorage();
+    
+        console.log("Carrinho limpo com sucesso!");
+    };
 
-    btnLimpar.addEventListener("click", function () { 
-                    // Encontrar a tabela de carrinho
-                    const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
-                
-                    // Remover todas as linhas da tabela
-                    while (tabelaCarrinho.rows.length > 0) {
-                        tabelaCarrinho.deleteRow(0);
-                    }
-                
-                    // Outras ações que você pode querer realizar, como atualizar o localStorage
-                    atualizarCarrinhoLocalStorage();
-                
-                    console.log("Carrinho limpo com sucesso!");
-                });
-
+    // ATUALIZA A LISTA DE PRODUTOS SALVOS EM ESTOQUE
     function atualizarListaProdutos() {
         const tabelaDeProdutos = document.querySelector("#tabelaProdutosSalvos");
 
@@ -52,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ADICIONAR O ITEM SELECIONADO NO CARRINHO
     function adicionarNoCarrinho(botao, produto) {
         // Encontrar a linha da tabela onde o botão foi clicado
         const linha = botao.closest('tr');
@@ -78,6 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const cellQuantidadeCarrinho = novaLinha.insertCell(2);
         const cellPrecoCarrinho = novaLinha.insertCell(3);
     
+        novaLinha.classList.add("itemNoCarrinho");
+
         cellCodigoCarrinho.textContent = cod || '';
         cellProdutoCarrinho.textContent = nomeProduto || '';
         cellQuantidadeCarrinho.textContent = quantidade;
@@ -107,14 +113,14 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Produto adicionado ao carrinho:", { cod, nomeProduto, quantidade, novoPreco });
     }
     
-    
+    // ATUALIZA O VALOR TOTAL DA COMPRA
     function atualizarTotalCompra() {
         // Encontrar a tabela de carrinho
         const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
     
         // Verificar se há pelo menos uma linha (excluindo a linha "TOTAL")
         if (tabelaCarrinho.rows.length > 1) {
-            // Calcular o total somando os valores da coluna "preço"
+            // Calcula o total somando os valores da coluna "preço"
             let totalCompra = 0;
             for (let i = 0; i < tabelaCarrinho.rows.length - 1; i++) {
                 const precoCell = tabelaCarrinho.rows[i].cells[3];
@@ -144,8 +150,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Erro ao encontrar a célula de total.");
             }
         }
+        
     }
     
+    // BOTAO PARA REMOVER O ITEM DO CARRINHO
     function removerDoCarrinho(botaoRemover) {
         const linhaRemover = botaoRemover.closest('tr');
         linhaRemover.remove();
@@ -156,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
         atualizarCarrinhoLocalStorage();
     }
 
+    // ATUALIZA O CARRINHO NO LOCAL STORAGE
     function atualizarCarrinhoLocalStorage() {
         // Encontrar a tabela de carrinho
         const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
@@ -183,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Dados do carrinho salvos no localStorage:", produtosCarrinho);
     }
     
+    // CARREGA OS DADOS DO CARRINHO NO LOCAL STORAGE
     function carregarCarrinhoDoLocalStorage() {
         const produtosCarrinho = JSON.parse(localStorage.getItem("produtosCarrinho")) || [];
     
@@ -230,6 +240,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    // SCRIPT MODAL
+
+    const btnModalVenda = document.getElementById("btnModalVenda");
+    const formRegistrarVenda = document.getElementById("formRegistroVenda");
+    const btnConfirmarVenda = document.getElementById("btnConfirmarVenda");
+    
+    // LIMPA O FORMULARIO NO MODAL
+    btnModalVenda.addEventListener("click", function (event) {
+        formRegistrarVenda.reset();
+    });
+    btnConfirmarVenda.addEventListener("click", confirmarVenda)
+
+    // CONFIRMA A VENDA - PUXA OS DADOS DO CLIENTE E DO CARRINHO
+    function confirmarVenda(event){
+        event.preventDefault(); // Impede o envio padrão do formulário
+        
+        // Recuperar os registros de vendas existentes do localStorage
+        const registrosExistente = JSON.parse(localStorage.getItem("registroVendas")) || [];
+        const carrinhoAtual = JSON.parse(localStorage.getItem("produtosCarrinho")) || [];
+
+        // PEGA DADOS DO CLIENTE
+        const nomeCliente = document.getElementById("nomeCliente").value;
+        const telefoneCliente = document.getElementById("telefoneCliente").value; 
+        
+        // SALVA OS DADOS DO CLIENTE NUMA VARIAVEL
+        const dadosDoCliente = {nomeCliente, telefoneCliente};
+
+        // PEGA VALOR TOTAL DO CARRINHO
+        
+        const totalCompraHTML = document.getElementById("totalCompra").textContent;
+        const totalCompra = parseFloat(totalCompraHTML);
+        console.log("Total da compra:", totalCompra);
+
+        const vendaAtual = {dadosDoCliente, intensNoCarrinho: carrinhoAtual, totalCompra: totalCompra};
+
+        registrosExistente.push(vendaAtual);
+
+        // Salvar o array no localStorage
+        localStorage.setItem("registroVendas", JSON.stringify(registrosExistente));
+
+        limparCarrinho();
+
+        // Fechar o modal após o envio
+        $("#modalRegistrarVenda").modal("hide");
+    }
+
+
+
+
+
+
+
     atualizarListaProdutos();
     carregarCarrinhoDoLocalStorage();
 
