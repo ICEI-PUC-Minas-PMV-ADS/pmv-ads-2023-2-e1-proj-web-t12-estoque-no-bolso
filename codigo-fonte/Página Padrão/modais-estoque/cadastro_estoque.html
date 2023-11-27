@@ -1,68 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estoque</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-  
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
-    <script src="pag_estoque.js">
-   
-
-    function listarEstoque (){
-    produtos = JSON.parse(produtos);
-    produtos.array.forEach(produtoObj => {
-    <p>Teste</p>
-    document.write (<li>Código</li>);
-    document.write (<li>Produto</li>);
-    document.write (<li>Categoria</li>);
-    document.write (<li>Quantidade</li>);
-    
-  });
-    }
-
- 
-    </script>
-
-</head>
-
-<body>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Estoque no Bolso</title>
+            <link rel="stylesheet" href="../css/reset.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" href="../css/style.css">
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <table id="grid-produtos" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Código</th>
-                            <th scope="col">Produto</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Variação</th>
-                            <th scope="col">Quantidade</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-produtos">
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
+            <meta http-equiv="refresh" content="5;http://google.com"> -->    
+            
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
+        
+        </head>
+        <body>
+            <header>
+                <div class="menu">
+                    <h1>
+                        <a href=""><img src="../img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
+                    </h1>
+                    <!--Preciso adicionar a logo aqui em cima-->
+                    <nav>
+                        <ul>
+                            <li><a href="../pag_estoque.html"><img src="../img/img_estoque.png" alt="imagem de estoque"></a></li>
+                            <li><a href="../pag_vendas.html"><img src="../img/img_dinheiro2.png" alt="imagem de dinheiro"></a></li>
+                            <li><a href="../pag_relatorios.html"><img src="../img/img_grafico.png" alt="imagem de grafico"></a></li>
+                            <li><a href="/codigo-fonte/HomePage_Logado_Fagner/home_logado.html"><img src="../img/img_login.png" alt=""></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+             
+            <div class="div_rel">RELATÓRIO DE ESTOQUE</div> 
+
+
+            <div id="corpo-vendas">
+                <section id="lista-produtos">
+                    <div class="conteudo">
+                        <!-- BARRA DE PESQUISA -->
+
+
+
+                        <button class="btn-menu btn_trans" id="btnLimparCarrinho" >Limpar Carrinho</button>
+                        
+                        <!-- LISTA DE PROUDTOS -->
+                        <div id="lista-abaixo" class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <table id="produtosVendas" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Cód.</th>
+                                                <th scope="col">Produto</th>
+                                                <th scope="col">Estoque</th>
+                                                <th scope="col">Custo</th>
+                                                <th scope="col">Preço</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabelaProdutosSalvos">
+                                            <tr>
+                                            <!--LISTA/TABELA DE VENDAS-->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>               
+                    </div>
+               
             </div>
-        </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
-</body>
+            <script src="relatorio_estoque.js"></script>
+            
+            <!-- SCRIP PARA BARRA DE PESQUISA -->
+            <script>
+                function myFunction() {
+                    var input, filter, table, tr, td, i, txtValue;
+                    input = document.getElementById("myInput");
 
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("listaContatos");
+                    tr = table.getElementsByTagName("tr");
+                    var select = document.getElementById("columnSelect");
+                    var index = select.value;
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[index];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+                function clearSearch() {
+                    document.getElementById("myInput").value = "";
+                    myFunction(); // Chame a função de filtro para reexibir todos os resultados
+                }
+            
+            </script>  
+
+            <footer id="footer">
+                <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
+                <p class="copyright">&copy; Estoque no Bolso - 2023</p>
+            </footer>
+        </body>
 </html>
