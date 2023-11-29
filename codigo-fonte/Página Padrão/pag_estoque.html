@@ -38,11 +38,14 @@
           <!-- BARRA DE PESQUISA -->
           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome"/>
           <select id="columnSelect">
-            <option value="1">Cód.</option>
-            <option value="2">Produto</option>
-            <option value="3">Categoria</option>
+            <option value="0">Cód.</option>
+            <option value="1">Produto</option>
+            <option value="2">Categoria</option>
+            <option value="3">Tamanho</option>
             <option value="4">Custo</option>
-            <option value="5">Valor</option>
+            <option value="5">Quantidade</option>
+            <option value="6">Valor</option>
+            <option value="7">Descrição</option>
           </select>
           <button class="btn-menu" onclick="clearSearch()">Limpar</button>
           <button class="btn-menu" data-toggle="modal" data-target="#modalProdutos">Adicionar</button>
@@ -205,6 +208,35 @@
         </div>
       </div>
     </div>
+
+    <!-- SCRIP PARA BARRA DE PESQUISA -->
+    <script>
+      function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("produtosVendas");
+          tr = table.getElementsByTagName("tr");
+          var select = document.getElementById("columnSelect");
+          var index = select.value;
+          for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[index];
+              if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      tr[i].style.display = "";
+                  } else {
+                      tr[i].style.display = "none";
+                  }
+              }
+          }
+      }
+      function clearSearch() {
+          document.getElementById("myInput").value = "";
+          myFunction(); // Chame a função de filtro para reexibir todos os resultados
+      }
+  
+  </script> 
 
     <!-- SCRIPTS MODAL -->
     <script

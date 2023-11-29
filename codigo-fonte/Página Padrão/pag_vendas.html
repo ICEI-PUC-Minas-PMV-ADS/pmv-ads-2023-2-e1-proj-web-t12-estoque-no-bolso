@@ -42,11 +42,11 @@
                         <!-- BARRA DE PESQUISA -->
                         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
                         <select id="columnSelect">
-                            <option value="1">Cód.</option>
-                            <option value="2">Produtos</option>
-                            <option value="3">Estoque</option>
-                            <option value="4">Custo</option>
-                            <option value="5">Preço</option>
+                            <option value="0">Cód.</option>
+                            <option value="1">Produtos</option>
+                            <option value="2">Estoque</option>
+                            <option value="3">Custo</option>
+                            <option value="4">Preço</option>
                         </select>
                         <button class="btn-menu">Excluir</button>
                         <button class="btn-menu" onclick="clearSearch()">Limpar</button>
@@ -158,7 +158,7 @@
                     var input, filter, table, tr, td, i, txtValue;
                     input = document.getElementById("myInput");
                     filter = input.value.toUpperCase();
-                    table = document.getElementById("listaContatos");
+                    table = document.getElementById("produtosVendas");
                     tr = table.getElementsByTagName("tr");
                     var select = document.getElementById("columnSelect");
                     var index = select.value;
