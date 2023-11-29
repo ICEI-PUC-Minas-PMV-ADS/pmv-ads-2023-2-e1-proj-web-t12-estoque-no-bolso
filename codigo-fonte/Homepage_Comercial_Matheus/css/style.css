@@ -15,8 +15,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #30323D;
 }
 
-/* HEADER */
-
 header{
     background: #7c81a0;
     padding: 30px;
@@ -76,10 +74,89 @@ nav li{ /*nav li (lista) sao os itens da lista*/
     margin-right: auto;
 }
 
-/* BODY */
 
-/* BARRA DE PESQUISA */
 
+/* Estilização do banner (você pode adicionar mais estilos conforme necessário) */
+#banner {
+    text-align: center;
+    padding: 40px 20px 15px;
+}
+
+#imgbanner {
+    /* width: 940px; */
+    max-width: 100%; /* Para garantir que a imagem do banner se ajuste à largura do contêiner */
+}
+
+
+#bem-vindo{
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#inicio {
+    display: inline-flex;
+    align-items: center;
+    padding: 30px 80px;
+}
+
+#imgrelatorio{
+    width: 100%;
+}
+
+#listacorpo {
+    text-align: left;
+    line-height: 150%;
+    padding-left: 10px;
+    padding-top: 10px;
+    list-style: circle;
+}
+
+#listacorpo2 {
+    text-align: left;
+    line-height: 150%;
+    padding-left: 130px;
+    padding-top: 10px;
+    list-style: circle;
+}
+
+#planoseprecos{
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#preco{
+    display: inline-flex;
+    align-items: center;
+    padding: 30px 80px;
+}
+
+#sobre{
+    margin: 0 100px;
+}
+
+#sobrenos {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#corposobrenos{
+    padding: 30px 80px;
+    text-align:center;
+}
+
+#preco {
+    display: inline-flex;
+    align-items: center;
+}
 
 .conteudo {
     width: auto;
@@ -112,66 +189,11 @@ nav li{ /*nav li (lista) sao os itens da lista*/
     text-align: center;
 }
 
-
-/* BARRA DE PESQUISA */
-
-.btn-excluir{
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    /* background-image: url('img/buscar.png'); */
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
+#contact-form{
+    padding: 30px;
+    line-height: 250%;
 }
 
-input[type=text] {
-    width: 200px;
-    height: 10px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    /* background-image: url('img/buscar.png'); */
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 15px 10px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  input[type=text]:focus {
-    width: 400px;
-  }
-
-#columnSelect{
-    margin: 0 20px;
-  }
-
-#lista-abaixo{
-    padding:40px 0 0;
-}
-
-/* FILTRO */
-
-.header-container {
-    display: flex;
-    align-items: center;
-}
-
-.header-container span {
-    margin-right: 5px; /* Ajuste conforme necessário para o espaçamento desejado */
-}
-
-.header-container button {
-    font-size: 0.8em; /* Ajuste o tamanho da fonte conforme necessário */
-    margin-left: 5px; /* Ajuste conforme necessário para o espaçamento desejado */
-}
-
-
-/* FOOTER */
 
 #footer {
     text-align: center;
