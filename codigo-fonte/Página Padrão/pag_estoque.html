@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estoque no Bolso</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap"
+    />
   </head>
   <body>
     <header>
@@ -21,10 +29,26 @@
         <!--Preciso adicionar a logo aqui em cima-->
         <nav>
           <ul>
-            <li><a href="pag_estoque.html"><img src="img/img_estoque2.png" alt="imagem de estoque"/></a></li>
-            <li><a href="pag_vendas.html"><img src="img/img_dinheiro.png" alt="imagem de dinheiro"/></a></li>
-            <li><a href="pag_relatorios.html"><img src="img/img_grafico.png" alt="imagem de grafico"/></a></li>
-            <li><a href="../HomePage_Logado_Fagner/home_logado.html"><img src="img/img_login.png" alt=""/></a></li>
+            <li>
+              <a href="pag_estoque.html"
+                ><img src="img/img_estoque2.png" alt="imagem de estoque"
+              /></a>
+            </li>
+            <li>
+              <a href="pag_vendas.html"
+                ><img src="img/img_dinheiro.png" alt="imagem de dinheiro"
+              /></a>
+            </li>
+            <li>
+              <a href="pag_relatorios.html"
+                ><img src="img/img_grafico.png" alt="imagem de grafico"
+              /></a>
+            </li>
+            <li>
+              <a href="../HomePage_Logado_Fagner/home_logado.html"
+                ><img src="img/img_login.png" alt=""
+              /></a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -36,19 +60,29 @@
       <section id="lista-produtos">
         <div class="conteudo">
           <!-- BARRA DE PESQUISA -->
-          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome"/>
+          <input
+            type="text"
+            id="myInput"
+            onkeyup="myFunction()"
+            placeholder="Buscar..."
+            title="Digite um nome"
+          />
           <select id="columnSelect">
             <option value="0">Cód.</option>
-            <option value="1">Produto</option>
-            <option value="2">Categoria</option>
-            <option value="3">Tamanho</option>
-            <option value="4">Custo</option>
-            <option value="5">Quantidade</option>
-            <option value="6">Valor</option>
-            <option value="7">Descrição</option>
+            <option value="1">Produtos</option>
+            <option value="2">Estoque</option>
+            <option value="3">Custo</option>
+            <option value="4">Preço</option>
           </select>
+          <button class="btn-menu">Excluir</button>
           <button class="btn-menu" onclick="clearSearch()">Limpar</button>
-          <button class="btn-menu" data-toggle="modal" data-target="#modalProdutos">Adicionar</button>
+          <button
+            class="btn-menu"
+            data-toggle="modal"
+            data-target="#modalProdutos"
+          >
+            Adicionar
+          </button>
 
           <!-- LISTA DE PRODUTOS -->
           <div id="lista-abaixo" class="container">
@@ -203,7 +237,9 @@
             >
               Cancelar
             </button>
-            <button type="button" id="btn_salvar" class="btn btn-info">Salvar</button>
+            <button type="button" id="btn_salvar" class="btn btn-info">
+              Salvar
+            </button>
           </div>
         </div>
       </div>
@@ -212,31 +248,30 @@
     <!-- SCRIP PARA BARRA DE PESQUISA -->
     <script>
       function myFunction() {
-          var input, filter, table, tr, td, i, txtValue;
-          input = document.getElementById("myInput");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("produtosVendas");
-          tr = table.getElementsByTagName("tr");
-          var select = document.getElementById("columnSelect");
-          var index = select.value;
-          for (i = 0; i < tr.length; i++) {
-              td = tr[i].getElementsByTagName("td")[index];
-              if (td) {
-                  txtValue = td.textContent || td.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                      tr[i].style.display = "";
-                  } else {
-                      tr[i].style.display = "none";
-                  }
-              }
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("produtosVendas");
+        tr = table.getElementsByTagName("tr");
+        var select = document.getElementById("columnSelect");
+        var index = select.value;
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[index];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
           }
+        }
       }
       function clearSearch() {
-          document.getElementById("myInput").value = "";
-          myFunction(); // Chame a função de filtro para reexibir todos os resultados
+        document.getElementById("myInput").value = "";
+        myFunction(); // Chame a função de filtro para reexibir todos os resultados
       }
-  
-  </script> 
+    </script>
 
     <!-- SCRIPTS MODAL -->
     <script
@@ -257,7 +292,10 @@
     <script src="modais-estoque/pag_estoque.js"></script>
 
     <footer id="footer">
-      <img src="../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%"/>
+      <img
+        src="../HomePage_Logado_Fagner/Img/Logo - ENB.png"
+        style="scale: 70%"
+      />
       <p class="copyright">&copy; Estoque no Bolso - 2023</p>
     </footer>
   </body>
