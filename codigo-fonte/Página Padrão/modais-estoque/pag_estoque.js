@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       renderTable();
     }
   }
-//   const formProdutos = document.getElementById("form-produtos");
+  //   const formProdutos = document.getElementById("form-produtos");
   const btnSalvar = document.getElementById("btn_salvar");
   const tabelaProdutos = document.getElementById("tabelaPrudotosSalvos");
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const produto = produtos[i];
 
       const row = document.createElement("tr");
-      row.innerHTML =       `
+      row.innerHTML = `
                             <td>${produto.cod}</td>
                             <td>${produto.nome}</td>
                             <td>${produto.categoria}</td>
@@ -99,6 +99,24 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       editingIndex = -1;
     }
+    //Função de salvar informações adicionais
+    function salvarInformacoesAdicionais() {
+      var informacoesAdicionais = document.getElementById(
+        "informacoes_adicionais"
+      ).value;
+      // Atualiza o campo de texto abaixo do botão de salvar
+      document.getElementById("exibir_informacoes").value =
+        informacoesAdicionais;
+    }
+
+    function atualizarCampoTexto() {
+      // Atualiza o campo de texto ao clicar no botão
+      var informacoesAdicionais = document.getElementById(
+        "informacoes_adicionais"
+      ).value;
+      document.getElementById("exibir_informacoes").value =
+        informacoesAdicionais;
+    }
 
     // Renderiza a tabela novamente
     renderTable();
@@ -119,12 +137,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       document.getElementById("txt_cod").value = produtos[index].cod;
       document.getElementById("txt_produto").value = produtos[index].nome;
-      document.getElementById("txt_categoria").value = produtos[index].categoria;
+      document.getElementById("txt_categoria").value =
+        produtos[index].categoria;
       document.getElementById("txt_tamanho").value = produtos[index].tamanho;
       document.getElementById("txt_custo").value = produtos[index].custo;
-      document.getElementById("txt_quantidade").value = produtos[index].quantidade;
+      document.getElementById("txt_quantidade").value =
+        produtos[index].quantidade;
       document.getElementById("text_venda").value = produtos[index].valorVenda;
-      document.getElementById("text_descricao").value = produtos[index].descricao;
+      document.getElementById("text_descricao").value =
+        produtos[index].descricao;
 
       $("#modalProdutos").modal("show");
     } else if (target.classList.contains("btn-excluir")) {

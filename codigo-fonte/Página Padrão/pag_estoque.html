@@ -139,99 +139,176 @@
             </button>
           </div>
           <div class="modal-body">
-            <div id="login-box" class="col-md-12">
-              <form
-                id="form-produtos"
-                class="form"
-                method="post"
-                onsubmit="loginUser (this)"
+            <ul class="nav nav-tabs" id="myTabs" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="produto-tab"
+                  data-toggle="tab"
+                  href="#produto"
+                  role="tab"
+                  aria-controls="produto"
+                  aria-selected="true"
+                >
+                  Informações
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="adicional-tab"
+                  data-toggle="tab"
+                  href="#adicional"
+                  role="tab"
+                  aria-controls="adicional"
+                  aria-selected="false"
+                >
+                  Registros do Produto
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabsContent">
+              <div
+                class="tab-pane fade show active"
+                id="produto"
+                role="tabpanel"
+                aria-labelledby="produto-tab"
               >
-                <h3 class="text-center text-info">Cadastro de Produtos</h3>
-                <div class="form-group">
-                  <label for="cod" class="text-info">Cod.</label><br />
-                  <input
-                    type="number"
-                    name="txt_cod"
-                    id="txt_cod"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="produto" class="text-info">Produto</label><br />
-                  <input
-                    type="text"
-                    name="txt_produto"
-                    id="txt_produto"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="categoria" class="text-info">Categoria</label
-                  ><br />
-                  <input
-                    type="text"
-                    name="categoria"
-                    id="txt_categoria"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="tamanho" class="text-info">Variação</label><br />
-                  <input
-                    type="text"
-                    name="txt_tamanho"
-                    id="txt_tamanho"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="custo" class="text-info">Custo</label><br />
-                  <input
-                    type="number"
-                    name="txt_custo"
-                    id="txt_custo"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="quantidade" class="text-info">Quantidade</label
-                  ><br />
-                  <input
-                    type="number"
-                    name="txt_quantidade"
-                    id="txt_quantidade"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="venda" class="text-info">Valor</label><br />
-                  <input
-                    type="text"
-                    name="text_venda"
-                    id="text_venda"
-                    class="form-control"
-                  />
-                </div>
-                <!-- <div class="form-group">
+                <!--Informações basicas do produto -->
+                <form
+                  id="form-produtos"
+                  class="form"
+                  method="post"
+                  onsubmit="loginUser (this)"
+                >
+                  <h3 class="text-center text-info">Cadastro de Produtos</h3>
+                  <div class="form-group">
+                    <label for="cod" class="text-info">Cod.</label><br />
+                    <input
+                      type="number"
+                      name="txt_cod"
+                      id="txt_cod"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="produto" class="text-info">Produto</label><br />
+                    <input
+                      type="text"
+                      name="txt_produto"
+                      id="txt_produto"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="categoria" class="text-info">Categoria</label
+                    ><br />
+                    <input
+                      type="text"
+                      name="categoria"
+                      id="txt_categoria"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="tamanho" class="text-info">Variação</label
+                    ><br />
+                    <input
+                      type="text"
+                      name="txt_tamanho"
+                      id="txt_tamanho"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="custo" class="text-info">Custo</label><br />
+                    <input
+                      type="number"
+                      name="txt_custo"
+                      id="txt_custo"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="quantidade" class="text-info">Quantidade</label
+                    ><br />
+                    <input
+                      type="number"
+                      name="txt_quantidade"
+                      id="txt_quantidade"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="venda" class="text-info">Valor</label><br />
+                    <input
+                      type="text"
+                      name="text_venda"
+                      id="text_venda"
+                      class="form-control"
+                    />
+                  </div>
+                  <!-- <div class="form-group">
                                 <label for="imagem" class="text-info">Imagem</label><br>
                                 <input type="file" name="text_imagem" id="text_imagem" class="form-control">
                             </div> -->
-                <div class="form-group">
-                  <label for="descricao" class="text-info">Descrição</label
-                  ><br />
-                  <input
-                    type="text"
-                    name="text_descricao"
-                    id="text_descricao"
-                    class="form-control"
-                  />
-                </div>
-              </form>
+                  <div class="form-group">
+                    <label for="descricao" class="text-info">Descrição</label
+                    ><br />
+                    <input
+                      type="text"
+                      name="text_descricao"
+                      id="text_descricao"
+                      class="form-control"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="adicional"
+                role="tabpanel"
+                aria-labelledby="adicional-tab"
+              >
+                <!-- formulário para campos de informações adicionais aqui -->
+                <form
+                  id="form-informacoes-adicionais"
+                  class="form"
+                  method="post"
+                  onsubmit="salvarInformacoesAdicionais()"
+                >
+                  <div class="form-group">
+                    <label for="informacoes_adicionais" class="text-info">
+                      Informações Adicionais
+                    </label>
+                    <textarea
+                      name="informacoes_adicionais"
+                      id="informacoes_adicionais"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                  <button type="button" class="btn btn-info">
+                    Salvar Informações Adicionais
+                  </button>
+                  <div class="form-group">
+                    <label for="exibir_informacoes" class="text-info">
+                      Informações Adicionais Exibidas
+                    </label>
+                    <input
+                      type="text"
+                      name="exibir_informacoes"
+                      id="exibir_informacoes"
+                      class="form-control"
+                      readonly
+                    />
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
             <button
-              type="submit"
+              type="button"
               class="btn btn-secondary"
               data-dismiss="modal"
             >
