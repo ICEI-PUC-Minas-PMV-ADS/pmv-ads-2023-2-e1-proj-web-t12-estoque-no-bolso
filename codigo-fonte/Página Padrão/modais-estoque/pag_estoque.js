@@ -157,4 +157,41 @@ document.addEventListener("DOMContentLoaded", function () {
       renderTable();
     }
   });
+
+      // FUNCAO MOSTRA ALERTA ESTOQUE BAIXO
+      function contarItensEstoqueBaixo() {
+        var dadosDoEstoque = JSON.parse(localStorage.getItem('produtosSalvos'));
+        var estoqueMinimo = 10;
+        var contador = 0;
+    
+        for (var i = 0; i < dadosDoEstoque.length; i++) {
+            if (dadosDoEstoque[i].quantidade < estoqueMinimo) {
+                contador++;
+            }
+        }
+    
+        return contador;
+    }
+    
+    // FUNCAO MOSTRA ITENS COM ESTOQUE BAIXO
+    function listarItensEstoqueBaixo() {
+        var dadosDoEstoque = JSON.parse(localStorage.getItem('produtosSalvos'));
+        var estoqueMinimo = 10;
+        var itens = [];
+    
+        for (var i = 0; i < dadosDoEstoque.length; i++) {
+            if (dadosDoEstoque[i].quantidade < estoqueMinimo) {
+                itens.push(dadosDoEstoque[i].nome);
+            }
+        }
+    
+        return itens;
+    }
+
+
+    window.onload = function() {
+        var quantidade = contarItensEstoqueBaixo();
+        document.getElementById('estoqueBaixo').innerText = quantidade;
+    };
+    
 });

@@ -19,10 +19,15 @@
     <body>
         <header>
             <div class="menu">
-                <h1>
-                    <a href="index.html"><img src="img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
-                </h1>
-                <!--Preciso adicionar a logo aqui em cima-->
+                <div class="menu">
+                    <h1>
+                        <a href="index.html"><img src="img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
+                    </h1>
+                    <div id="alertaEstoqueBaixo">
+                        <img src="img/warning.svg" alt="alerta de estoque" id="simboloDeAlerta">
+                        <p id="estoqueBaixo" style="padding-top: 10px;"></p>
+                    </div>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="pag_estoque.html"><img src="img/img_estoque.png" alt="imagem de estoque"></a></li>
@@ -48,7 +53,7 @@
                 </div>
         </header>
         
-        <script src="../app.js"></script>
+        <script src="relatorio_mariana/relatorio_estoque.js"></script>
 
         <footer id="footer">
             <img src= "../HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">

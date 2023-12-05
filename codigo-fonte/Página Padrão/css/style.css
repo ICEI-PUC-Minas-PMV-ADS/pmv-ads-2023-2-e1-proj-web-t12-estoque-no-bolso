@@ -56,6 +56,30 @@ nav li {
   padding-top: 30px;
 }
 
+#alertaEstoqueBaixo{
+  margin-top: 70px;
+  margin-left: 20px;
+  width: 86px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #E8C547;
+  display: flex;
+}
+
+#estoqueBaixo{
+  padding-left: 4px;
+  padding-top: 4px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+#simboloDeAlerta{
+  scale: 80%;
+  padding-left: 5px;
+}
+
+
 /* BODY */
 
 .conteudo {
