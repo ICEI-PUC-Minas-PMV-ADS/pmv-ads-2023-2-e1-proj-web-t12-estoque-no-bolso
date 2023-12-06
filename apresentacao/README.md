@@ -29,4 +29,4 @@ A equipe também deverá gravar um vídeo de, no máximo, três minutos, com a a
 
 ## Hospedagem
 
-[Adicione o endereço eletrônico público onde o site encontra-se hospedado.]
+[Acessar Estoque no Bolso.](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/index.html)
