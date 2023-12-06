@@ -57,60 +57,102 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ADICIONAR O ITEM SELECIONADO NO CARRINHO
     function adicionarNoCarrinho(botao, produto) {
-        // Encontrar a linha da tabela onde o botão foi clicado
-        const linha = botao.closest('tr');
+        const carrinho = document.querySelector("#tabelaPrudotosVendas");
+        let linhaExistente = null;
     
-        // Obter os dados da linha
-        const cod = linha.cells[0]?.textContent;
-        const nomeProduto = linha.cells[1]?.textContent;
+        // Verificar se o produto já está no carrinho
+        for (let i = 0; i < carrinho.rows.length; i++) {
+            if (carrinho.rows[i].cells[0].textContent === produto.cod) {
+                linhaExistente = carrinho.rows[i];
+                break;
+            }
+        }
     
         // Solicitar ao usuário a quantidade desejada
-        const quantidadeDigitada = prompt(`Digite a quantidade desejada para ${nomeProduto}:`);
-    
+        const quantidadeDigitada = prompt(`Digite a quantidade desejada para ${produto.nome}:`);
         // Validar se a quantidade é um número válido
         const quantidade = parseInt(quantidadeDigitada.trim()) || 0;
     
-        // Calcular o novo preço com base na quantidade
-        const precoUnitario = parseFloat(produto.valorVenda.trim().replace('R$', '').replace(',', '.')) || 0;
-        const novoPreco = quantidade * precoUnitario;
-    
-        // Adicionar o produto ao carrinho
-        const carrinho = document.querySelector("#tabelaPrudotosVendas");
-        const novaLinha = carrinho.insertRow();
-        const cellCodigoCarrinho = novaLinha.insertCell(0);
-        const cellProdutoCarrinho = novaLinha.insertCell(1);
-        const cellQuantidadeCarrinho = novaLinha.insertCell(2);
-        const cellPrecoCarrinho = novaLinha.insertCell(3);
-    
-        novaLinha.classList.add("itemNoCarrinho");
+        if (linhaExistente) {
+            // Se o produto já está no carrinho, atualizar a quantidade
+            const quantidadeCell = linhaExistente.cells[2];
+            quantidadeCell.textContent = parseInt(quantidadeCell.textContent) + quantidade;
+        } else {
 
-        cellCodigoCarrinho.textContent = cod || '';
-        cellProdutoCarrinho.textContent = nomeProduto || '';
-        cellQuantidadeCarrinho.textContent = quantidade;
-        cellPrecoCarrinho.textContent = novoPreco.toFixed(2);
-    
-        // Adicionar o botão de remoção
-        const cellRemover = novaLinha.insertCell(-1); // -1 insere no final
-        const botaoRemover = document.createElement("button");
-        botaoRemover.className = "btn-excluir";
-        botaoRemover.textContent = "Remover";
-        botaoRemover.onclick = function () {
-            removerDoCarrinho(this);
-        };
-        cellRemover.appendChild(botaoRemover);
-    
-        // Mover a linha "TOTAL" para o final da tabela
-        const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
-        const linhaTotal = tabelaCarrinho.querySelector('.linha-total');
-        tabelaCarrinho.appendChild(linhaTotal);
-    
-        // Atualizar o total da compra
-        atualizarTotalCompra();
-    
-        // Salvar no localStorage
-        atualizarCarrinhoLocalStorage();
-    
-        console.log("Produto adicionado ao carrinho:", { cod, nomeProduto, quantidade, novoPreco });
+            // Encontrar a linha da tabela onde o botão foi clicado
+            const linha = botao.closest('tr');
+        
+            // Obter os dados da linha
+            const cod = linha.cells[0]?.textContent;
+            const nomeProduto = linha.cells[1]?.textContent;
+        
+            // Solicitar ao usuário a quantidade desejada
+            // const quantidadeDigitada = prompt(`Digite a quantidade desejada para ${nomeProduto}:`);
+        
+            // Validar se a quantidade é um número válido
+            const quantidade = parseInt(quantidadeDigitada.trim()) || 0;
+
+            // Por ser um array, preciso buscar pelo codigo para saber se é o mesmo produto
+            const produtoSalvo = produtos.find(p => p.cod === cod);
+
+            // Verifique se o produto foi encontrado
+            if (!produtoSalvo) {
+                console.error('Produto não encontrado.');
+                return;
+            }
+
+            // Recupere a quantidade salva do produto
+            const quantidadeSalva = produtoSalvo.quantidade;
+
+            // Verificar se a quantidade inserida é menor ou igual à quantidade salva
+            if (quantidade > quantidadeSalva) {
+                alert('A quantidade inserida é maior do que a quantidade disponível em estoque.');
+                return;
+            }
+
+        
+            // Calcular o novo preço com base na quantidade
+            const precoUnitario = parseFloat(produto.valorVenda.trim().replace('R$', '').replace(',', '.')) || 0;
+            const novoPreco = quantidade * precoUnitario;
+        
+            // Adicionar o produto ao carrinho
+            const carrinho = document.querySelector("#tabelaPrudotosVendas");
+            const novaLinha = carrinho.insertRow();
+            const cellCodigoCarrinho = novaLinha.insertCell(0);
+            const cellProdutoCarrinho = novaLinha.insertCell(1);
+            const cellQuantidadeCarrinho = novaLinha.insertCell(2);
+            const cellPrecoCarrinho = novaLinha.insertCell(3);
+        
+            novaLinha.classList.add("itemNoCarrinho");
+
+            cellCodigoCarrinho.textContent = cod || '';
+            cellProdutoCarrinho.textContent = nomeProduto || '';
+            cellQuantidadeCarrinho.textContent = quantidade;
+            cellPrecoCarrinho.textContent = novoPreco.toFixed(2);
+        
+            // Adicionar o botão de remoção
+            const cellRemover = novaLinha.insertCell(-1); // -1 insere no final
+            const botaoRemover = document.createElement("button");
+            botaoRemover.className = "btn-excluir";
+            botaoRemover.textContent = "Remover";
+            botaoRemover.onclick = function () {
+                removerDoCarrinho(this);
+            };
+            cellRemover.appendChild(botaoRemover);
+        
+            // Mover a linha "TOTAL" para o final da tabela
+            const tabelaCarrinho = document.querySelector("#tabelaPrudotosVendas");
+            const linhaTotal = tabelaCarrinho.querySelector('.linha-total');
+            tabelaCarrinho.appendChild(linhaTotal);
+        
+            // Atualizar o total da compra
+            atualizarTotalCompra();
+        
+            // Salvar no localStorage
+            atualizarCarrinhoLocalStorage();
+        
+            console.log("Produto adicionado ao carrinho:", { cod, nomeProduto, quantidade, novoPreco });
+        }
     }
     
     // ATUALIZA O VALOR TOTAL DA COMPRA
