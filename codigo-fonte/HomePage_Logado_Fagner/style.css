@@ -1,9 +1,16 @@
+:root{
+    --cor-do-texto: #30323d;
+    --cor-do-hover: #e8c547;
+    --cor-do-fundo: #4D5061;
+}
+
 body {
-    background-color:#4D5061;;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+    font-family: 'Inter', sans-serif;
+    color: var(--cor-do-texto); 
+    background: var(--cor-do-fundo);
+    text-align: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -38,23 +45,13 @@ nav a{
     font-weight: 600;
     line-height: normal;
 }        
-.estoque, .vendas, .relatorios {
-    color: #FAFAFA;
-
-text-align: center;
-font-family: Inter;
-font-size: 8px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-}      
+     
 .botao-estoque, .botao-vendas, .botao-relatorios {
 border-radius: 50%;
 }
-.botoes{
-display: flex;
-justify-content: center;
-.estoque, .vendas, .relatorios{
-margin: 30px;
-}
+
+#botaoSair{
+    scale: 1.5;
+    margin-top: 30px;
+    margin-left: 10px;
 }

@@ -27,7 +27,7 @@
                                 <input type="text" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group text-right">                                
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar" id="botaoEntrar">
                             </div>
                         </form>
                     </div>
@@ -141,7 +141,15 @@
 
 
         // Associar salvamento ao botao
-        document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin);        
+        document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin);   
+        
+        document.getElementById ('botaoEntrar').addEventListener ('click', function () {
+            localStorage.removeItem('usuarioAtual');
+            const usuario = document.getElementById('username').value;
+            localStorage.setItem("usuarioAtual", usuario);
+        });
+
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
