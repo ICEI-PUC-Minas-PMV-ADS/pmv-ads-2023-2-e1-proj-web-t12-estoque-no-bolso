@@ -1,45 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
-        <link rel="stylesheet" href="style.css">
-        <script scr="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script scr="script.js"></script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img width=" 100px" height="100px" src="img/Logo - ENB.png" alt="Logo" />
+    </div>
 
-    </head>
-    <body>
-        <div class="container">
-            <img width=" 100px" height="100px" src="img/Logo - ENB.png" alt="Logo">
-        </div>  
+    <div class="titulo">
+      <img
+        width="80px"
+        height="80px"
+        src="img/Simbolo - ENB.png"
+        alt="simbolo foto"
+      />
+      <br />
+      <h1 id="usuarioLogado"></h1>
+    </div>
 
-        <div class="titulo">
-            <img width="80px" height="80px" src="img/Simbolo - ENB.png" alt="simbolo foto">
-            <br>
-            <h1 id="usuarioLogado"></h1>
-        </div>
+    <section class="menu">
+      <nav>
+        <ul>
+          <li>
+            <a href="../Página Padrão/pag_estoque.html"
+              ><img
+                width="80px"
+                height="80px"
+                class="botao-estoque"
+                src="img/Simbolo Estoque - ENB.png"
+                alt="botao-estoque"
+              /><br />Estoque</a
+            >
+          </li>
+          <li>
+            <a href="../Página Padrão/pag_vendas.html"
+              ><img
+                width="80px"
+                height="80px"
+                class="botao-vendas"
+                src="img/Simbolo Vendas - ENB.png"
+                alt="botao-vendas"
+              /><br />Vendas</a
+            >
+          </li>
+          <li>
+            <a href="../Página Padrão/pag_relatorios.html"
+              ><img
+                width="80px"
+                height="80px"
+                class="botao-relatorios"
+                src="img/Simbolo Relatorios - ENB.png"
+                alt="botao-relatorios"
+              /><br />Relatórios</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <button id="botaoSair">
+      <a href="../index.html"><img src="img/icons8-sair-100.png" /></a>
+    </button>
 
-        <section class="menu">
-            <nav>
-                <ul>
-                    <li><a href="../Página Padrão/pag_estoque.html"><img width="80px" height="80px" class="botao-estoque" src="img/Simbolo Estoque - ENB.png" alt="botao-estoque"><br>Estoque</a></li>
-                    <li><a href="../Página Padrão/pag_vendas.html"><img width="80px" height="80px" class="botao-vendas" src="img/Simbolo Vendas - ENB.png" alt="botao-vendas"><BR>Vendas</a></li>
-                    <li><a href="../Página Padrão/pag_relatorios.html"><img width="80px" height="80px" class="botao-relatorios" src="img/Simbolo Relatorios - ENB.png" alt="botao-relatorios"><BR>Relatórios</a></li>
-                </ul>
-            </nav>
-        </section>
-        <button id="botaoSair"><a href="../index.html" style="text-decoration: none;">Sair</a></button>
-
-        <script>
-
-            const usuarioAtual = localStorage.getItem('usuarioAtual');
-            document.getElementById('usuarioLogado').innerText = "Olá, " + usuarioAtual
-
-        </script>
-    </body>
+    <script>
+      const usuarioAtual = localStorage.getItem("usuarioAtual");
+      document.getElementById("usuarioLogado").innerText =
+        "Olá, " + usuarioAtual;
+    </script>
+  </body>
 </html>
-

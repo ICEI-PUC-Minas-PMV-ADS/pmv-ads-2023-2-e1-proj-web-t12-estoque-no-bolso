@@ -1,57 +1,60 @@
-:root{
-    --cor-do-texto: #30323d;
-    --cor-do-hover: #e8c547;
-    --cor-do-fundo: #4D5061;
+:root {
+  --cor-do-texto: #30323d;
+  --cor-do-hover: #e8c547;
+  --cor-do-fundo: #4d5061;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--cor-do-texto); 
-    background: var(--cor-do-fundo);
-    text-align: center;
+  font-family: "Inter", sans-serif;
+  color: var(--cor-do-texto);
+  background: var(--cor-do-fundo);
+  text-align: center;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px; /* saber a quantidade necessaria para ajustar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px; /* saber a quantidade necessaria para ajustar */
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-nav li{ /*nav li (lista) sao os itens da lista*/
-    display: inline-flex;
-    line-height: 150%;
-    margin: 0 0 0 10px; /*margens são topo, direita, baixo e esquerda*/
+nav li {
+  /*nav li (lista) sao os itens da lista*/
+  display: inline-flex;
+  line-height: 150%;
+  margin: 0 0 0 10px; /*margens são topo, direita, baixo e esquerda*/
 }
 
-nav a{
-    padding: 30px;
-    color: #FAFAFA;
-    text-decoration: none;
-    
+nav a {
+  padding: 30px;
+  color: #fafafa;
+  text-decoration: none;
 }
 
-.titulo{
-    color: #FAFAFA;
-    text-align: center;
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}        
-     
-.botao-estoque, .botao-vendas, .botao-relatorios {
-border-radius: 50%;
+.titulo {
+  color: #fafafa;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
-#botaoSair{
-    scale: 1.5;
-    margin-top: 30px;
-    margin-left: 10px;
+.botao-estoque,
+.botao-vendas,
+.botao-relatorios {
+  border-radius: 50%;
+}
+
+#botaoSair {
+  scale: 0.5;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: inline-flex;
 }

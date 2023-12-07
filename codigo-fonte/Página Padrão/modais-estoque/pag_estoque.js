@@ -99,24 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       editingIndex = -1;
     }
-    //Função de salvar informações adicionais
-    function salvarInformacoesAdicionais() {
-      var informacoesAdicionais = document.getElementById(
-        "informacoes_adicionais"
-      ).value;
-      // Atualiza o campo de texto abaixo do botão de salvar
-      document.getElementById("exibir_informacoes").value =
-        informacoesAdicionais;
-    }
-
-    function atualizarCampoTexto() {
-      // Atualiza o campo de texto ao clicar no botão
-      var informacoesAdicionais = document.getElementById(
-        "informacoes_adicionais"
-      ).value;
-      document.getElementById("exibir_informacoes").value =
-        informacoesAdicionais;
-    }
 
     // Renderiza a tabela novamente
     renderTable();
@@ -158,40 +140,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-      // FUNCAO MOSTRA ALERTA ESTOQUE BAIXO
-      function contarItensEstoqueBaixo() {
-        var dadosDoEstoque = JSON.parse(localStorage.getItem('produtosSalvos'));
-        var estoqueMinimo = 10;
-        var contador = 0;
-    
-        for (var i = 0; i < dadosDoEstoque.length; i++) {
-            if (dadosDoEstoque[i].quantidade < estoqueMinimo) {
-                contador++;
-            }
-        }
-    
-        return contador;
-    }
-    
-    // FUNCAO MOSTRA ITENS COM ESTOQUE BAIXO
-    function listarItensEstoqueBaixo() {
-        var dadosDoEstoque = JSON.parse(localStorage.getItem('produtosSalvos'));
-        var estoqueMinimo = 10;
-        var itens = [];
-    
-        for (var i = 0; i < dadosDoEstoque.length; i++) {
-            if (dadosDoEstoque[i].quantidade < estoqueMinimo) {
-                itens.push(dadosDoEstoque[i].nome);
-            }
-        }
-    
-        return itens;
+  // FUNCAO MOSTRA ALERTA ESTOQUE BAIXO
+  function contarItensEstoqueBaixo() {
+    var dadosDoEstoque = JSON.parse(localStorage.getItem("produtosSalvos"));
+    var estoqueMinimo = 10;
+    var contador = 0;
+
+    for (var i = 0; i < dadosDoEstoque.length; i++) {
+      if (dadosDoEstoque[i].quantidade < estoqueMinimo) {
+        contador++;
+      }
     }
 
+    return contador;
+  }
 
-    window.onload = function() {
-        var quantidade = contarItensEstoqueBaixo();
-        document.getElementById('estoqueBaixo').innerText = quantidade;
-    };
-    
+  // FUNCAO MOSTRA ITENS COM ESTOQUE BAIXO
+  function listarItensEstoqueBaixo() {
+    var dadosDoEstoque = JSON.parse(localStorage.getItem("produtosSalvos"));
+    var estoqueMinimo = 10;
+    var itens = [];
+
+    for (var i = 0; i < dadosDoEstoque.length; i++) {
+      if (dadosDoEstoque[i].quantidade < estoqueMinimo) {
+        itens.push(dadosDoEstoque[i].nome);
+      }
+    }
+
+    return itens;
+  }
+
+  window.onload = function () {
+    var quantidade = contarItensEstoqueBaixo();
+    document.getElementById("estoqueBaixo").innerText = quantidade;
+  };
 });
