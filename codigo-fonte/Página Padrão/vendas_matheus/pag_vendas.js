@@ -62,23 +62,36 @@ document.addEventListener("DOMContentLoaded", function () {
     
         // Verificar se o produto já está no carrinho
         for (let i = 0; i < carrinho.rows.length; i++) {
-            if (carrinho.rows[i].cells[0].textContent === produto.cod) {
+            // Certifique-se de verificar se cells[0] existe antes de acessar textContent
+            if (carrinho.rows[i].cells[0]?.textContent === produto.cod) {
                 linhaExistente = carrinho.rows[i];
                 break;
             }
         }
-    
+            
         // Solicitar ao usuário a quantidade desejada
         const quantidadeDigitada = prompt(`Digite a quantidade desejada para ${produto.nome}:`);
+
         // Validar se a quantidade é um número válido
         const quantidade = parseInt(quantidadeDigitada.trim()) || 0;
     
         if (linhaExistente) {
             // Se o produto já está no carrinho, atualizar a quantidade
             const quantidadeCell = linhaExistente.cells[2];
-            quantidadeCell.textContent = parseInt(quantidadeCell.textContent) + quantidade;
+            const novaQuantidade = parseInt(quantidadeCell.textContent) + quantidade;
+        
+            // Obter a quantidade salva do produto
+            const cod = linhaExistente.cells[0]?.textContent || ''; // Adicionado para obter o código
+            const quantidadeSalva = produtos.find(p => p.cod === cod)?.quantidade || 0;
+        
+            // Verificar se a nova quantidade ultrapassa a quantidade em estoque
+            if (novaQuantidade > quantidadeSalva) {
+                alert('A quantidade no carrinho somada à nova quantidade ultrapassa a disponível em estoque.');
+                return;
+            }
+        
+            quantidadeCell.textContent = novaQuantidade;
         } else {
-
             // Encontrar a linha da tabela onde o botão foi clicado
             const linha = botao.closest('tr');
         
@@ -91,25 +104,24 @@ document.addEventListener("DOMContentLoaded", function () {
         
             // Validar se a quantidade é um número válido
             const quantidade = parseInt(quantidadeDigitada.trim()) || 0;
-
-            // Por ser um array, preciso buscar pelo codigo para saber se é o mesmo produto
+        
+            // Verificar se a quantidade inserida ultrapassa a quantidade em estoque
             const produtoSalvo = produtos.find(p => p.cod === cod);
-
-            // Verifique se o produto foi encontrado
+        
+            // Verificar se o produto foi encontrado
             if (!produtoSalvo) {
                 console.error('Produto não encontrado.');
                 return;
             }
-
-            // Recupere a quantidade salva do produto
+        
+            // Recuperar a quantidade salva do produto
             const quantidadeSalva = produtoSalvo.quantidade;
-
-            // Verificar se a quantidade inserida é menor ou igual à quantidade salva
+        
+            // Verificar se a quantidade inserida é maior do que a quantidade disponível em estoque
             if (quantidade > quantidadeSalva) {
                 alert('A quantidade inserida é maior do que a quantidade disponível em estoque.');
                 return;
             }
-
         
             // Calcular o novo preço com base na quantidade
             const precoUnitario = parseFloat(produto.valorVenda.trim().replace('R$', '').replace(',', '.')) || 0;
@@ -295,37 +307,64 @@ document.addEventListener("DOMContentLoaded", function () {
     btnConfirmarVenda.addEventListener("click", confirmarVenda)
 
     // CONFIRMA A VENDA - PUXA OS DADOS DO CLIENTE E DO CARRINHO
-    function confirmarVenda(event){
+    function confirmarVenda(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
         
         // Recuperar os registros de vendas existentes do localStorage
         const registrosExistente = JSON.parse(localStorage.getItem("registroVendas")) || [];
         const carrinhoAtual = JSON.parse(localStorage.getItem("produtosCarrinho")) || [];
-
+    
         // PEGA DADOS DO CLIENTE
         const nomeCliente = document.getElementById("nomeCliente").value;
         const telefoneCliente = document.getElementById("telefoneCliente").value; 
         
         // SALVA OS DADOS DO CLIENTE NUMA VARIAVEL
         const dadosDoCliente = {nomeCliente, telefoneCliente};
-
+    
         // PEGA VALOR TOTAL DO CARRINHO
-        
         const totalCompraHTML = document.getElementById("totalCompra").textContent;
         const totalCompra = parseFloat(totalCompraHTML);
         console.log("Total da compra:", totalCompra);
-
-        const vendaAtual = {dadosDoCliente, intensNoCarrinho: carrinhoAtual, totalCompra: totalCompra};
-
+    
+        const vendaAtual = {dadosDoCliente, itensNoCarrinho: carrinhoAtual, totalCompra};
+    
+        // Atualizar o estoque
+        atualizarEstoque(carrinhoAtual);
+    
         registrosExistente.push(vendaAtual);
-
+    
         // Salvar o array no localStorage
         localStorage.setItem("registroVendas", JSON.stringify(registrosExistente));
-
+    
         limparCarrinho();
-
+    
         // Fechar o modal após o envio
         $("#modalRegistrarVenda").modal("hide");
+    }
+    
+    function atualizarEstoque(itensVendidos) {
+        // Recuperar os produtos salvos no localStorage
+        const produtosSalvos = JSON.parse(localStorage.getItem("produtosSalvos")) || [];
+    
+        // Atualizar o estoque para cada item vendido
+        itensVendidos.forEach(item => {
+            const produtoSalvo = produtosSalvos.find(p => p.cod === item.cod);
+    
+            if (produtoSalvo) {
+                // Diminuir a quantidade vendida do estoque
+                produtoSalvo.quantidade -= item.quantidade;
+    
+                // Verificar se a quantidade em estoque ficou negativa
+                if (produtoSalvo.quantidade < 0) {
+                    console.error(`Erro ao atualizar estoque. Produto ${produtoSalvo.nome} possui quantidade negativa.`);
+                }
+            } else {
+                console.error(`Produto ${item.nomeProduto} não encontrado no estoque.`);
+            }
+        });
+    
+        // Salvar o array atualizado no localStorage
+        localStorage.setItem("produtosSalvos", JSON.stringify(produtosSalvos));
     }
 
     // FUNCAO MOSTRA ALERTA ESTOQUE BAIXO
