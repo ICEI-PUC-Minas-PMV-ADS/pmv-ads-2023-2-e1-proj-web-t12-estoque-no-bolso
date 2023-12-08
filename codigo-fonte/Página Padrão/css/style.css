@@ -146,6 +146,7 @@ nav li {
   margin: 20px 150px 20px;
 }
 
+
 /* BARRA DE PESQUISA */
 .btn-menu {
   box-sizing: border-box;
@@ -265,6 +266,21 @@ text-align: center;
   color: white;
   font-size: 18px;
   width: 700px;
+
+}
+
+.div_rel2 {
+  line-height: 30px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: -2px;
+  margin-left: -2px;
+  margin-right: -2px;
+  background-color: #4d5061; 
+  color: white;
+  font-size: 18px;
+  width: 380px;
 
 }
 .lista_transp{

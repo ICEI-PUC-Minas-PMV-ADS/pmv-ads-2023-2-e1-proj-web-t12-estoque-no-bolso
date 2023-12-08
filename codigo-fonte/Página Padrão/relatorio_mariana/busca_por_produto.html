@@ -8,9 +8,7 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
             <link rel="stylesheet" href="/codigo-fonte/Página Padrão/css/style.css">
 
-
-            <!-- ESSE CÓD META SERVE PARA ATUALIZAR UMA PÁGINA AUTOMATICAMENTE DEPOIS DE 5 SEGUNDOS
-            <meta http-equiv="refresh" content="5;http://google.com"> -->    
+            
             
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +18,15 @@
         <body>
             <header>
                 <div class="menu">
-                    <h1>
-                        <a href=""><img src="/codigo-fonte/Página Padrão/img/logo.png" alt='Logo da Empresa' id="logomenu"></a>
-                    </h1>
+                    <div class="menu">
+                        <h1>
+                            <img src="/codigo-fonte/Página Padrão/img/logo.png" alt='Logo da Empresa' id="logomenu">
+                        </h1>
+                        <div id="alertaEstoqueBaixo">
+                            <img src="/codigo-fonte/Página Padrão/img/warning.svg" alt="alerta de estoque" id="simboloDeAlerta">
+                            <p id="estoqueBaixo"></p>
+                        </div>
+                    </div>
                     <!--Preciso adicionar a logo aqui em cima-->
                     <nav>
                         <ul>
@@ -35,24 +39,28 @@
                 </div>
             </header>
             
-             
+            <div class = "conteudo"><p></p>Indique o produto que deseja exibir<p></p></div>   
+
             <div id="corpo-vendas">
                 <section id="lista-produtos">
                     <div class="conteudo">
                         <!-- BARRA DE PESQUISA -->
                         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar..." title="Digite um nome">
                         <select id="columnSelect">
-                            <option value="1">Produto</option>
-                            <option value="2">Código</option>
-                            <option value="3">Estoque</option>
-                            <option value="4">Custo</option>
-                            <option value="5">Preço</option>
+                            <option value="0">Cód.</option>
+                            <option value="1">Produtos</option>
+                            <option value="2">Estoque</option>
+                            <option value="3">Custo</option>
+                            <option value="4">Preço</option>
                         </select>
 
 
                         <button class="btn-menu btn_trans" id="btnLimparCarrinho" >Limpar Carrinho</button>
-                       
+                        <button class="btn-menu btn_trans" id="btnModalVenda" data-toggle="modal" data-target="#modalRegistrarVenda">Registrar</button>
+                        
                         <!-- LISTA DE PROUDTOS -->
+ 
+                        <div class="div_rel2">PRODUTOS EM ESTOQUE</div>
                         <div id="lista-abaixo" class="container">
                             <div class="row">
                                 <div class="col-sm-12 col-md-6">
@@ -64,10 +72,10 @@
                                                 <th scope="col">Estoque</th>
                                                 <th scope="col">Custo</th>
                                                 <th scope="col">Preço</th>
-                                                <th></th>
+                                                
                                             </tr>
                                         </thead>
-                                        <tbody id="tabelaProdutosSalvos">
+                                        <tbody id="tabelaProdutosSalvos2">
                                             <tr>
                                             <!--LISTA/TABELA DE PRODUTOS SALVOS-->
                                             </tr>
@@ -79,28 +87,36 @@
                     </div>
                 </section>
                 
-               
-                
+                <!-- TABELA CARRINHO -->
+
             </div>
 
 
+            <!-- Modal de Registro de Venda -->
+            <div class="modal fade" id="modalRegistrarVenda" tabindex="-1" role="dialog" aria-labelledby="RegistroVenda" aria-hidden="true">
+                <div class="modal-dialog" role="document">
 
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="btnConfirmarVenda">Confirmar Venda</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
   
-            <script src="../Página Padrão/vendas_matheus/pag_vendas.js"></script>
+            <script src="relatorio_estoque.js"></script>
             
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
               
 
-            <script src="relatorio_estoque.js"></script>
-            
             <!-- SCRIP PARA BARRA DE PESQUISA -->
             <script>
                 function myFunction() {
                     var input, filter, table, tr, td, i, txtValue;
                     input = document.getElementById("myInput");
-
                     filter = input.value.toUpperCase();
                     table = document.getElementById("produtosVendas");
                     tr = table.getElementsByTagName("tr");
