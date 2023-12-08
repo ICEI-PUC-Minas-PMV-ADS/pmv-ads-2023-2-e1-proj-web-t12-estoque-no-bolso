@@ -49,7 +49,3 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Gerenciamento do Projeto            | Trello          | [Trello](https://trello.com/b/unR5yFCf/project-backlog)              |
 | Hospedagem                          | GitHub Pages                       |   [Estoque no Bolso]( https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/index.html)                         |
 
-
-### Estratégia de Organização de Codificação 
-
-Todos os artefatos relacionados a implementação e visualização dos conteúdos do projeto do site deverão ser inseridos na pasta [codigo-fonte](http://https://github.com/ICEI-PUC-Minas-PMV-ADS/WebApplicationProject-Template-v2/tree/main/codigo-fonte). Consulte também a nossa sugestão referente a estratégia de organização de codificação a ser adotada pela equipe de desenvolvimento do projeto.
