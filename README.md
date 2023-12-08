@@ -36,7 +36,7 @@ Nosso principal foco é a concepção de um aplicativo de fácil usabilidade e b
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/">Estoque no Bolso</a> 
 
 # Código-Fonte
 

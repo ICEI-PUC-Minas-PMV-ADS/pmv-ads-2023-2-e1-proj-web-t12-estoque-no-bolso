@@ -1,10 +1,5 @@
 # Registro de Testes de Software
 
-Relatório com as evidências dos testes de software realizados na aplicação pela equipe, baseado no plano de testes pré-definido.
-
-Os resultados dos testes funcionais realizados na aplicação são descritos a seguir. [Utilize a estrutura abaixo para cada caso de teste executado]
-
-# Casos de Teste   
 # CT-01 - Cadastro de Usuários
 
 Usuário preenche os campos "Email" e "Senha" inválidos ou de usuário não cadastrado.
@@ -31,6 +26,26 @@ Responsável pela execução do caso de Teste | Fagner
 | Informação disponíveis na pasta cadastro de usuários |
 
 ![Captura de tela 2023-11-26 172446](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/0899204d-424e-4269-89bf-0cd24b39bc31)
+
+# CT-03 - Relatório de Vendas
+
+Existem dois botões relacionados aos relatórios de vendas, seria venda de acordo com produtos e outro um relatório total de vendas, ao clicar no primeiro aparece uma pagina zerada mesmo já tendo um produto vendido. Ao clicar no segundo ele exibe de maneira correta todas as vendas feitas.
+
+Responsável pela execução do caso de Teste | Fagner
+
+[CT-04](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/144800739/74164fd9-d3af-4bc3-9286-ba0d32b757a6)
+
+# CT-04 - Relatório de Estoque
+
+Existem dois botões relacionados aos relatórios de estoque, seriam eles estoque total e estoque por produto, os dois cumprem com as descritas funções dos casos de teste.
+
+Responsável pela execução do caso de Teste | Fagner
+
+
+
+[Ct-05](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/144800739/31da0706-72b6-4653-a665-19fb2f947330)
+
+
 
 
 # CT-05 - Links página home
