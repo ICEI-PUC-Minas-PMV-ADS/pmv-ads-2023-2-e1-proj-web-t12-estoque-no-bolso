@@ -18,7 +18,7 @@ Desse modo, a equipe se dispõe da sequinte forma:
 
 Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello (Figura 1), estruturado no estilo Kanban, com as seguintes listas:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/3c491c3f-d4f3-4892-a9ff-f128500472cf)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/9e78a01f-a1ff-4b8b-a645-ba30fda958ba)
 
 Figura 1 - Quadro Kanban no Trello.
 
@@ -43,11 +43,11 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             |                           |
+| Repositório de código fonte         | GitHub                             |   [Código Fonte](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/blob/main/codigo-fonte/README.md)                        |
 | Documentos do projeto               | GitHub                             | [Documentos do projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso)                           |
 | Projeto de Interface                | Figma                              | [Figma](https://www.figma.com/proto/bLf0EhDVXRQd02w4x7Mk9N/Estoque-no-Bolso?page-id=0%3A1&type=design&node-id=68-80&viewport=783%2C76%2C0.2&t=kPwLcZYw6bd2dLus-1&scaling=contain&starting-point-node-id=68%3A80&mode=design)                            |
 | Gerenciamento do Projeto            | Trello          | [Trello](https://trello.com/b/unR5yFCf/project-backlog)              |
-| Hospedagem                          | GitHub Pages                       |                             |
+| Hospedagem                          | GitHub Pages                       |   [Estoque no Bolso]( https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/index.html)                         |
 
 
 ### Estratégia de Organização de Codificação 
