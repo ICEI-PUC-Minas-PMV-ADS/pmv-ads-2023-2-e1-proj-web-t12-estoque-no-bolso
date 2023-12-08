@@ -27,7 +27,7 @@ Figura 1 - Quadro Kanban no Trello.
 - Backlog priorizado: Todas as atividades identificadas no decorrer do projeto devem ser incorporadas a esta lista. Funciona como Product Backlog. 
 - Sprint: Esta lista representa o Sprint Backlog. Este é o Sprint que a equipe está trabalhando atualmente. 
 - Hoje (Doing): Aqui a equipe seleciona as tarefas que realizarão naquele dia. São tarefas que são puxadas do Sprint 
-- Aprovados pelo PO (Done): Nesta lista são colocadas as tarefas que foram aprovadas pelo PO como prontas para ser entregues ao cliente. 
+- Aprovados (Done): Nesta lista são colocadas as tarefas que foram aprovadas pelo PO como prontas para ser entregues ao cliente. 
 
 ### Etiquetas
 
