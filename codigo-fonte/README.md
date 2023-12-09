@@ -13,6 +13,44 @@ O site em HTML/CSS/JS é um projeto estático. É necessário implantá-lo em um
 
 ## Histórico de versões
 
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado/Atualizado/Removido
-- Relação de artefatos ...
+### [0.1.0] - 29/10/2023
+#### Adicionado
+- Homepage comercial: arquivos HTML, CSS, JS e imagens.
+- Homepage após logado: arquivos HTML, CSS, JS e imagens.
+- Login: arquivos HTML, CSS, JS.
+
+### [0.1.1] - 06/11/2023
+#### Atualizado
+- Homepage comercial: arquivos HTML, CSS, JS e imagens.
+- Homepage após logado: arquivos HTML, CSS, JS e imagens.
+- Login: arquivos HTML, CSS, JS.
+
+ #### Adicionado
+- Página padrão: arquivos HTML, CSS, JS e imagens.
+
+
+### [0.1.2] - 15/11/2023
+#### Atualizado
+- Homepage comercial: arquivos HTML, CSS, JS e imagens.
+- Homepage após logado: arquivos HTML, CSS, JS e imagens.
+- Login: arquivos HTML, CSS, JS e imagens.
+
+ #### Adicionado
+- Página de estoque: arquivos HTML, CSS, JS.
+- Página de vendas: arquivos HTML, CSS, JS.
+- Página de relatórios: arquivos HTML, CSS, JS.
+
+### [0.1.3] - 26/11/2023
+#### Atualizado
+- Página de estoque: arquivos HTML, CSS, JS.
+- Página de vendas: arquivos HTML, CSS, JS.
+- Página de relatórios: arquivos HTML, CSS, JS.
+- Homepage comercial: arquivos HTML, CSS, JS e imagens.
+- Homepage após logado: arquivos HTML, CSS, JS e imagens.
+
+### [0.1.4] - 08/12/2023
+#### Atualizado
+- Página de estoque: arquivos HTML, CSS, JS.
+- Página de vendas: arquivos HTML, CSS, JS.
+- Página de relatórios: arquivos HTML, CSS, JS.
+- Homepage comercial: arquivos HTML, CSS, JS e imagens.
