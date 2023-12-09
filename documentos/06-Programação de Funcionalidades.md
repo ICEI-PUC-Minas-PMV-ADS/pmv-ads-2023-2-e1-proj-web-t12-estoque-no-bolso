@@ -2,7 +2,7 @@
 
 Implementação da aplicação descritas por meio dos requisitos codificados. 
 
-### Tela de login (RF13)
+## Tela de login (RF13)
 
 ![Captura de tela 2023-11-15 064745](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/e74cf2bf-972f-4ad4-b218-42619b3efc48)
 
@@ -33,7 +33,7 @@ Efetue o login, só é aceito login de usuários cadastrados
 Mariana França
 
 
-### Tela de cadastro de usuários (RF12)
+## Tela de cadastro de usuários (RF12)
 
 ![Captura de tela 2023-11-15 064900](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/07e47cda-ca2b-4a79-9cbc-b8fa59ff3445)
 
@@ -66,7 +66,7 @@ O cadastro de usuário será feito através do menu login, que possui a opção 
 Mariana França
 
 
-### Tela de usuários cadastrados
+## Tela de usuários cadastrados
 
 ![Captura de tela 2023-11-15 070228](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/145354919/2aab2e7a-cd8c-4f88-a45c-73f880957129)
 
@@ -83,9 +83,11 @@ Os usuários cadastrados e as informações relativas a ele deverão ficar dispo
 
 Mariana França
 
-### Tela Home Page Comercial (RF-15)
+## Tela Home Page Comercial (RF-15)
 
 Esta é a tela inicial do projeto.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/46014ecf-b7a3-4dc1-84d2-1c30f79fd117)
+
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/56f50b96-e6b3-4130-a3b9-2126f8e0e34b)
 
@@ -111,7 +113,7 @@ Após entrar no link acima, role até o final da página para encontrar o formul
 Matheus Castelliano
 
 
-### Tela Lista de Contatos (RF-15)
+## Tela Lista de Contatos (RF-15)
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/4e39679d-2c9f-4ab6-baf6-fe29fc69916a)
 
@@ -136,7 +138,10 @@ Depois de preencher o formulário de contato, acesse o link acima, para encontra
 
 Matheus Castelliano
 
-### Pagina Home Page Após Login
+## Pagina Home Page Após Login (RNF-05)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/b1801840-aa4b-45ec-8a78-9a908b0d4b90)
+
 
 #### Requisitos Atendidos:
 
@@ -160,12 +165,12 @@ Abra a Home do projeto (GitHub/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/c
 
 Fagner Passos
 
-##### Tela Home Logado:
+## Tela Home Logado:
 
-![image](https://user-images.githubusercontent.com/58199879/271438380-dfa1d087-1358-4b5d-9471-80ec3ae3cfb3.png)
 
-### Tela Controle de Vendas (RF-01)
-![image](https://private-user-images.githubusercontent.com/58199879/271438647-194f0cba-2b14-4573-a743-a0a3cf10c37b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEwNDA2ODIsIm5iZiI6MTcwMTA0MDM4MiwicGF0aCI6Ii81ODE5OTg3OS8yNzE0Mzg2NDctMTk0ZjBjYmEtMmIxNC00NTczLWE3NDMtYTBhM2NmMTBjMzdiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI2VDIzMTMwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY5YWI0ZTY0ZTA0YTg3ZTgzM2Q4MDQ4ZDgyZGZlYzI3MjQwMWI2M2MxMjBkYmFiN2UwYjk2NTlkN2I0NGY0NWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.S7LLbnCUBPdgyqfKbIdsH-rroZVwOCMCgl0FCgku3L4)
+
+## Tela Estoque (RF-01)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/671ec052-6853-4fe3-9cdf-41eb4c2f464f)
 
 #### Requisistos Atendidos.
 - RF-01:A aplicação deve permitir ao usuário fazer o cadastro de itens;
@@ -192,8 +197,9 @@ Abra a Home do projeto (GitHub/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/c
 
 Fagner
 
-### Tela de Vendas (RF-03)
-![image](https://private-user-images.githubusercontent.com/58199879/271439174-c3b16a42-a913-4be3-ba64-d4707d99bf1c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEwNDE0NjYsIm5iZiI6MTcwMTA0MTE2NiwicGF0aCI6Ii81ODE5OTg3OS8yNzE0MzkxNzQtYzNiMTZhNDItYTkxMy00YmUzLWJhNjQtZDQ3MDdkOTliZjFjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI2VDIzMjYwNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZmNzYwNTI5ZTI2NGVhZDBjMjRhMWZiMDVjMDVhZDE1MzBlNzgzMzQ4M2NjZTAxMGY2MDM0OTllNmQ5YjYzNjEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.xTNUtWDg-UlwNm_b32jTv_zYkjEwIa_21pRuLDGgXxk)
+## Tela de Vendas (RF-03)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/58199879/85e0cc67-80b1-4721-861e-9d3a8efdbffd)
 
 #### Requisitos Atendidos
 
