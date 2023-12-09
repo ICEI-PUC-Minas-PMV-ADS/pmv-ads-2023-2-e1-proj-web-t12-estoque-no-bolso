@@ -3,7 +3,7 @@
 ## Estratégia de Organização de Codificação 
 
 Nesse primeiro eixo do curso, para simplificar a utilização do Git e a organização das pastas e artefatos de implementação no sistema de arquivos, sugerimos que o projeto seja estruturado de modo que cada aluno trabalhe com seus arquivos nas suas respectivas pastas, identificadas por nomes das suas respectivas telas. Por exemplo:
-- Pasta codigo-fonte (root do projeto): index.html, style.css, app.js - Desenvolvedora responsável: Aluna X.
+- Pasta codigo-fonte (root do projeto): index.html, style.css, app.js - Desenvolvedora responsável: Matheus.
 - Pasta codigo-fonte/homepage_logado_fagner: clientes.html, style.css, script.js - Desenvolvedor responsável: Fagner.
 - Pasta codigo-fonte/homepage_comercial_matheus: index.html, style.css, app.js  - Desenvolvedora responsável: Matheus.
 - Pasta codigo-fonte/pagina_padrão/vendas_matheus: pag_vendas.html, pag_vendas.css, pag_vendas.js  - Desenvolvedora responsável: Matheus.
@@ -13,7 +13,7 @@ Nesse primeiro eixo do curso, para simplificar a utilização do Git e a organiz
 
 ## Instalação do Site
 
-O site em HTML/CSS/JS é um projeto estático. É necessário implantá-lo em um servidor web de sua preferência. Existem diversos servidores web gratuitos que podem ser utilizados, tal como GitHub Pages (GitHub.IO), Vercel, Render, Netlify, Surge.sh, entre outros. Nesse primeiro eixo, recomenda-se inclusive a utilização do GitHub Pages. [Insira o endereço eletrônico público para acessá-lo.] 
+O site em HTML/CSS/JS é um projeto estático. Para acessar o Estoque no Bolso é só clicar [aqui.](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/codigo-fonte/index.html)
 
 ## Histórico de versões
 
