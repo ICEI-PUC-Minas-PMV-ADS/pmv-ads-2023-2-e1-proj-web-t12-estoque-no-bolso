@@ -58,3 +58,10 @@ O site em HTML/CSS/JS é um projeto estático. Para acessar o Estoque no Bolso �
 - Página de vendas: arquivos HTML, CSS, JS.
 - Página de relatórios: arquivos HTML, CSS, JS.
 - Homepage comercial: arquivos HTML, CSS, JS e imagens.
+
+  ### [0.1.5] - 09/12/2023
+#### Atualizado
+- Página de estoque: arquivos HTML, CSS, JS.
+- Página de vendas: arquivos HTML, CSS, JS.
+- Página de relatórios: arquivos HTML, CSS, JS.
+- Homepage comercial: arquivos HTML, CSS, JS e imagens.
