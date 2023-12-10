@@ -1,30 +1,19 @@
-    
-    document.addEventListener("DOMContentLoaded", function () {
-    // ATUALIZA A LISTA DE PRODUTOS VENDIDOS
-    function atualizarListaProdutos() {
+document.addEventListener("DOMContentLoaded", function () {
+    let registroVendas = JSON.parse(localStorage.getItem("registroVendas"));
+    let tabelaVendas = document.getElementById("tabelaVendas");
 
-        const registrosExistente = JSON.parse(localStorage.getItem("registroVendas")) || [];
-        const tabelaDeProdutos = document.querySelector("#tabelaProdutosVendidos");
-    
-        // Preencher a tabela com os produtos
-        registrosExistente.forEach(function (produto, index) {
-            const row = tabelaDeProdutos.insertRow();
-    
-            const cellCod = row.insertCell(0);
-            cellCod.textContent = produto.cod;
-    
-            const cellNome = row.insertCell(1);
-            cellNome.textContent = produto.nome;
-    
-            const cellEstoque = row.insertCell(2);
-            cellEstoque.textContent = produto.quantidade;
-    
-            const cellCusto = row.insertCell(3);
-            cellCusto.textContent = produto.custo;
-    
-            const cellvalorVenda = row.insertCell(4);
-            cellvalorVenda.textContent = produto.valorVenda;
-        });
+    for (let i = 0; i < registroVendas.length; i++) {
+      let venda = registroVendas[i];
+
+      let novaLinha = tabelaVendas.insertRow(-1);
+      let novaCelulaData = novaLinha.insertCell(0);
+      let novaCelulaProduto = novaLinha.insertCell(1);
+      let novaCelulaQuantidade = novaLinha.insertCell(2);
+      let novaCelulaPreco = novaLinha.insertCell(3);
+
+      novaCelulaData.innerHTML = venda.data;
+      novaCelulaProduto.innerHTML = venda.produto;
+      novaCelulaQuantidade.innerHTML = venda.quantidade;
+      novaCelulaPreco.innerHTML = venda.preco;
     }
-    atualizarListaProdutos();
 });
