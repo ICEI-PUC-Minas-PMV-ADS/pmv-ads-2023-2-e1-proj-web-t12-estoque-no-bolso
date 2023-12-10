@@ -41,25 +41,30 @@
             </header>
 <div><p></p></div>    
 <div><p></p></div>           
-<div class="div_rel">PRODUTOS VENDIDOS</div>   
+<div class="div_rel">CLIENTES E VALOR TOTAL VENDIDO</div>   
 
-            <div id="corpo-vendas">
-                <table id="tabelaVendas">
+            <div id="corpo-vendas" class="container">
+                <div class="conteudo">
+                    <div id="lista-abaixo" class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-40">
+                    <table id="tabelaVendas" class="table table-striped">
                     <thead>
                       <tr>
-                        <th>Data</th>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Preço</th>
+                        <th>Cliente</th>
+                        <th>Telefone</th>
+                        <th>Total da Compra</th>
                       </tr>
                     </thead>
                     <tbody>
                         
 
                     </tbody>
-                  </table>
-                
-              
+                    </table>
+                </div>
+                </div>
+            </div>
+            </div>
             </div>
 
   
@@ -77,27 +82,7 @@
                 <img src= "/codigo-fonte/HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
                 <p class="copyright">&copy; Estoque no Bolso - 2023</p>
             </footer>
-            
-            <script>
-                let registroVendas = JSON.parse(localStorage.getItem("registroVendas"));
-              
-                let tabelaVendas = document.getElementById("tabelaVendas");
-              
-                for (let i = 0; i < registroVendas.length; i++) {
-                  let venda = registroVendas[i];
-              
-                  let novaLinha = tabelaVendas.insertRow(-1);
-                  let novaCelulaData = novaLinha.insertCell(0);
-                  let novaCelulaProduto = novaLinha.insertCell(1);
-                  let novaCelulaQuantidade = novaLinha.insertCell(2);
-                  let novaCelulaPreco = novaLinha.insertCell(3);
-              
-                  novaCelulaData.innerHTML = venda.nomeCliente;
-                  novaCelulaProduto.innerHTML = venda.nomeProduto;
-                  novaCelulaQuantidade.innerHTML = venda.quantidade;
-                  novaCelulaPreco.innerHTML = venda.preco;
-                }
-              </script>
+    
             <script src="rel_vendas.js"></script>
         </body>
 </html>

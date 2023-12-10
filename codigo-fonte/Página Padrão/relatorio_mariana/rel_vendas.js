@@ -7,13 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let novaLinha = tabelaVendas.insertRow(-1);
       let novaCelulaData = novaLinha.insertCell(0);
-      let novaCelulaProduto = novaLinha.insertCell(1);
-      let novaCelulaQuantidade = novaLinha.insertCell(2);
-      let novaCelulaPreco = novaLinha.insertCell(3);
+      let novaCelulaTelefone = novaLinha.insertCell(1);
+      let novaCelulaTotal = novaLinha.insertCell(2);
 
-      novaCelulaData.innerHTML = venda.data;
-      novaCelulaProduto.innerHTML = venda.produto;
-      novaCelulaQuantidade.innerHTML = venda.quantidade;
-      novaCelulaPreco.innerHTML = venda.preco;
+      novaCelulaData.innerHTML = venda.dadosDoCliente.nomeCliente;
+      novaCelulaTelefone.innerHTML = venda.dadosDoCliente.telefoneCliente;
+      novaCelulaTotal.innerHTML = venda.totalCompra;
     }
 });
