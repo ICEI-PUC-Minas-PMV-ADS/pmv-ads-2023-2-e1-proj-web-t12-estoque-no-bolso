@@ -1,6 +1,11 @@
-# Apresentação do Projeto
+# Apresentação da Solução
 
-## Conjunto de Slides
+## 1. Apresentação de Slides
+
+[Apresentação - Estoque no Bolso.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/files/13627921/Apresentacao.-.Estoque.no.Bolso.pdf)
+
+<br>
+
 
 A apresentação do projeto consiste na geração de um conjunto de slides em um arquivo no formato ppt, pptx ou pdf, contemplando os seguintes itens:
 
