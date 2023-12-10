@@ -13,7 +13,8 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Oooh+Baby&display=swap" rel="stylesheet">  
-        
+            
+
         </head>
         <body>
             <header>
@@ -40,76 +41,50 @@
             </header>
 <div><p></p></div>    
 <div><p></p></div>           
-<div class="div_rel">PRODUTOS EM ESTOQUE</div>   
+<div class="div_rel"><b>ESTOQUE TOTAL</b></div>   
 
             <div id="corpo-vendas">
-                <section id="lista-produtos">
-                    <div class="conteudo">
+                <div class="conteudo">
+                    <div id="lista-abaixo" class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-40">
+                    <table id="tabelaProdutosSalvos" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Custo</th>
+                        <th>Valor de Venda</th>
+                      </tr>
+                    </thead>
+                    <tbody>
                         
 
-
-                        <button class="btn-menu btn_trans" id="btnLimparCarrinho" >Limpar Carrinho</button>
-                        <button class="btn-menu btn_trans" id="btnModalVenda" data-toggle="modal" data-target="#modalRegistrarVenda">Registrar</button>
-                        
-                        <!-- LISTA DE PROUDTOS -->
-                        <div id="lista-abaixo" class="container">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                                    <table id="produtosVendas" class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Cód.</th>
-                                                <th scope="col">Produto</th>
-                                                <th scope="col">Estoque</th>
-                                                <th scope="col">Custo</th>
-                                                <th scope="col">Preço</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody id="tabelaProdutosSalvos2">
-                                            <tr>
-                                            <!--LISTA/TABELA DE PRODUTOS SALVOS-->
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>               
-                    </div>
-                </section>
-                
-                <!-- TABELA CARRINHO -->
-
-            </div>
-
-
-            <!-- Modal de Registro de Venda -->
-            <div class="modal fade" id="modalRegistrarVenda" tabindex="-1" role="dialog" aria-labelledby="RegistroVenda" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary" id="btnConfirmarVenda">Confirmar Venda</button>
-                        </div>
-                    </div>
+                    </tbody>
+                    </table>
+                </div>
                 </div>
             </div>
+            </div>
+            </div>
+
   
-            <script src="relatorio_estoque.js"></script>
+            
             
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
               
 
-            <!-- SCRIP PARA BARRA DE PESQUISA -->
+
 
 
             <footer id="footer">
                 <img src= "/codigo-fonte/HomePage_Logado_Fagner/Img/Logo - ENB.png" style="scale: 70%;">
                 <p class="copyright">&copy; Estoque no Bolso - 2023</p>
             </footer>
+    
+            <script src="rel_est.js"></script>
         </body>
 </html>
