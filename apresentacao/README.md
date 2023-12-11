@@ -4,12 +4,13 @@
 
 [Apresentação - Estoque no Bolso.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/files/13627921/Apresentacao.-.Estoque.no.Bolso.pdf)
 
-<br>
-
 ## 2. Video de apresentação
 
 
-<br>
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t12-estoque-no-bolso/assets/144800739/319daaa5-1c80-4904-a746-0f7b8f810609
+
+
 
 ## 3. Vídeo de apresentação Funcionalidades 
 
